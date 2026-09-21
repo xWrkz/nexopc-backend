@@ -1,0 +1,70 @@
+# ============================================
+# WordPress Core
+# ============================================
+/wp-admin/
+/wp-includes/
+/wp-*.php
+!/wp-config-sample.php
+/index.php
+/license.txt
+/readme.html
+/xmlrpc.php
+/wp-config.php
+/wp-activate.php
+/wp-blog-header.php
+/wp-comments-post.php
+/wp-cron.php
+/wp-links-opml.php
+/wp-load.php
+/wp-login.php
+/wp-mail.php
+/wp-settings.php
+/wp-signup.php
+/wp-trackback.php
+
+# ============================================
+# Contenido de WordPress (excluir TODO por defecto)
+# ============================================
+/wp-content/*
+!/wp-content/mu-plugins/
+
+# ============================================
+# Dentro de mu-plugins, solo incluir los personalizados
+# ============================================
+/wp-content/mu-plugins/*
+!/wp-content/mu-plugins/nexopc-*
+
+# ============================================
+# Archivos específicos de LocalWP
+# ============================================
+.htaccess
+local-xdebuginfo.php
+local-*.php
+
+# ============================================
+# Archivos de sistema
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ============================================
+# Logs y temporales
+# ============================================
+*.log
+*.sql
+*.sqlite
+error_log
+debug.log
+
+# ============================================
+# Configuración local
+# ============================================
+.env
+.env.local
+.env.*.local
