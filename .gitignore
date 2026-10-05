@@ -66,5 +66,7 @@ debug.log
 # Configuración local
 # ============================================
 .env
+.env.*
+!.env.example
 .env.local
 .env.*.local

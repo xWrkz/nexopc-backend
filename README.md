@@ -118,6 +118,31 @@ graph LR
 
 ## 🚀 Instalación Paso a Paso
 
+## 🚀 Despliegue compartido en Dokploy
+
+El archivo `docker-compose.yml` permite desplegar WordPress y MariaDB como un
+entorno compartido. La base de datos y los archivos subidos se guardan en
+volúmenes Docker persistentes, por lo que un nuevo despliegue no debe borrar
+productos, pedidos, usuarios ni imágenes.
+
+En Dokploy:
+
+1. Crea un proyecto nuevo.
+2. Añade un servicio **Docker Compose** conectado a este repositorio.
+3. Selecciona la rama `main` y el archivo `docker-compose.yml`.
+4. Define las variables del archivo `.env.example` desde la sección de entorno.
+5. Asigna una URL temporal o un dominio al servicio `wordpress`, puerto `80`.
+6. Despliega y termina la instalación desde `/wp-admin`.
+
+Las contraseñas reales deben configurarse en Dokploy y nunca subirse al
+repositorio. Después del primer despliegue se instalarán WooCommerce,
+WPGraphQL, WooGraphQL, JWT Authentication y el mu-plugin `nexopc-cors.php`
+desde el panel o mediante una imagen personalizada controlada por Git.
+
+El servicio debe usar auto-deploy solo después de verificar los volúmenes y
+los backups. Los productos, pedidos y usuarios se administran en WordPress;
+no se guardan en Git.
+
 ### 1. Instalar LocalWP y crear el sitio
 
 1. Descarga e instala **LocalWP**.
