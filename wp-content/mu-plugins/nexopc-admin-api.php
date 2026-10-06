@@ -134,8 +134,26 @@ function nexopc_validate_common_product($data, $is_publish) {
     if (isset($data['regularPrice']) && $data['regularPrice'] !== '' && !is_numeric($data['regularPrice'])) $errors['regularPrice'] = 'El precio regular no es válido.';
     if (isset($data['salePrice']) && $data['salePrice'] !== '' && !is_numeric($data['salePrice'])) $errors['salePrice'] = 'El precio de oferta no es válido.';
     if (($data['salePrice'] ?? '') !== '' && ($data['regularPrice'] ?? '') !== '' && (float) $data['salePrice'] > (float) $data['regularPrice']) $errors['salePrice'] = 'El precio de oferta no puede ser mayor que el precio regular.';
+    $weight = trim((string) ($data['weight'] ?? ''));
+    if ($weight !== '' && (!is_numeric($weight) || (float) $weight < 0)) $errors['weight'] = 'El peso debe ser un número igual o mayor que cero.';
+    $dimensions = (array) ($data['dimensions'] ?? array());
+    $dimension_keys = array('length' => 'largo', 'width' => 'ancho', 'height' => 'alto');
+    $has_dimension = false;
+    foreach ($dimension_keys as $key => $label) {
+        $value = trim((string) ($dimensions[$key] ?? ''));
+        if ($value !== '') $has_dimension = true;
+        if ($value !== '' && (!is_numeric($value) || (float) $value < 0)) $errors['dimensions.' . $key] = 'El ' . $label . ' debe ser un número igual o mayor que cero.';
+    }
+    if ($has_dimension) foreach ($dimension_keys as $key => $label) if (trim((string) ($dimensions[$key] ?? '')) === '') $errors['dimensions.' . $key] = 'Completa el ' . $label . ' para registrar dimensiones.';
     if (!empty($errors)) return nexopc_error('nexopc_validation_error', 'Revisa los campos marcados.', 422, $errors);
     return true;
+}
+
+function nexopc_store_units() {
+    return rest_ensure_response(array(
+        'weight' => get_option('woocommerce_weight_unit', 'kg'),
+        'dimension' => get_option('woocommerce_dimension_unit', 'cm'),
+    ));
 }
 
 function nexopc_apply_stock(WC_Product $product, $data) {
@@ -598,6 +616,7 @@ add_action('rest_api_init', function () {
     ));
     register_rest_route('nexopc/v1', '/catalog/attributes/(?P<id>\\d+)/terms', array('methods' => WP_REST_Server::CREATABLE, 'callback' => 'nexopc_attribute_term_save', 'permission_callback' => $permission));
     register_rest_route('nexopc/v1', '/catalog/media', array('methods' => WP_REST_Server::CREATABLE, 'callback' => 'nexopc_upload_media', 'permission_callback' => $permission));
+    register_rest_route('nexopc/v1', '/settings/units', array('methods' => WP_REST_Server::READABLE, 'callback' => 'nexopc_store_units', 'permission_callback' => $permission));
     register_rest_route('nexopc/v1', '/inventory', array(
         array('methods' => WP_REST_Server::READABLE, 'callback' => 'nexopc_inventory_list', 'permission_callback' => $permission),
     ));
