@@ -29,6 +29,7 @@ services:
         define('DISALLOW_FILE_EDIT', true);
     volumes:
       - wordpress_files:/var/www/html
+      - ./wp-content/mu-plugins:/var/www/html/wp-content/mu-plugins:ro
     ports:
       - "${WORDPRESS_HTTP_PORT:-8080}:80"
     expose:
