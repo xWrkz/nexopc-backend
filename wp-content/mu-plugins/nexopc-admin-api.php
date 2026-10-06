@@ -470,6 +470,62 @@ function nexopc_upload_media(WP_REST_Request $request) {
     return new WP_REST_Response(nexopc_media_item($attachment_id), 201);
 }
 
+function nexopc_pagination_args(WP_REST_Request $request) {
+    return array('page' => max(1, absint($request->get_param('page') ?: 1)), 'per_page' => min(100, max(1, absint($request->get_param('perPage') ?: 20))));
+}
+
+function nexopc_inventory_list(WP_REST_Request $request) {
+    $paging = nexopc_pagination_args($request);
+    $args = array('limit' => $paging['per_page'], 'page' => $paging['page'], 'paginate' => true, 'status' => array('publish', 'draft', 'private'));
+    if ($request->get_param('search')) $args['s'] = sanitize_text_field($request->get_param('search'));
+    if ($request->get_param('stockStatus')) $args['stock_status'] = sanitize_text_field($request->get_param('stockStatus'));
+    $query = wc_get_products($args);
+    $items = array();
+    foreach ($query->products as $product) {
+        if ($product->is_type('variable')) {
+            foreach ($product->get_children() as $variation_id) { $variation = wc_get_product($variation_id); if ($variation) $items[] = array('id' => $variation->get_id(), 'parentId' => $product->get_id(), 'name' => $product->get_name() . ' · ' . implode(' / ', $variation->get_variation_attributes()), 'sku' => $variation->get_sku(), 'stockQuantity' => $variation->get_stock_quantity(), 'manageStock' => $variation->get_manage_stock(), 'stockStatus' => $variation->get_stock_status(), 'lowStockAmount' => $variation->get_low_stock_amount(), 'image' => nexopc_media_item($variation->get_image_id() ?: $product->get_image_id())); }
+        } else $items[] = array('id' => $product->get_id(), 'parentId' => null, 'name' => $product->get_name(), 'sku' => $product->get_sku(), 'stockQuantity' => $product->get_stock_quantity(), 'manageStock' => $product->get_manage_stock(), 'stockStatus' => $product->get_stock_status(), 'lowStockAmount' => $product->get_low_stock_amount(), 'image' => nexopc_media_item($product->get_image_id()));
+    }
+    return rest_ensure_response(array('items' => $items, 'page' => $paging['page'], 'perPage' => $paging['per_page'], 'total' => (int) $query->total, 'totalPages' => (int) $query->max_num_pages));
+}
+
+function nexopc_inventory_adjust(WP_REST_Request $request) {
+    $data = nexopc_request_data($request); $product = wc_get_product(absint($data['productId'] ?? 0));
+    if (!$product) return nexopc_error('nexopc_stock_product_not_found', 'Producto no encontrado.', 404);
+    $mode = ($data['mode'] ?? 'increase') === 'set' ? 'set' : (($data['mode'] ?? 'increase') === 'decrease' ? 'decrease' : 'increase');
+    $quantity = absint($data['quantity'] ?? 0); if (!$quantity && $mode !== 'set') return nexopc_error('nexopc_stock_quantity_required', 'Indica una cantidad mayor a cero.', 422);
+    $product->set_manage_stock(true); $product->save();
+    $new_stock = $mode === 'set' ? wc_update_product_stock($product, $quantity, 'set') : wc_update_product_stock($product, $quantity, $mode);
+    $product = wc_get_product($product->get_id());
+    $history = (array) $product->get_meta('_nexopc_stock_history');
+    array_unshift($history, array('date' => current_time(DATE_ATOM), 'user' => get_current_user_id(), 'mode' => $mode, 'quantity' => $quantity, 'reason' => sanitize_text_field($data['reason'] ?? ''), 'result' => (int) $new_stock));
+    $product->update_meta_data('_nexopc_stock_history', array_slice($history, 0, 100)); $product->set_stock_status($new_stock > 0 ? 'instock' : 'outofstock'); $product->save();
+    return rest_ensure_response(array('id' => $product->get_id(), 'stockQuantity' => $product->get_stock_quantity(), 'stockStatus' => $product->get_stock_status(), 'history' => array_slice($history, 0, 20)));
+}
+
+function nexopc_order_item($order, $detail = false) {
+    $data = array('id' => $order->get_id(), 'number' => $order->get_order_number(), 'status' => $order->get_status(), 'date' => $order->get_date_created() ? $order->get_date_created()->date(DATE_ATOM) : null, 'total' => $order->get_total(), 'currency' => $order->get_currency(), 'paymentMethod' => $order->get_payment_method_title(), 'customer' => array('id' => $order->get_customer_id(), 'name' => trim($order->get_formatted_billing_full_name()), 'email' => $order->get_billing_email()));
+    if ($detail) { $data['items'] = array_map(function ($item) { $product = $item->get_product(); return array('name' => $item->get_name(), 'quantity' => $item->get_quantity(), 'total' => $item->get_total(), 'sku' => $product ? $product->get_sku() : ''); }, $order->get_items()); $data['notes'] = array_map(function ($note) { return array('date' => $note->comment_date, 'content' => $note->comment_content); }, wc_get_order_notes(array('order_id' => $order->get_id()))); }
+    return $data;
+}
+
+function nexopc_orders_list(WP_REST_Request $request) {
+    $paging = nexopc_pagination_args($request); $args = array('limit' => $paging['per_page'], 'page' => $paging['page'], 'paginate' => true, 'orderby' => 'date', 'order' => 'DESC');
+    if ($request->get_param('status')) $args['status'] = sanitize_key($request->get_param('status'));
+    if ($request->get_param('search')) $args['s'] = sanitize_text_field($request->get_param('search'));
+    $query = wc_get_orders($args); return rest_ensure_response(array('items' => array_map(function ($order) { return nexopc_order_item($order); }, $query->orders), 'page' => $paging['page'], 'perPage' => $paging['per_page'], 'total' => (int) $query->total, 'totalPages' => (int) $query->max_num_pages));
+}
+
+function nexopc_order_get(WP_REST_Request $request) { $order = wc_get_order(absint($request['id'])); return $order ? rest_ensure_response(nexopc_order_item($order, true)) : nexopc_error('nexopc_order_not_found', 'Pedido no encontrado.', 404); }
+function nexopc_order_update(WP_REST_Request $request) { $order = wc_get_order(absint($request['id'])); if (!$order) return nexopc_error('nexopc_order_not_found', 'Pedido no encontrado.', 404); $data = nexopc_request_data($request); $status = sanitize_key($data['status'] ?? ''); if (!$status || !array_key_exists('wc-' . $status, wc_get_order_statuses())) return nexopc_error('nexopc_invalid_order_status', 'Estado de pedido no válido.', 422); $order->update_status($status, sanitize_textarea_field($data['note'] ?? ''), !empty($data['notifyCustomer'])); return rest_ensure_response(nexopc_order_item($order, true)); }
+
+function nexopc_customers_list(WP_REST_Request $request) {
+    $paging = nexopc_pagination_args($request); $args = array('number' => $paging['per_page'], 'offset' => ($paging['page'] - 1) * $paging['per_page'], 'role__in' => array('customer', 'subscriber'), 'orderby' => 'registered', 'order' => 'DESC');
+    if ($request->get_param('search')) $args['search'] = '*' . sanitize_text_field($request->get_param('search')) . '*';
+    $users = get_users($args); $total = count_users(); $items = array_map(function ($user) { $customer = new WC_Customer($user->ID); return array('id' => $user->ID, 'name' => trim($customer->get_first_name() . ' ' . $customer->get_last_name()) ?: $user->display_name, 'email' => $user->user_email, 'orders' => wc_get_customer_order_count($user->ID), 'spent' => wc_get_customer_total_spent($user->ID), 'registeredAt' => $user->user_registered, 'phone' => $customer->get_billing_phone()); }, $users);
+    $count = (int) (($total['avail_roles']['customer'] ?? 0) + ($total['avail_roles']['subscriber'] ?? 0)); return rest_ensure_response(array('items' => $items, 'page' => $paging['page'], 'perPage' => $paging['per_page'], 'total' => $count, 'totalPages' => max(1, (int) ceil($count / $paging['per_page']))));
+}
+
 function nexopc_kit_stock_change($order, $direction) {
     foreach ($order->get_items() as $item_id => $item) {
         $product = $item->get_product();
@@ -542,4 +598,14 @@ add_action('rest_api_init', function () {
     ));
     register_rest_route('nexopc/v1', '/catalog/attributes/(?P<id>\\d+)/terms', array('methods' => WP_REST_Server::CREATABLE, 'callback' => 'nexopc_attribute_term_save', 'permission_callback' => $permission));
     register_rest_route('nexopc/v1', '/catalog/media', array('methods' => WP_REST_Server::CREATABLE, 'callback' => 'nexopc_upload_media', 'permission_callback' => $permission));
+    register_rest_route('nexopc/v1', '/inventory', array(
+        array('methods' => WP_REST_Server::READABLE, 'callback' => 'nexopc_inventory_list', 'permission_callback' => $permission),
+    ));
+    register_rest_route('nexopc/v1', '/inventory/adjust', array('methods' => WP_REST_Server::CREATABLE, 'callback' => 'nexopc_inventory_adjust', 'permission_callback' => $permission));
+    register_rest_route('nexopc/v1', '/orders', array('methods' => WP_REST_Server::READABLE, 'callback' => 'nexopc_orders_list', 'permission_callback' => $permission));
+    register_rest_route('nexopc/v1', '/orders/(?P<id>\\d+)', array(
+        array('methods' => WP_REST_Server::READABLE, 'callback' => 'nexopc_order_get', 'permission_callback' => $permission),
+        array('methods' => WP_REST_Server::EDITABLE, 'callback' => 'nexopc_order_update', 'permission_callback' => $permission),
+    ));
+    register_rest_route('nexopc/v1', '/customers', array('methods' => WP_REST_Server::READABLE, 'callback' => 'nexopc_customers_list', 'permission_callback' => $permission));
 });
