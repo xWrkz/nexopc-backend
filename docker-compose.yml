@@ -25,7 +25,6 @@ services:
       WORDPRESS_TABLE_PREFIX: ${WORDPRESS_TABLE_PREFIX:-wp_}
       WORDPRESS_CONFIG_EXTRA: |
         define('WP_ENVIRONMENT_TYPE', 'staging');
-        define('WP_DEBUG', false);
         define('DISALLOW_FILE_EDIT', true);
     volumes:
       - wordpress_files:/var/www/html
