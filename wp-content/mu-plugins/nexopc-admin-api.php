@@ -575,6 +575,16 @@ add_action('woocommerce_update_product', function ($product_id) {
 
 add_action('graphql_register_types', function () {
     if (!function_exists('register_graphql_object_type')) return;
+    register_graphql_object_type('NexoPcHardware', array('fields' => array(
+        'componentTypeSlug' => array('type' => 'String'), 'componentTypeName' => array('type' => 'String'),
+        'socketId' => array('type' => 'Int'), 'memoryTypeId' => array('type' => 'Int'), 'formFactorId' => array('type' => 'Int'),
+        'storageInterfaceId' => array('type' => 'Int'), 'storageInterfaceSlug' => array('type' => 'String'), 'supportedMemoryTypeIds' => array('type' => array('list_of' => 'Int')),
+        'supportedStorageInterfaceIds' => array('type' => array('list_of' => 'Int')), 'supportedFormFactorIds' => array('type' => array('list_of' => 'Int')),
+        'tdpWatts' => array('type' => 'Float'), 'capacityGb' => array('type' => 'Int'), 'gpuLengthMm' => array('type' => 'Int'),
+        'gpuSlots' => array('type' => 'Float'), 'recommendedPsuWatts' => array('type' => 'Int'), 'maxGpuLengthMm' => array('type' => 'Int'),
+        'maxCoolerHeightMm' => array('type' => 'Int'), 'bays25' => array('type' => 'Int'), 'bays35' => array('type' => 'Int'),
+        'continuousWatts' => array('type' => 'Int'), 'm2Slots' => array('type' => 'Int'), 'sataPorts' => array('type' => 'Int'),
+    )));
     register_graphql_object_type('NexoPcKit', array('fields' => array(
         'pricingMode' => array('type' => 'String'), 'discount' => array('type' => 'Float'), 'items' => array('type' => array('list_of' => 'String')),
     )));
@@ -586,6 +596,16 @@ add_action('graphql_register_types', function () {
             return array('pricingMode' => $product->get_meta(NEXOPC_KIT_PRICING_META), 'discount' => (float) $product->get_meta(NEXOPC_KIT_DISCOUNT_META), 'items' => array_map('wp_json_encode', (array) $product->get_meta(NEXOPC_KIT_ITEMS_META)));
         },
     ));
+    $hardware_field = array(
+        'type' => 'NexoPcHardware',
+        'resolve' => function ($source) {
+            $hardware = nexopc_hardware_product_item($source->ID);
+            if (!$hardware) return null;
+            return array_merge(array('componentTypeSlug' => $hardware['componentType']['slug'], 'componentTypeName' => $hardware['componentType']['name']), $hardware['specs']);
+        },
+    );
+    register_graphql_field('SimpleProduct', 'nexopcHardware', $hardware_field);
+    register_graphql_field('VariableProduct', 'nexopcHardware', $hardware_field);
 });
 
 add_action('rest_api_init', function () {
