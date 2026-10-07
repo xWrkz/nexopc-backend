@@ -14,6 +14,8 @@ const NEXOPC_KIT_ITEMS_META = '_nexopc_kit_items';
 const NEXOPC_KIT_PRICING_META = '_nexopc_kit_pricing_mode';
 const NEXOPC_KIT_DISCOUNT_META = '_nexopc_kit_discount';
 
+require_once __DIR__ . '/nexopc-hardware.php';
+
 function nexopc_admin_permission() {
     return current_user_can('manage_woocommerce');
 }
@@ -81,6 +83,7 @@ function nexopc_product_item($product, $detail = false) {
         'categories' => array_map('nexopc_term_item', is_wp_error($categories) ? array() : $categories),
         'tags' => array_map('nexopc_term_item', is_wp_error($tags) ? array() : $tags),
         'modifiedAt' => $product->get_date_modified() ? $product->get_date_modified()->date(DATE_ATOM) : null,
+        'hardware' => nexopc_hardware_product_item($product->get_id()),
     );
     if (!$detail) return $data;
     $gallery = array_filter(array_map('nexopc_media_item', $product->get_gallery_image_ids()));
@@ -339,6 +342,8 @@ function nexopc_save_product(WP_REST_Request $request, $existing_id = 0) {
         if ($type === 'kit') $product->set_manage_stock(false);
         $product_id = $product->save();
         nexopc_apply_terms($product_id, $data);
+        $hardware = nexopc_hardware_save_product($product_id, $data['hardware'] ?? null);
+        if (is_wp_error($hardware)) return $hardware;
         if ($type === 'variable') {
             nexopc_apply_attributes($product, $data['attributes'] ?? array());
             $product->save();
@@ -616,6 +621,7 @@ add_action('rest_api_init', function () {
     ));
     register_rest_route('nexopc/v1', '/catalog/attributes/(?P<id>\\d+)/terms', array('methods' => WP_REST_Server::CREATABLE, 'callback' => 'nexopc_attribute_term_save', 'permission_callback' => $permission));
     register_rest_route('nexopc/v1', '/catalog/media', array('methods' => WP_REST_Server::CREATABLE, 'callback' => 'nexopc_upload_media', 'permission_callback' => $permission));
+    register_rest_route('nexopc/v1', '/hardware/catalogos', array('methods' => WP_REST_Server::READABLE, 'callback' => 'nexopc_hardware_catalogs', 'permission_callback' => $permission));
     register_rest_route('nexopc/v1', '/settings/units', array('methods' => WP_REST_Server::READABLE, 'callback' => 'nexopc_store_units', 'permission_callback' => $permission));
     register_rest_route('nexopc/v1', '/inventory', array(
         array('methods' => WP_REST_Server::READABLE, 'callback' => 'nexopc_inventory_list', 'permission_callback' => $permission),
