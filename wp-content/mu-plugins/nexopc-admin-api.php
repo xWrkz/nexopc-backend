@@ -596,7 +596,7 @@ add_action('graphql_register_types', function () {
         'socketId' => array('type' => 'Int'), 'memoryTypeId' => array('type' => 'Int'), 'formFactorId' => array('type' => 'Int'),
         'storageInterfaceId' => array('type' => 'Int'), 'storageInterfaceSlug' => array('type' => 'String'), 'supportedMemoryTypeIds' => array('type' => array('list_of' => 'Int')),
         'supportedStorageInterfaceIds' => array('type' => array('list_of' => 'Int')), 'supportedFormFactorIds' => array('type' => array('list_of' => 'Int')),
-        'tdpWatts' => array('type' => 'Float'), 'capacityGb' => array('type' => 'Int'), 'gpuLengthMm' => array('type' => 'Int'),
+        'tdpWatts' => array('type' => 'Float'), 'capacityGb' => array('type' => 'Int'), 'gpuMemoryGb' => array('type' => 'Int'), 'gpuLengthMm' => array('type' => 'Int'),
         'gpuSlots' => array('type' => 'Float'), 'recommendedPsuWatts' => array('type' => 'Int'), 'maxGpuLengthMm' => array('type' => 'Int'),
         'maxCoolerHeightMm' => array('type' => 'Int'), 'bays25' => array('type' => 'Int'), 'bays35' => array('type' => 'Int'),
         'continuousWatts' => array('type' => 'Int'), 'm2Slots' => array('type' => 'Int'), 'sataPorts' => array('type' => 'Int'),
