@@ -13,6 +13,7 @@ const NEXOPC_KIT_TYPE_META = '_nexopc_product_type';
 const NEXOPC_KIT_ITEMS_META = '_nexopc_kit_items';
 const NEXOPC_KIT_PRICING_META = '_nexopc_kit_pricing_mode';
 const NEXOPC_KIT_DISCOUNT_META = '_nexopc_kit_discount';
+const NEXOPC_INTERNAL_MODEL_CODE_META = '_nexopc_internal_model_code';
 
 require_once __DIR__ . '/nexopc-hardware.php';
 require_once __DIR__ . '/nexopc-traceability.php';
@@ -68,6 +69,7 @@ function nexopc_product_item($product, $detail = false) {
         'name' => $product->get_name(),
         'slug' => $product->get_slug(),
         'sku' => $product->get_sku(),
+        'internalModelCode' => $product->get_meta(NEXOPC_INTERNAL_MODEL_CODE_META),
         'type' => nexopc_product_type($product),
         'status' => $product->get_status(),
         'catalogVisibility' => $product->get_catalog_visibility(),
@@ -132,12 +134,12 @@ function nexopc_product_item($product, $detail = false) {
     return $data;
 }
 
-function nexopc_validate_common_product($data, $is_publish) {
+function nexopc_validate_common_product($data, $is_publish, $requires_sellable_fields = true) {
     $errors = array();
     if (empty(trim((string) ($data['name'] ?? '')))) $errors['name'] = 'El nombre es obligatorio.';
     if ($is_publish && empty($data['categories'])) $errors['categories'] = 'Selecciona al menos una categoría para publicar.';
-    if ($is_publish && empty(trim((string) ($data['sku'] ?? '')))) $errors['sku'] = 'El SKU es obligatorio para publicar.';
-    if ($is_publish && ($data['regularPrice'] ?? '') === '') $errors['regularPrice'] = 'El precio regular es obligatorio para publicar.';
+    if ($is_publish && $requires_sellable_fields && empty(trim((string) ($data['sku'] ?? '')))) $errors['sku'] = 'El SKU es obligatorio para publicar.';
+    if ($is_publish && $requires_sellable_fields && ($data['regularPrice'] ?? '') === '') $errors['regularPrice'] = 'El precio regular es obligatorio para publicar.';
     if (isset($data['regularPrice']) && $data['regularPrice'] !== '' && !is_numeric($data['regularPrice'])) $errors['regularPrice'] = 'El precio regular no es válido.';
     if (isset($data['salePrice']) && $data['salePrice'] !== '' && !is_numeric($data['salePrice'])) $errors['salePrice'] = 'El precio de oferta no es válido.';
     if (($data['salePrice'] ?? '') !== '' && ($data['regularPrice'] ?? '') !== '' && (float) $data['salePrice'] > (float) $data['regularPrice']) $errors['salePrice'] = 'El precio de oferta no puede ser mayor que el precio regular.';
@@ -181,6 +183,7 @@ function nexopc_apply_common(WC_Product $product, $data) {
     $product->set_name(sanitize_text_field($data['name'] ?? ''));
     if (isset($data['slug'])) $product->set_slug(sanitize_title($data['slug']));
     if (array_key_exists('sku', $data)) $product->set_sku(sanitize_text_field($data['sku']));
+    if (array_key_exists('internalModelCode', $data)) $product->update_meta_data(NEXOPC_INTERNAL_MODEL_CODE_META, sanitize_text_field($data['internalModelCode']));
     if (isset($data['description'])) $product->set_description(wp_kses_post($data['description']));
     if (isset($data['shortDescription'])) $product->set_short_description(wp_kses_post($data['shortDescription']));
     if (isset($data['regularPrice'])) $product->set_regular_price(nexopc_money($data['regularPrice']));
@@ -341,10 +344,16 @@ function nexopc_save_kit(WC_Product $product, $data) {
 function nexopc_save_product(WP_REST_Request $request, $existing_id = 0) {
     $data = nexopc_request_data($request);
     $status = $data['status'] ?? 'draft';
-    $validation = nexopc_validate_common_product($data, $status === 'publish');
-    if (is_wp_error($validation)) return $validation;
     $type = in_array($data['type'] ?? 'simple', array('simple', 'variable', 'kit'), true) ? $data['type'] : 'simple';
+    $validation = nexopc_validate_common_product($data, $status === 'publish', $type !== 'variable');
+    if (is_wp_error($validation)) return $validation;
     if ($status === 'publish' && $type === 'variable' && empty($data['variations'])) return nexopc_error('nexopc_variations_required', 'Crea al menos una variación antes de publicar.', 422);
+    if ($type === 'variable') {
+        // El padre solo agrupa variantes: su SKU e importes no son unidades vendibles.
+        $data['sku'] = '';
+        $data['regularPrice'] = '';
+        $data['salePrice'] = '';
+    }
     try {
         $existing = $existing_id ? wc_get_product($existing_id) : null;
         if ($existing_id && !$existing) return nexopc_error('nexopc_not_found', 'Producto no encontrado.', 404);
