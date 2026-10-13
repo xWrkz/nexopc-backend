@@ -1,0 +1,16 @@
+{
+  "name": "nexopc-buildcores-importer",
+  "version": "1.0.0",
+  "description": "Importador de BuildCores Open DB para NexoPC",
+  "main": "import-buildcores.js",
+  "scripts": {
+    "import": "node import-buildcores.js",
+    "import:cpu": "node import-buildcores.js --categories=CPU",
+    "import:gpu": "node import-buildcores.js --categories=GPU",
+    "import:all": "node import-buildcores.js"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "csv-writer": "^1.6.0"
+  }
+}

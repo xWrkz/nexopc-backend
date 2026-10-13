@@ -70,3 +70,12 @@ debug.log
 !.env.example
 .env.local
 .env.*.local
+
+# ============================================
+# BuildCores Importer
+# ============================================
+/scripts/buildcores/data/
+/scripts/buildcores/node_modules/
+/scripts/buildcores/output/*.csv
+/scripts/buildcores/output/*.log
+
