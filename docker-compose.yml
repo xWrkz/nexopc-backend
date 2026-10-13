@@ -11,21 +11,6 @@ services:
       - wordpress_db:/var/lib/mysql
     networks:
       - wordpress_internal
-      - dokploy-network
-      - default
-    labels:
-      - traefik.docker.network=dokploy-network
-      - traefik.http.routers.nexopc-backend-web.rule=Host(`wordpress.wrkz.net`)
-      - traefik.http.routers.nexopc-backend-web.entrypoints=web
-      - traefik.http.routers.nexopc-backend-web.middlewares=redirect-to-https@file
-      - traefik.http.routers.nexopc-backend-web.service=nexopc-backend-web
-      - traefik.http.routers.nexopc-backend-websecure.rule=Host(`wordpress.wrkz.net`)
-      - traefik.http.routers.nexopc-backend-websecure.entrypoints=websecure
-      - traefik.http.routers.nexopc-backend-websecure.service=nexopc-backend-websecure
-      - traefik.http.routers.nexopc-backend-websecure.tls.certresolver=letsencrypt
-      - traefik.http.services.nexopc-backend-web.loadbalancer.server.port=80
-      - traefik.http.services.nexopc-backend-websecure.loadbalancer.server.port=80
-      - traefik.enable=true
 
   wordpress:
     build: .
@@ -49,6 +34,21 @@ services:
       - "80"
     networks:
       - wordpress_internal
+      - dokploy-network
+      - default
+    labels:
+      - traefik.docker.network=dokploy-network
+      - traefik.http.routers.nexopc-backend-qw04wv-4-web.rule=Host(`wordpress.wrkz.net`)
+      - traefik.http.routers.nexopc-backend-qw04wv-4-web.entrypoints=web
+      - traefik.http.routers.nexopc-backend-qw04wv-4-web.middlewares=redirect-to-https@file
+      - traefik.http.routers.nexopc-backend-qw04wv-4-web.service=nexopc-backend-qw04wv-4-web
+      - traefik.http.routers.nexopc-backend-qw04wv-4-websecure.rule=Host(`wordpress.wrkz.net`)
+      - traefik.http.routers.nexopc-backend-qw04wv-4-websecure.entrypoints=websecure
+      - traefik.http.routers.nexopc-backend-qw04wv-4-websecure.service=nexopc-backend-qw04wv-4-websecure
+      - traefik.http.routers.nexopc-backend-qw04wv-4-websecure.tls.certresolver=letsencrypt
+      - traefik.http.services.nexopc-backend-qw04wv-4-web.loadbalancer.server.port=80
+      - traefik.http.services.nexopc-backend-qw04wv-4-websecure.loadbalancer.server.port=80
+      - traefik.enable=true
 
 volumes:
   wordpress_db:
