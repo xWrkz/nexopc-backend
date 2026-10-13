@@ -11,9 +11,24 @@ services:
       - wordpress_db:/var/lib/mysql
     networks:
       - wordpress_internal
+      - dokploy-network
+      - default
+    labels:
+      - traefik.docker.network=dokploy-network
+      - traefik.http.routers.nexopc-backend-web.rule=Host(`wordpress.wrkz.net`)
+      - traefik.http.routers.nexopc-backend-web.entrypoints=web
+      - traefik.http.routers.nexopc-backend-web.middlewares=redirect-to-https@file
+      - traefik.http.routers.nexopc-backend-web.service=nexopc-backend-web
+      - traefik.http.routers.nexopc-backend-websecure.rule=Host(`wordpress.wrkz.net`)
+      - traefik.http.routers.nexopc-backend-websecure.entrypoints=websecure
+      - traefik.http.routers.nexopc-backend-websecure.service=nexopc-backend-websecure
+      - traefik.http.routers.nexopc-backend-websecure.tls.certresolver=letsencrypt
+      - traefik.http.services.nexopc-backend-web.loadbalancer.server.port=80
+      - traefik.http.services.nexopc-backend-websecure.loadbalancer.server.port=80
+      - traefik.enable=true
 
   wordpress:
-    image: wordpress:php8.2-apache
+    build: .
     restart: unless-stopped
     depends_on:
       - db
@@ -28,7 +43,6 @@ services:
         define('DISALLOW_FILE_EDIT', true);
     volumes:
       - wordpress_files:/var/www/html
-      - ./wp-content/mu-plugins:/var/www/html/wp-content/mu-plugins:ro
     ports:
       - "${WORDPRESS_HTTP_PORT:-8080}:80"
     expose:
@@ -42,3 +56,6 @@ volumes:
 
 networks:
   wordpress_internal:
+  default:
+  dokploy-network:
+    external: true
