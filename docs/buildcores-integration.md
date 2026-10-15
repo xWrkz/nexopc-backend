@@ -78,7 +78,8 @@ nexopc-backend/
 │       │   ├── RAM/
 │       │   ├── Storage/
 │       │   ├── PSU/
-│       │   └── Case/
+│       │   ├── Case/
+│       │   └── CPUCooler/
 │       ├── mappings/                # Lógica por categoría
 │       │   ├── cpu-mapping.js
 │       │   ├── gpu-mapping.js
@@ -86,7 +87,8 @@ nexopc-backend/
 │       │   ├── ram-mapping.js
 │       │   ├── storage-mapping.js
 │       │   ├── psu-mapping.js
-│       │   └── case-mapping.js
+│       │   ├── case-mapping.js
+│       │   └── cooler-mapping.js
 │       ├── output/                  # Archivos generados
 │       │   ├── attribute-values.json
 │       │   ├── cpu-products.csv
@@ -95,6 +97,7 @@ nexopc-backend/
 │       │   ├── all-products.csv
 │       │   └── import-YYYY-MM-DD.log
 │       ├── import-buildcores.js     # Script principal CLI
+│       ├── split-csv.js             # Divisor de CSVs en partes < 1.5MB
 │       ├── utils.js                 # Constantes y formateo
 │       ├── package.json
 │       └── README.md
@@ -138,14 +141,16 @@ npm install
 
 ### Paso 3: Ejecución del Script de Importación
 
-#### A. Importación estándar (todas las categorías)
+#### A. Catálogo Curado Gamer (~700 productos) (RECOMENDADO)
+Genera un catálogo moderno (2020–2026) balanceado entre las 8 categorías principales con precios base en Soles:
 ```bash
-node import-buildcores.js
+node import-buildcores.js --curated --unified
 ```
+*Total: 700 productos (~614 KB). Se sube directamente por el panel de WooCommerce en un solo paso sin problemas de límite de subida.*
 
-#### B. Generar un archivo CSV unificado para todas las categorías
+#### B. Generar un archivo CSV unificado para todas las categorías (Completo)
 ```bash
-node import-buildcores.js --unified
+node import-buildcores.js --tier=all --unified
 ```
 
 #### C. Limitar a un número de productos por categoría (ideal para pruebas rápidas)
@@ -158,9 +163,9 @@ node import-buildcores.js --categories=CPU,GPU --limit=50
 node import-buildcores.js --tier=mid-high
 ```
 
-#### E. Establecer un precio base inicial
+#### E. Establecer un precio base personalizado
 ```bash
-node import-buildcores.js --base-price=0
+node import-buildcores.js --curated --unified --base-price=0
 ```
 
 ---

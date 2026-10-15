@@ -40,6 +40,19 @@ module.exports = {
       return false;
     }
 
+    if (options.tier === 'curated' || options.curated) {
+      const ramType = cleanString(data.ram_type).toUpperCase();
+      if (!ramType.includes('DDR4') && !ramType.includes('DDR5')) return false;
+
+      const topMfrs = ['CORSAIR', 'KINGSTON', 'G.SKILL', 'GSKILL', 'TEAMGROUP', 'CRUCIAL', 'ADATA', 'XPG'];
+      const mfr = cleanString(data.metadata?.manufacturer).toUpperCase();
+      if (!topMfrs.some(m => mfr.includes(m))) return false;
+
+      // Solo capacidades estándar para gaming (16GB, 32GB, 64GB)
+      if (capacity !== 16 && capacity !== 32 && capacity !== 64) return false;
+      return true;
+    }
+
     if (options.tier === 'mid-high') {
       // Filtrar kits de al menos 16GB DDR4 o DDR5
       const ramType = cleanString(data.ram_type).toUpperCase();
@@ -82,11 +95,12 @@ module.exports = {
 
     const description = generateDescription(data, this.woocommerceCategory, specs);
     const tags = [manufacturer, ramType, speed ? `${speed}MHz` : '', `${capacity}GB`].filter(Boolean).join(', ');
+    const price = options.basePrices?.[this.category] ?? options.basePrice ?? 0;
 
     return {
       name: fullName,
       sku: data.opendb_id,
-      regular_price: options.basePrice ?? 0,
+      regular_price: price,
       sale_price: '',
       categories: this.woocommerceCategory,
       tags,

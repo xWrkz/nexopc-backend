@@ -34,9 +34,26 @@ module.exports = {
    * Filtra según criterios configurables.
    */
   filter(data, options = {}) {
+    if (options.tier === 'curated' || options.curated) {
+      const modernSockets = ['AM5', 'AM4', 'LGA1700', 'LGA1851', 'LGA1200'];
+      const socket = cleanString(data.socket).replace(/\s+/g, '').toUpperCase();
+      const isModern = modernSockets.some(s => socket.includes(s));
+      if (!isModern) return false;
+
+      const topMfrs = ['ASUS', 'MSI', 'GIGABYTE', 'ASROCK'];
+      const mfr = cleanString(data.metadata?.manufacturer).toUpperCase();
+      if (!topMfrs.some(m => mfr.includes(m))) return false;
+
+      const modernChipsets = ['B450', 'B550', 'X570', 'A520', 'A620', 'B650', 'X670', 'X870', 'B660', 'B760', 'Z690', 'Z790', 'Z890', 'H610', 'B560', 'Z590'];
+      const name = cleanString(data.metadata?.name).toUpperCase();
+      const chipset = cleanString(data.chipset).toUpperCase();
+      if (!modernChipsets.some(c => chipset.includes(c) || name.includes(c))) return false;
+      return true;
+    }
+
     if (options.tier === 'mid-high') {
       const modernSockets = ['AM5', 'AM4', 'LGA1700', 'LGA1200', 'LGA1851'];
-      const socket = cleanString(data.socket).toUpperCase();
+      const socket = cleanString(data.socket).replace(/\s+/g, '').toUpperCase();
       const isModern = modernSockets.some(s => socket.includes(s));
       if (!isModern) return false;
     }
@@ -72,11 +89,12 @@ module.exports = {
 
     const description = generateDescription(data, this.woocommerceCategory, specs);
     const tags = [manufacturer, chipset, socket, formFactor, ramType].filter(Boolean).join(', ');
+    const price = options.basePrices?.[this.category] ?? options.basePrice ?? 0;
 
     return {
       name: fullName,
       sku: data.opendb_id,
-      regular_price: options.basePrice ?? 0,
+      regular_price: price,
       sale_price: '',
       categories: this.woocommerceCategory,
       tags,

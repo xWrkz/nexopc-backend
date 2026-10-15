@@ -101,10 +101,26 @@ const CSV_HEADERS = [
   { id: 'meta_manufacturer', title: 'Meta: manufacturer' }
 ];
 
+/**
+ * Extrae la URL oficial de imagen de Amazon a partir del ASIN si está presente.
+ * 
+ * @param {Object} data
+ * @returns {string}
+ */
+function getAmazonImageUrl(data) {
+  const listings = data.retailer_listings || data.identifiers?.retailer_listings || [];
+  const amz = listings.find(l => l.source === 'amazon' && l.source_product_id);
+  if (amz?.source_product_id) {
+    return `https://images-na.ssl-images-amazon.com/images/P/${amz.source_product_id}.01.LZZZZZZZ.jpg`;
+  }
+  return '';
+}
+
 module.exports = {
   formatProductName,
   cleanString,
   cleanNumber,
   generateDescription,
+  getAmazonImageUrl,
   CSV_HEADERS
 };

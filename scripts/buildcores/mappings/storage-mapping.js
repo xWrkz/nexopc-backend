@@ -50,6 +50,19 @@ module.exports = {
   filter(data, options = {}) {
     const capacity = cleanNumber(data.capacity, 0);
 
+    if (options.tier === 'curated' || options.curated) {
+      if (capacity < 480) return false;
+      const topMfrs = ['SAMSUNG', 'CRUCIAL', 'KINGSTON', 'WESTERN DIGITAL', 'WD', 'ADATA', 'XPG', 'SEAGATE', 'LEXAR', 'CORSAIR', 'TEAMGROUP'];
+      const mfr = cleanString(data.metadata?.manufacturer).toUpperCase();
+      if (!topMfrs.some(m => mfr.includes(m))) return false;
+
+      const formFactor = cleanString(data.form_factor || '').toUpperCase();
+      const iface = cleanString(data.interface || '').toUpperCase();
+      const isSSD = formFactor.includes('M.2') || formFactor.includes('2.5') || iface.includes('NVME') || iface.includes('PCIE') || iface.includes('SATA');
+      if (!isSSD) return false;
+      return true;
+    }
+
     if (options.tier === 'mid-high') {
       // Filtrar unidades de al menos 480/500 GB preferentemente SSD / NVMe
       if (capacity < 480) return false;
@@ -85,11 +98,12 @@ module.exports = {
 
     const description = generateDescription(data, this.woocommerceCategory, specs);
     const tags = [manufacturer, normalizedType, formFactor, `${capacity}GB`].filter(Boolean).join(', ');
+    const price = options.basePrices?.[this.category] ?? options.basePrice ?? 0;
 
     return {
       name: fullName,
       sku: data.opendb_id,
-      regular_price: options.basePrice ?? 0,
+      regular_price: price,
       sale_price: '',
       categories: this.woocommerceCategory,
       tags,

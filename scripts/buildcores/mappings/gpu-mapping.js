@@ -39,6 +39,18 @@ module.exports = {
       return false;
     }
 
+    if (options.tier === 'curated' || options.curated) {
+      if (memory > 0 && memory < 4) return false;
+      const topMfrs = ['ASUS', 'MSI', 'GIGABYTE', 'ZOTAC', 'PNY', 'XFX', 'SAPPHIRE', 'POWERCOLOR', 'ASROCK', 'EVGA'];
+      const mfr = cleanString(data.metadata?.manufacturer).toUpperCase();
+      if (!topMfrs.some(m => mfr.includes(m))) return false;
+
+      const name = cleanString(data.metadata?.name).toUpperCase();
+      const modernPatterns = [/RTX\s*40/i, /RTX\s*30/i, /GTX\s*16[56]0/i, /RX\s*7\d\d\d/i, /RX\s*6\d\d\d/i, /ARC\s*A\d\d\d/i];
+      if (!modernPatterns.some(p => p.test(name))) return false;
+      return true;
+    }
+
     if (options.tier === 'mid-high') {
       // Filtrar tarjetas con al menos 6GB de VRAM o TDP > 115W para gaming moderno
       if (memory > 0 && memory < 6) return false;
@@ -77,11 +89,12 @@ module.exports = {
 
     const description = generateDescription(data, this.woocommerceCategory, specs);
     const tags = [manufacturer, chipset, data.memory_type].filter(Boolean).join(', ');
+    const price = options.basePrices?.[this.category] ?? options.basePrice ?? 0;
 
     return {
       name: fullName,
       sku: data.opendb_id,
-      regular_price: options.basePrice ?? 0,
+      regular_price: price,
       sale_price: '',
       categories: this.woocommerceCategory,
       tags,

@@ -41,10 +41,30 @@ module.exports = {
       return false;
     }
 
+    if (options.tier === 'curated' || options.curated) {
+      const modernSockets = ['AM5', 'AM4', 'LGA1700', 'LGA1851', 'LGA1200'];
+      const socket = cleanString(data.socket || data.specifications?.socket).replace(/\s+/g, '').toUpperCase();
+      const isModernSocket = modernSockets.some(s => socket.includes(s));
+      if (!isModernSocket) return false;
+
+      const name = cleanString(data.metadata?.name).toUpperCase();
+      const mfr = cleanString(data.metadata?.manufacturer).toUpperCase();
+      if (name.includes('THREADRIPPER') || name.includes('EPYC') || name.includes('XEON') || name.includes('PENTIUM') || name.includes('CELERON')) {
+        return false;
+      }
+      if (mfr.includes('AMD') && !name.includes('RYZEN')) return false;
+      if (mfr.includes('INTEL') && !name.includes('CORE') && !name.includes('ULTRA')) return false;
+
+      const cores = cleanNumber(data.cores?.total ?? data.cores, 0);
+      if (cores > 0 && cores < 4) return false;
+      if (tdp < 35) return false;
+      return true;
+    }
+
     if (options.tier === 'mid-high') {
       // Filtrar plataformas y procesadores modernos / gama media-alta
       const modernSockets = ['AM5', 'AM4', 'LGA1700', 'LGA1200', 'LGA1151', 'sTR5', 'TR4'];
-      const socket = cleanString(data.socket || data.specifications?.socket).toUpperCase();
+      const socket = cleanString(data.socket || data.specifications?.socket).replace(/\s+/g, '').toUpperCase();
       const isModernSocket = modernSockets.some(s => socket.includes(s));
       if (!isModernSocket) return false;
       if (tdp < 50) return false;
@@ -97,11 +117,12 @@ module.exports = {
 
     const description = generateDescription(data, this.woocommerceCategory, specs);
     const tags = [manufacturer, data.metadata?.series || data.series, socket].filter(Boolean).join(', ');
+    const price = options.basePrices?.[this.category] ?? options.basePrice ?? 0;
 
     return {
       name: fullName,
       sku: data.opendb_id,
-      regular_price: options.basePrice ?? 0,
+      regular_price: price,
       sale_price: '',
       categories: this.woocommerceCategory,
       tags,

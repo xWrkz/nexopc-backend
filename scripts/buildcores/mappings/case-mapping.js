@@ -42,6 +42,14 @@ module.exports = {
   filter(data, options = {}) {
     const maxGpuLength = cleanNumber(data.max_gpu_length ?? data.gpu_length ?? data.gpu_clearance ?? data.dimensions?.max_gpu_length);
 
+    if (options.tier === 'curated' || options.curated) {
+      if (maxGpuLength !== null && maxGpuLength < 310) return false;
+      const topMfrs = ['NZXT', 'CORSAIR', 'LIAN LI', 'DEEPCOOL', 'COOLER MASTER', 'PHANTEKS', 'MONTECH', 'FRACTAL', 'THERMALTAKE', 'ASUS', 'MSI'];
+      const mfr = cleanString(data.metadata?.manufacturer).toUpperCase();
+      if (!topMfrs.some(m => mfr.includes(m))) return false;
+      return true;
+    }
+
     if (options.tier === 'mid-high') {
       // Filtrar gabinetes con buen espacio para GPUs modernas (al menos 300 mm si está especificado)
       if (maxGpuLength !== null && maxGpuLength < 300) return false;
@@ -77,11 +85,12 @@ module.exports = {
 
     const description = generateDescription(data, this.woocommerceCategory, specs);
     const tags = [manufacturer, formFactor, maxGpuLength ? `GPU-${maxGpuLength}mm` : ''].filter(Boolean).join(', ');
+    const price = options.basePrices?.[this.category] ?? options.basePrice ?? 0;
 
     return {
       name: fullName,
       sku: data.opendb_id,
-      regular_price: options.basePrice ?? 0,
+      regular_price: price,
       sale_price: '',
       categories: this.woocommerceCategory,
       tags,

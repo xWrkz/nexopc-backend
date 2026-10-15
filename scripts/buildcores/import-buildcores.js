@@ -10,7 +10,7 @@ const fs = require('fs');
 const path = require('path');
 const { program } = require('commander');
 const { createObjectCsvWriter } = require('csv-writer');
-const { CSV_HEADERS } = require('./utils');
+const { CSV_HEADERS, getAmazonImageUrl } = require('./utils');
 
 // Cargar mapeadores por categoría
 const mappings = {
@@ -20,7 +20,31 @@ const mappings = {
   RAM: require('./mappings/ram-mapping'),
   Storage: require('./mappings/storage-mapping'),
   PSU: require('./mappings/psu-mapping'),
-  Case: require('./mappings/case-mapping')
+  Case: require('./mappings/case-mapping'),
+  Cooler: require('./mappings/cooler-mapping')
+};
+
+// Cuotas y precios sugeridos para catálogo curado gamer (~700 productos totales)
+const CURATED_TARGETS = {
+  CPU: 90,
+  GPU: 130,
+  Motherboard: 110,
+  RAM: 90,
+  Storage: 70,
+  PSU: 70,
+  Case: 75,
+  Cooler: 65
+};
+
+const DEFAULT_CURATED_PRICES_PEN = {
+  CPU: 890,
+  GPU: 1750,
+  Motherboard: 620,
+  RAM: 280,
+  Storage: 290,
+  PSU: 350,
+  Case: 290,
+  Cooler: 240
 };
 
 // Configurar CLI con commander
@@ -28,12 +52,13 @@ program
   .name('import-buildcores')
   .description('Importador de BuildCores Open DB a CSV para WooCommerce (NexoPC)')
   .version('1.0.0')
-  .option('-c, --categories <categories>', 'Categorías a procesar separadas por coma (ej: CPU,GPU,RAM)', 'CPU,GPU,Motherboard,RAM,Storage,PSU,Case')
+  .option('-c, --categories <categories>', 'Categorías a procesar separadas por coma (ej: CPU,GPU,RAM,Cooler)', 'CPU,GPU,Motherboard,RAM,Storage,PSU,Case,Cooler')
   .option('-d, --data-dir <path>', 'Directorio de datos de BuildCores', path.join(__dirname, 'data'))
   .option('-o, --output-dir <path>', 'Directorio de salida para CSVs y logs', path.join(__dirname, 'output'))
   .option('-l, --limit <number>', 'Límite máximo de productos por categoría', parseInt)
-  .option('-p, --base-price <number>', 'Precio base regular por defecto en WooCommerce', 0)
-  .option('-t, --tier <tier>', 'Filtro de gama: all | mid-high', 'all')
+  .option('-p, --base-price <number>', 'Precio base regular por defecto en WooCommerce (Soles)', parseFloat)
+  .option('-t, --tier <tier>', 'Filtro de gama: all | mid-high | curated', 'curated')
+  .option('--curated', 'Activa modo catálogo curado moderno (~700 componentes)', false)
   .option('--min-tdp <number>', 'Filtro: TDP mínimo en watts', parseInt)
   .option('--min-gpu-vram <number>', 'Filtro: VRAM mínima en GB para GPUs', parseInt)
   .option('--min-ram-capacity <number>', 'Filtro: Capacidad mínima en GB para RAM', parseInt)
@@ -159,14 +184,27 @@ async function run() {
   const logger = new Logger(outputDir);
   const attributeCollector = new AttributeCollector();
 
+  if (options.curated || options.tier === 'curated') {
+    options.curated = true;
+    options.tier = 'curated';
+    if (options.basePrice === undefined || isNaN(options.basePrice)) {
+      options.basePrices = DEFAULT_CURATED_PRICES_PEN;
+    }
+  } else if (options.basePrice === undefined || isNaN(options.basePrice)) {
+    options.basePrice = 0;
+  }
+
   logger.info(`Iniciando importador NexoPC BuildCores v1.0.0`);
   logger.info(`Directorio de entrada: ${dataDir}`);
   logger.info(`Directorio de salida: ${outputDir}`);
   logger.info(`Categorías solicitadas: ${requestedCategories.join(', ')}`);
-  logger.info(`Filtro tier: ${options.tier}`);
+  logger.info(`Filtro tier: ${options.tier} (Curated: ${options.curated})`);
 
   console.log('🚀 NexoPC BuildCores Importer v1.0.0');
   console.log(`📁 Leyendo datos desde: ${dataDir}`);
+  if (options.curated) {
+    console.log('✨ Modo Catálogo Curado Gamer ACTIVO (~700 componentes seleccionados)');
+  }
 
   let totalProcessed = 0;
   let totalSkipped = 0;
@@ -200,10 +238,16 @@ async function run() {
     let errorCount = 0;
     const categoryRows = [];
 
-    const limit = options.limit ? Math.min(options.limit, files.length) : files.length;
+    const categoryLimit = options.limit
+      ? Math.min(options.limit, files.length)
+      : (options.curated ? (CURATED_TARGETS[catKey] || files.length) : files.length);
+
+    let cpuAmdCount = 0;
+    let cpuIntelCount = 0;
+    const cpuHalfLimit = categoryLimit ? Math.ceil(categoryLimit / 2) : 45;
 
     for (let i = 0; i < files.length; i++) {
-      if (options.limit && processedCount >= options.limit) break;
+      if (categoryLimit && processedCount >= categoryLimit) break;
 
       const filename = files[i];
       const filePath = path.join(categoryDir, filename);
@@ -237,9 +281,28 @@ async function run() {
         continue;
       }
 
+      // Balancear CPUs AMD vs Intel en modo curado
+      if (catKey === 'CPU' && options.curated) {
+        const mfr = (json.metadata?.manufacturer || '').toUpperCase();
+        if (mfr.includes('AMD')) {
+          if (cpuAmdCount >= cpuHalfLimit) {
+            skippedCount++;
+            continue;
+          }
+          cpuAmdCount++;
+        } else if (mfr.includes('INTEL')) {
+          if (cpuIntelCount >= cpuHalfLimit) {
+            skippedCount++;
+            continue;
+          }
+          cpuIntelCount++;
+        }
+      }
+
       // Mapear al modelo de WooCommerce
       try {
         const row = mapping.map(json, options);
+        row.images = row.images || getAmazonImageUrl(json);
         categoryRows.push(row);
         allRows.push(row);
         attributeCollector.add(row);

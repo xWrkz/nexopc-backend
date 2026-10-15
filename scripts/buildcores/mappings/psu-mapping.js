@@ -33,6 +33,17 @@ module.exports = {
   filter(data, options = {}) {
     const wattage = cleanNumber(data.wattage, 0);
 
+    if (options.tier === 'curated' || options.curated) {
+      if (wattage < 550 || wattage > 1200) return false;
+      const topMfrs = ['CORSAIR', 'EVGA', 'SEASONIC', 'MSI', 'COOLER MASTER', 'THERMALTAKE', 'BE QUIET', 'ASUS', 'DEEPCOOL'];
+      const mfr = cleanString(data.metadata?.manufacturer).toUpperCase();
+      if (!topMfrs.some(m => mfr.includes(m))) return false;
+
+      const eff = cleanString(data.efficiency_rating).toUpperCase();
+      if (!eff.includes('80 PLUS') && !eff.includes('BRONZE') && !eff.includes('GOLD') && !eff.includes('PLATINUM')) return false;
+      return true;
+    }
+
     if (options.tier === 'mid-high') {
       // Filtrar fuentes de al menos 600W para builds modernas
       if (wattage < 600) return false;
@@ -67,11 +78,12 @@ module.exports = {
 
     const description = generateDescription(data, this.woocommerceCategory, specs);
     const tags = [manufacturer, `${wattage}W`, formFactor, efficiency, modular].filter(Boolean).join(', ');
+    const price = options.basePrices?.[this.category] ?? options.basePrice ?? 0;
 
     return {
       name: fullName,
       sku: data.opendb_id,
-      regular_price: options.basePrice ?? 0,
+      regular_price: price,
       sale_price: '',
       categories: this.woocommerceCategory,
       tags,

@@ -78,4 +78,6 @@ debug.log
 /scripts/buildcores/node_modules/
 /scripts/buildcores/output/*.csv
 /scripts/buildcores/output/*.log
+/scripts/buildcores/output/chunks-under-2mb/
+
 
