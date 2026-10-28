@@ -32,7 +32,7 @@ add_action('init', function () {
         header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');
     }
 
-    if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS' && $origin && in_array($origin, $allowed_origins, true)) {
+    if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'OPTIONS' && $origin && in_array($origin, $allowed_origins, true)) {
         status_header(204);
         exit();
     }
