@@ -1,5 +1,8 @@
 # 📚 Integración de BuildCores Open DB en NexoPC
 
+> **Obsoleto.** BuildCores OpenDB usa CC BY-NC-SA 4.0 y no permite uso comercial sin
+> una licencia escrita. El catálogo vigente se gestiona en `scripts/catalog/`.
+
 Este documento detalla la arquitectura, el flujo de trabajo y las instrucciones operativas para sincronizar la base de datos abierta de componentes de hardware **[BuildCores Open DB](https://github.com/buildcores/buildcores-open-db)** con el backend de **NexoPC** (WordPress + WooCommerce + WPGraphQL + WooGraphQL).
 
 ---
