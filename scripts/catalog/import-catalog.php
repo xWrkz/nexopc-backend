@@ -12,7 +12,7 @@
  */
 if (php_sapi_name() !== 'cli') exit(1);
 
-define('DISABLE_WP_CRON', true);
+if (!defined('DISABLE_WP_CRON')) define('DISABLE_WP_CRON', true);
 $_SERVER['HTTP_HOST'] = 'localhost';
 $_SERVER['REQUEST_URI'] = '/';
 require (getenv('WP_LOAD_PATH') ?: '/var/www/html/wp-load.php');
@@ -133,8 +133,11 @@ function nexopc_import_product($item, $apply, $with_images) {
     $product_id = $product->save();
 
     $hardware = nexopc_hardware_save_product($product_id, nexopc_import_hardware($item['category'], $item['specs']));
-    if (is_wp_error($hardware)) return $hardware;
-    $brand = nexopc_set_product_brand($product_id, nexopc_import_brand($item['brand']));
+    if (is_wp_error($hardware)) {
+        if (!empty($item['verified'])) return $hardware;
+        nexopc_import_log('  ficha pendiente: ' . implode(', ', array_keys((array) $hardware->get_error_data()['fields'])));
+    }
+    $brand =nexopc_set_product_brand($product_id, nexopc_import_brand($item['brand']));
     if (is_wp_error($brand)) return $brand;
 
     if ($with_images) {
