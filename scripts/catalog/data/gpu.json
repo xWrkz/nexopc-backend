@@ -1,0 +1,551 @@
+[
+  {
+    "key": "gpu-asus-rtx3050-dual-oc-6g",
+    "name": "ASUS Dual GeForce RTX 3050 OC Edition 6GB",
+    "brand": "ASUS",
+    "mpn": "DUAL-RTX3050-O6G",
+    "gtin": "4711387470633",
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica GeForce RTX 3050 con 6 GB de memoria GDDR6 y 201 mm de largo, formato de 2 ranuras.",
+    "market_evidence": "IN+PB+DL",
+    "specs": {
+      "chip": "RTX 3050",
+      "memory_type": "gddr6",
+      "memory_gb": 6,
+      "length_mm": 201,
+      "slots": 2.0,
+      "tdp_w": 70,
+      "psu_w": 450
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/graphics-cards/dual/dual-rtx3050-o6g/techspec/",
+      "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ASUS&ProductCode=DUAL-RTX3050-O6G"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/a87deb9d285250624b927606cea4b4a91c566c2f.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "tdp_w es la cifra oficial del chip: NVIDIA RTX 3050 6 GB, 70 W (el ensamblador no la publica en la ficha leída). psu_w 450 W publicado por ASUS; Icecat lista 550 W, se prefirió el fabricante."
+  },
+  {
+    "key": "gpu-msi-rtx3050-ventus-2x-oc-6g",
+    "name": "MSI GeForce RTX 3050 VENTUS 2X 6G OC",
+    "brand": "MSI",
+    "mpn": "GEFORCE RTX 3050 VENTUS 2X 6G OC",
+    "gtin": "4711377176811",
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica GeForce RTX 3050 con 6 GB de memoria GDDR6 y 189 mm de largo.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "chip": "RTX 3050",
+      "memory_type": "gddr6",
+      "memory_gb": 6,
+      "length_mm": 189,
+      "slots": null,
+      "tdp_w": 70,
+      "psu_w": 300
+    },
+    "sources": [
+      "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&GTIN=4711377176811"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/223246f7aaf38cffed832755ee0b3360fce79c53.jpg",
+    "image_source": "icecat",
+    "verified": false,
+    "notes": "slots null: msi.com devolvió 403 e Icecat no publica ranuras para este modelo; no se infirió del grosor (42 mm). tdp_w 70 W de Icecat (Consumo energético), coincide con NVIDIA RTX 3050 6 GB. psu_w 300 W de Icecat, también coincide con NVIDIA."
+  },
+  {
+    "key": "gpu-asus-rtx5050-dual-oc-8g",
+    "name": "ASUS Dual GeForce RTX 5050 OC Edition 8GB",
+    "brand": "ASUS",
+    "mpn": "DUAL-RTX5050-O8G",
+    "gtin": null,
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica GeForce RTX 5050 con 8 GB de memoria GDDR6 y 203 mm de largo, formato de 2 ranuras.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "chip": "RTX 5050",
+      "memory_type": "gddr6",
+      "memory_gb": 8,
+      "length_mm": 203,
+      "slots": 2.0,
+      "tdp_w": 130,
+      "psu_w": 550
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/graphics-cards/dual/dual-rtx5050-o8g/techspec/",
+      "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5050/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ASUS&ProductCode=DUAL-RTX5050-O8G"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/abac87dcd9fed026ac277976fd086c1922e78118.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "tdp_w es la cifra oficial del chip: NVIDIA RTX 5050, 130 W (el ensamblador no la publica en la ficha leída). GTIN omitido: el de Icecat (4711636178518) corresponde a otro SKU regional (90YV0N72-M0NA00)."
+  },
+  {
+    "key": "gpu-gigabyte-rtx5050-windforce-oc-v2-8g",
+    "name": "Gigabyte GeForce RTX 5050 WINDFORCE OC V2 8G",
+    "brand": "Gigabyte",
+    "mpn": "GV-N5050WF2OCV2-8GD",
+    "gtin": "4719331356996",
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica GeForce RTX 5050 con 8 GB de memoria GDDR6 y 201 mm de largo, formato de 2 ranuras.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "chip": "RTX 5050",
+      "memory_type": "gddr6",
+      "memory_gb": 8,
+      "length_mm": 201,
+      "slots": 2.0,
+      "tdp_w": 130,
+      "psu_w": 550
+    },
+    "sources": [
+      "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5050/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&GTIN=4719331356996"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/c8cc340a0a1672e62a555ca2d5d5572d103965a5.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "tdp_w es la cifra oficial del chip (NVIDIA): gigabyte.com devolvió 403 y no se pudo leer si el ensamblador publica otra. CONFLICTO: Icecat lista TDP 94 W para este modelo, muy por debajo del TGP oficial de 130 W; no se usó por no poder confirmarlo con el fabricante. psu_w de Icecat."
+  },
+  {
+    "key": "gpu-asus-rtx5060-dual-oc-8g",
+    "name": "ASUS Dual GeForce RTX 5060 8GB GDDR7 OC Edition",
+    "brand": "ASUS",
+    "mpn": "DUAL-RTX5060-O8G",
+    "gtin": null,
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica GeForce RTX 5060 con 8 GB de memoria GDDR7 y 228 mm de largo, formato de 2.5 ranuras.",
+    "market_evidence": "IN+PB+DL",
+    "specs": {
+      "chip": "RTX 5060",
+      "memory_type": "gddr7",
+      "memory_gb": 8,
+      "length_mm": 228,
+      "slots": 2.5,
+      "tdp_w": 145,
+      "psu_w": 550
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/graphics-cards/dual/dual-rtx5060-o8g/techspec/",
+      "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5060-family/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ASUS&ProductCode=DUAL-RTX5060-O8G"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/f0aaa94c64240f81463e925b86eaa3cd9a7742b3.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "tdp_w es la cifra oficial del chip: NVIDIA RTX 5060, 145 W (el ensamblador no la publica en la ficha leída). GTIN omitido: el de Icecat (4711636057899) corresponde a otro SKU regional (90YV0N12-M0NA00)."
+  },
+  {
+    "key": "gpu-gigabyte-rtx5060-windforce-max-oc-8g",
+    "name": "Gigabyte GeForce RTX 5060 WINDFORCE MAX OC 8G",
+    "brand": "Gigabyte",
+    "mpn": "GV-N5060WF2MAX OC-8GD",
+    "gtin": "4719331356699",
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica GeForce RTX 5060 con 8 GB de memoria GDDR7 y 199 mm de largo, formato de 2 ranuras.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "chip": "RTX 5060",
+      "memory_type": "gddr7",
+      "memory_gb": 8,
+      "length_mm": 199,
+      "slots": 2.0,
+      "tdp_w": 145,
+      "psu_w": 550
+    },
+    "sources": [
+      "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5060-family/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&GTIN=4719331356699"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/d3e9ddfedd99dad01e114757e3789f8d3ae2e651.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "tdp_w es la cifra oficial del chip (NVIDIA): gigabyte.com devolvió 403 y no se pudo leer si el ensamblador publica otra. CONFLICTO: Icecat lista TDP 109 W para este modelo, muy por debajo del TGP oficial de 145 W; no se usó por no poder confirmarlo con el fabricante. psu_w de Icecat."
+  },
+  {
+    "key": "gpu-asus-rtx5060ti-dual-oc-8g",
+    "name": "ASUS Dual GeForce RTX 5060 Ti 8GB GDDR7 OC Edition",
+    "brand": "ASUS",
+    "mpn": "DUAL-RTX5060TI-O8G",
+    "gtin": "4711636014175",
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica GeForce RTX 5060 Ti con 8 GB de memoria GDDR7 y 229 mm de largo, formato de 2.5 ranuras.",
+    "market_evidence": "PB+DL",
+    "specs": {
+      "chip": "RTX 5060 Ti",
+      "memory_type": "gddr7",
+      "memory_gb": 8,
+      "length_mm": 229,
+      "slots": 2.5,
+      "tdp_w": 180,
+      "psu_w": 550
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/graphics-cards/dual/dual-rtx5060ti-o8g/techspec/",
+      "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5060-family/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ASUS&ProductCode=DUAL-RTX5060TI-O8G"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/9d6012dc2529e861fdd0f2ac6e7aa646e72ab755.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "tdp_w es la cifra oficial del chip: NVIDIA RTX 5060 Ti, 180 W (el ensamblador no la publica en la ficha leída). psu_w 550 W publicado por ASUS para este modelo; NVIDIA indica 600 W para el chip."
+  },
+  {
+    "key": "gpu-gigabyte-rtx5060ti-eagle-oc-8g",
+    "name": "Gigabyte GeForce RTX 5060 Ti EAGLE OC 8G",
+    "brand": "Gigabyte",
+    "mpn": "GV-N506TEAGLE OC-8GD",
+    "gtin": "4719331356101",
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica GeForce RTX 5060 Ti con 8 GB de memoria GDDR7 y 215 mm de largo, formato de 2 ranuras.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "chip": "RTX 5060 Ti",
+      "memory_type": "gddr7",
+      "memory_gb": 8,
+      "length_mm": 215,
+      "slots": 2.0,
+      "tdp_w": 180,
+      "psu_w": 650
+    },
+    "sources": [
+      "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5060-family/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&GTIN=4719331356101"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/037ce81a677b9852e003c61aa92f8a80a024d964.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "tdp_w es la cifra oficial del chip (NVIDIA): gigabyte.com devolvió 403 y no se pudo leer si el ensamblador publica otra. CONFLICTO: Icecat lista TDP 135 W para este modelo, muy por debajo del TGP oficial de 180 W; no se usó por no poder confirmarlo con el fabricante. psu_w de Icecat (NVIDIA indica 600 W para el chip)."
+  },
+  {
+    "key": "gpu-gigabyte-rtx5060ti-windforce-oc-8g",
+    "name": "Gigabyte GeForce RTX 5060 Ti WINDFORCE OC 8G",
+    "brand": "Gigabyte",
+    "mpn": "GV-N506TWF2OC-8GD",
+    "gtin": "4719331356057",
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica GeForce RTX 5060 Ti con 8 GB de memoria GDDR7 y 208 mm de largo, formato de 2 ranuras.",
+    "market_evidence": "IN",
+    "specs": {
+      "chip": "RTX 5060 Ti",
+      "memory_type": "gddr7",
+      "memory_gb": 8,
+      "length_mm": 208,
+      "slots": 2.0,
+      "tdp_w": 180,
+      "psu_w": 650
+    },
+    "sources": [
+      "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5060-family/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&GTIN=4719331356057"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/41e8146403cfc1917f3dcafee7f9bb8001dc42fd.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "tdp_w es la cifra oficial del chip (NVIDIA): gigabyte.com devolvió 403 y no se pudo leer si el ensamblador publica otra. CONFLICTO: Icecat lista TDP 135 W para este modelo, muy por debajo del TGP oficial de 180 W; no se usó por no poder confirmarlo con el fabricante. psu_w de Icecat (NVIDIA indica 600 W para el chip)."
+  },
+  {
+    "key": "gpu-asus-rtx5070-prime-oc-12g",
+    "name": "ASUS Prime GeForce RTX 5070 12GB GDDR7 OC Edition",
+    "brand": "ASUS",
+    "mpn": "PRIME-RTX5070-O12G",
+    "gtin": "4711387837825",
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica GeForce RTX 5070 con 12 GB de memoria GDDR7 y 304 mm de largo, formato de 2.5 ranuras.",
+    "market_evidence": "DL",
+    "specs": {
+      "chip": "RTX 5070",
+      "memory_type": "gddr7",
+      "memory_gb": 12,
+      "length_mm": 304,
+      "slots": 2.5,
+      "tdp_w": 250,
+      "psu_w": 750
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/graphics-cards/prime/prime-rtx5070-o12g/techspec/",
+      "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ASUS&ProductCode=PRIME-RTX5070-O12G"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/65f0062ca33986c5992ec9051c60ec2f516235a1.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "tdp_w es la cifra oficial del chip: NVIDIA RTX 5070, 250 W (el ensamblador no la publica en la ficha leída). psu_w 750 W publicado por ASUS; NVIDIA indica 650 W para el chip."
+  },
+  {
+    "key": "gpu-asus-rtx5070-tuf-gaming-oc-12g",
+    "name": "ASUS TUF Gaming GeForce RTX 5070 12GB GDDR7 OC Edition",
+    "brand": "ASUS",
+    "mpn": "TUF-RTX5070-O12G-GAMING",
+    "gtin": null,
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica GeForce RTX 5070 con 12 GB de memoria GDDR7 y 329 mm de largo, formato de 3.125 ranuras.",
+    "market_evidence": "PB+DL",
+    "specs": {
+      "chip": "RTX 5070",
+      "memory_type": "gddr7",
+      "memory_gb": 12,
+      "length_mm": 329,
+      "slots": 3.125,
+      "tdp_w": 250,
+      "psu_w": 750
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/graphics-cards/tuf-gaming/tuf-rtx5070-o12g-gaming/techspec/",
+      "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ASUS&ProductCode=TUF-RTX5070-O12G-GAMING"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/3814a4fac927e5f6bf90a9f805c3d2328cc3382e.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "tdp_w es la cifra oficial del chip: NVIDIA RTX 5070, 250 W (el ensamblador no la publica en la ficha leída). psu_w 750 W publicado por ASUS; NVIDIA indica 650 W para el chip. Icecat no trae GTIN."
+  },
+  {
+    "key": "gpu-msi-rtx5070-ventus-2x-oc-12g",
+    "name": "MSI GeForce RTX 5070 12G VENTUS 2X OC",
+    "brand": "MSI",
+    "mpn": "GEFORCE RTX 5070 12G VENTUS 2X OC",
+    "gtin": "4711377308229",
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica GeForce RTX 5070 con 12 GB de memoria GDDR7 y 236 mm de largo.",
+    "market_evidence": "PB",
+    "specs": {
+      "chip": "RTX 5070",
+      "memory_type": "gddr7",
+      "memory_gb": 12,
+      "length_mm": 236,
+      "slots": null,
+      "tdp_w": 250,
+      "psu_w": 650
+    },
+    "sources": [
+      "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=MSI&ProductCode=GEFORCE%20RTX%205070%2012G%20VENTUS%202X%20OC"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/43814b6abfa39d9d97318592d7556f72e40d0525.jpg",
+    "image_source": "icecat",
+    "verified": false,
+    "notes": "slots null: msi.com devolvió 403 e Icecat no publica ranuras para este modelo; no se infirió del grosor (50 mm). tdp_w y psu_w de Icecat; coinciden con NVIDIA."
+  },
+  {
+    "key": "gpu-asus-rtx5070ti-prime-oc-16g",
+    "name": "ASUS Prime GeForce RTX 5070 Ti 16GB GDDR7 OC Edition",
+    "brand": "ASUS",
+    "mpn": "PRIME-RTX5070TI-O16G",
+    "gtin": "4711387861516",
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica GeForce RTX 5070 Ti con 16 GB de memoria GDDR7 y 304 mm de largo, formato de 2.5 ranuras.",
+    "market_evidence": "DL",
+    "specs": {
+      "chip": "RTX 5070 Ti",
+      "memory_type": "gddr7",
+      "memory_gb": 16,
+      "length_mm": 304,
+      "slots": 2.5,
+      "tdp_w": 300,
+      "psu_w": 750
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/graphics-cards/prime/prime-rtx5070ti-o16g/techspec/",
+      "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ASUS&ProductCode=PRIME-RTX5070TI-O16G"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/468907348fd7aec8f60cb0341a90cbaf7c098540.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "tdp_w es la cifra oficial del chip: NVIDIA RTX 5070 Ti, 300 W (el ensamblador no la publica en la ficha leída). length_mm 304 de asus.com; Icecat lista 306 mm, se prefirió el fabricante."
+  },
+  {
+    "key": "gpu-asus-rtx5070ti-tuf-gaming-oc-16g",
+    "name": "ASUS TUF Gaming GeForce RTX 5070 Ti 16GB GDDR7 OC Edition",
+    "brand": "ASUS",
+    "mpn": "TUF-RTX5070TI-O16G-GAMING",
+    "gtin": null,
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica GeForce RTX 5070 Ti con 16 GB de memoria GDDR7 y 329 mm de largo, formato de 3.125 ranuras.",
+    "market_evidence": "DL",
+    "specs": {
+      "chip": "RTX 5070 Ti",
+      "memory_type": "gddr7",
+      "memory_gb": 16,
+      "length_mm": 329,
+      "slots": 3.125,
+      "tdp_w": 300,
+      "psu_w": 850
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/graphics-cards/tuf-gaming/tuf-rtx5070ti-o16g-gaming/techspec/",
+      "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/",
+      "https://www.asus.com/motherboards-components/graphics-cards/tuf-gaming/tuf-rtx5070ti-o16g-gaming/"
+    ],
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/a1ff0778-334d-4bc1-8862-7bfd44f2754b/w800",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "tdp_w es la cifra oficial del chip: NVIDIA RTX 5070 Ti, 300 W (el ensamblador no la publica en la ficha leída). psu_w 850 W publicado por ASUS; NVIDIA indica 750 W para el chip. Producto ausente en Open Icecat."
+  },
+  {
+    "key": "gpu-xfx-rx7600-speedster-swft-210-8g",
+    "name": "XFX Speedster SWFT 210 AMD Radeon RX 7600 Core Edition",
+    "brand": "XFX",
+    "mpn": "RX-76PSWFTFY",
+    "gtin": null,
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica Radeon RX 7600 con 8 GB de memoria GDDR6 y 241 mm de largo, formato de 2 ranuras.",
+    "market_evidence": "IN",
+    "specs": {
+      "chip": "RX 7600",
+      "memory_type": "gddr6",
+      "memory_gb": 8,
+      "length_mm": 241,
+      "slots": 2.0,
+      "tdp_w": 165,
+      "psu_w": 550
+    },
+    "sources": [
+      "https://www.xfxforce.com/shop/xfx-speedster-swft-210-amd-radeon-tm-rx-7600-core-edition",
+      "https://ir.amd.com/news-events/press-releases/detail/1133/amd-introduces-amd-radeon-rx-7600-graphics-card-for-superb-next-gen-1080p-gaming"
+    ],
+    "image_url": "https://cdn.prod.website-files.com/5d1911406ad3cbdb9924a753/646ce32996ab7d830295a051_XFX%207600%20SWFT210%20%20card%2Bbox.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "tdp_w es la cifra oficial del chip: comunicado AMD RX 7600, TBP 165 W (el ensamblador no la publica en la ficha leída). XFX rotula las dimensiones como estimadas (length_mm convertido de 24.1 cm)."
+  },
+  {
+    "key": "gpu-xfx-rx7600-speedster-qick-308-8g",
+    "name": "XFX Speedster QICK 308 AMD Radeon RX 7600 Black Edition",
+    "brand": "XFX",
+    "mpn": "RX-76PQICKBY",
+    "gtin": null,
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica Radeon RX 7600 con 8 GB de memoria GDDR6 y 274 mm de largo, formato de 2.5 ranuras.",
+    "market_evidence": "IN",
+    "specs": {
+      "chip": "RX 7600",
+      "memory_type": "gddr6",
+      "memory_gb": 8,
+      "length_mm": 274,
+      "slots": 2.5,
+      "tdp_w": 165,
+      "psu_w": 550
+    },
+    "sources": [
+      "https://www.xfxforce.com/shop/xfx-speedster-qick-308-amd-radeon-tm-rx-7600-black-edition",
+      "https://ir.amd.com/news-events/press-releases/detail/1133/amd-introduces-amd-radeon-rx-7600-graphics-card-for-superb-next-gen-1080p-gaming"
+    ],
+    "image_url": "https://cdn.prod.website-files.com/5d1911406ad3cbdb9924a753/646ce05ea5e6d5228346e491_XFX%207600%20QICK308%20card%2Bbox.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "tdp_w es la cifra oficial del chip: comunicado AMD RX 7600, TBP 165 W (el ensamblador no la publica en la ficha leída). XFX rotula las dimensiones como estimadas (length_mm convertido de 27.4 cm)."
+  },
+  {
+    "key": "gpu-asus-rx9060xt-prime-oc-8g",
+    "name": "ASUS Prime Radeon RX 9060 XT OC Edition 8GB GDDR6",
+    "brand": "ASUS",
+    "mpn": "PRIME-RX9060XT-O8G",
+    "gtin": "4711387994184",
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica Radeon RX 9060 XT con 8 GB de memoria GDDR6 y 304 mm de largo, formato de 2.5 ranuras.",
+    "market_evidence": "IN+PB",
+    "specs": {
+      "chip": "RX 9060 XT",
+      "memory_type": "gddr6",
+      "memory_gb": 8,
+      "length_mm": 304,
+      "slots": 2.5,
+      "tdp_w": 150,
+      "psu_w": 550
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/graphics-cards/prime/prime-rx9060xt-o8g/techspec/",
+      "https://newsroom.amd.com/news/amd-introduces-new-radeon-graphics-cards-and-ryzen/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ASUS&ProductCode=PRIME-RX9060XT-O8G"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/b6b74666970a692f483ed17466e2769683182f68.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "tdp_w es la cifra oficial del chip: anuncio AMD RX 9060 XT 8 GB, TBP \"Starting at 150W\"; es un valor mínimo (el ensamblador no la publica en la ficha leída)."
+  },
+  {
+    "key": "gpu-xfx-rx9060xt-swift-oc-white-triple-16g",
+    "name": "XFX Swift AMD Radeon RX 9060 XT OC White Triple Fan Gaming Edition 16GB",
+    "brand": "XFX",
+    "mpn": "RX-96TS316W7",
+    "gtin": null,
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica Radeon RX 9060 XT con 16 GB de memoria GDDR6 y 290 mm de largo, formato de 2 ranuras.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "chip": "RX 9060 XT",
+      "memory_type": "gddr6",
+      "memory_gb": 16,
+      "length_mm": 290,
+      "slots": 2.0,
+      "tdp_w": 160,
+      "psu_w": 450
+    },
+    "sources": [
+      "https://www.xfxforce.com/shop/xfx-swift-amd-radeon-rx-9060xt-oc-white-triple-fan-gaming-edition-16gb",
+      "https://newsroom.amd.com/news/amd-introduces-new-radeon-graphics-cards-and-ryzen/"
+    ],
+    "image_url": "https://cdn.prod.website-files.com/5d1911406ad3cbdb9924a753/683dce4abd9ea66d337d3243_SwiftWhite3Fan.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "tdp_w es la cifra oficial del chip: anuncio AMD RX 9060 XT 16 GB, TBP \"Starting at 160W\"; es un valor mínimo (el ensamblador no la publica en la ficha leída). XFX rotula las dimensiones como estimadas (length_mm convertido de 29 cm)."
+  },
+  {
+    "key": "gpu-xfx-rx9070xt-swift-triple-16g",
+    "name": "XFX Swift AMD Radeon RX 9070XT Triple Fan Gaming Edition",
+    "brand": "XFX",
+    "mpn": "RX-97TSWF3B9",
+    "gtin": null,
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica Radeon RX 9070 XT con 16 GB de memoria GDDR6 y 325 mm de largo, formato de 3.5 ranuras.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "chip": "RX 9070 XT",
+      "memory_type": "gddr6",
+      "memory_gb": 16,
+      "length_mm": 325,
+      "slots": 3.5,
+      "tdp_w": 304,
+      "psu_w": 850
+    },
+    "sources": [
+      "https://www.xfxforce.com/shop/xfx-swift-amd-radeon-rx-9070xt-triple-fan-gaming-edition",
+      "https://ir.amd.com/news-events/press-releases/detail/1238/amd-unveils-next-generation-amd-rdna-4-architecture-with-the-launch-of-amd-radeon-rx-9000-series-graphics-cards"
+    ],
+    "image_url": "https://cdn.prod.website-files.com/5d1911406ad3cbdb9924a753/67aa486c4ae0bbbd13be4b20_Box_Mockup_SWIFT_RX_9700_XT_Black_9-PACK_100_RX-97TSWF3B9.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "tdp_w es la cifra oficial del chip: comunicado AMD RX 9070 XT, TBP 304 W (el ensamblador no la publica en la ficha leída). XFX rotula las dimensiones como estimadas (length_mm convertido de 32.5 cm). psu_w 850 W publicado por XFX para este modelo."
+  },
+  {
+    "key": "gpu-xfx-rx9070xt-swift-white-triple-16g",
+    "name": "XFX Swift AMD Radeon RX 9070XT White Triple Fan Gaming Edition",
+    "brand": "XFX",
+    "mpn": "RX-97TSWF3W9",
+    "gtin": null,
+    "category": "gpu",
+    "summary_es": "Tarjeta gráfica Radeon RX 9070 XT con 16 GB de memoria GDDR6 y 325 mm de largo, formato de 3.5 ranuras.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "chip": "RX 9070 XT",
+      "memory_type": "gddr6",
+      "memory_gb": 16,
+      "length_mm": 325,
+      "slots": 3.5,
+      "tdp_w": 304,
+      "psu_w": 850
+    },
+    "sources": [
+      "https://www.xfxforce.com/shop/xfx-swift-amd-radeon-rx-9070xt-white-triple-fan-gaming-edition",
+      "https://ir.amd.com/news-events/press-releases/detail/1238/amd-unveils-next-generation-amd-rdna-4-architecture-with-the-launch-of-amd-radeon-rx-9000-series-graphics-cards"
+    ],
+    "image_url": "https://cdn.prod.website-files.com/5d1911406ad3cbdb9924a753/67aa49163207ac3b1e913d77_Box_Mockup_SWIFT_RX_9700_XT_White_9-PACK_100_RX-97TSWF3W9.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "tdp_w es la cifra oficial del chip: comunicado AMD RX 9070 XT, TBP 304 W (el ensamblador no la publica en la ficha leída). XFX rotula las dimensiones como estimadas (length_mm convertido de 32.5 cm). psu_w 850 W publicado por XFX para este modelo."
+  }
+]

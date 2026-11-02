@@ -1,0 +1,468 @@
+[
+  {
+    "key": "case-deepcool-cg580",
+    "name": "DeepCool CG580",
+    "brand": "DeepCool",
+    "mpn": "R-CG580-BKNDA0-G-1",
+    "gtin": "6933412774112",
+    "category": "case",
+    "summary_es": "Gabinete ATX de cámara única con paneles panorámicos de vidrio templado, sin ventiladores preinstalados.",
+    "market_evidence": "IN+PB",
+    "specs": {
+      "formats": [
+        "mini_itx",
+        "micro_atx",
+        "atx"
+      ],
+      "max_gpu_mm": 262,
+      "max_cooler_mm": 176,
+      "max_radiator_mm": 360,
+      "bays_2_5": 3,
+      "bays_3_5": 2
+    },
+    "sources": [
+      "https://www.deepcool.com/products/Cases/CG580-Panoramic-ATX-Case/2024/18933.shtml"
+    ],
+    "image_url": "https://cdn.deepcool.com/public/ProductFile/DEEPCOOL/Cases/CG580/Gallery/800X800/01.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "GPU: el fabricante publica 410 mm, limitado a 262 mm con radiador y ventiladores de 360 mm en el lateral; se usa la menor. Bahías 2.5\": publicado como \"2+1\", registrado como 3."
+  },
+  {
+    "key": "case-deepcool-cc560-v2",
+    "name": "DeepCool CC560 V2",
+    "brand": "DeepCool",
+    "mpn": "R-CC560-BKGAA4-G-2",
+    "gtin": "6933412774617",
+    "category": "case",
+    "summary_es": "Gabinete mid-tower ATX con panel lateral de vidrio templado y cuatro ventiladores LED preinstalados.",
+    "market_evidence": "IN",
+    "specs": {
+      "formats": [
+        "mini_itx",
+        "micro_atx",
+        "atx"
+      ],
+      "max_gpu_mm": 370,
+      "max_cooler_mm": 165,
+      "max_radiator_mm": 360,
+      "bays_2_5": 3,
+      "bays_3_5": 2
+    },
+    "sources": [
+      "https://www.deepcool.com/products/Cases/CC560-V2-Mid-Tower-Airflow-Case/2023/17782.shtml"
+    ],
+    "image_url": "https://cdn.deepcool.com/public/ProductFile/DEEPCOOL/Cases/CC560_V2/Gallery/800X800/01.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "Bahías 2.5\": publicado como \"2+1\", registrado como 3."
+  },
+  {
+    "key": "case-deepcool-ch260",
+    "name": "DeepCool CH260",
+    "brand": "DeepCool",
+    "mpn": "R-CH260-BKNGM0-G-1",
+    "gtin": "6933412765233",
+    "category": "case",
+    "summary_es": "Gabinete compacto Micro-ATX con panel lateral de vidrio templado y paneles superior y frontal perforados, sin ventiladores preinstalados.",
+    "market_evidence": "IN",
+    "specs": {
+      "formats": [
+        "mini_itx",
+        "micro_atx"
+      ],
+      "max_gpu_mm": 388,
+      "max_cooler_mm": 174,
+      "max_radiator_mm": 360,
+      "bays_2_5": 1,
+      "bays_3_5": 1
+    },
+    "sources": [
+      "https://www.deepcool.com/products/Cases/CH260-High-Airflow-M-ATX-Compact-Case-Supports-Rear-Connector-Motherboards/2025/20030.shtml"
+    ],
+    "image_url": "https://cdn.deepcool.com/public/ProductFile/DEEPCOOL/Cases/CH260/Gallery/800X800/01.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "GPU: el fabricante publica 388/413 mm (413 mm sin ventiladores frontales); se usa la menor."
+  },
+  {
+    "key": "case-msi-mag-forge-120a-airflow",
+    "name": "MSI MAG Forge 120A Airflow",
+    "brand": "MSI",
+    "mpn": "MAG FORGE 120A AIRFLOW",
+    "gtin": "4711377121576",
+    "category": "case",
+    "summary_es": "Gabinete mid-tower ATX con panel frontal de malla.",
+    "market_evidence": "DL+IN",
+    "specs": {
+      "formats": [
+        "mini_itx",
+        "micro_atx",
+        "atx"
+      ],
+      "max_gpu_mm": 330,
+      "max_cooler_mm": 160,
+      "max_radiator_mm": 240,
+      "bays_2_5": 3,
+      "bays_3_5": 2
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=en&Brand=MSI&ProductCode=MAG%20FORGE%20120A%20AIRFLOW",
+      "https://objects.icecat.biz/objects/mmo_114593746_1702241589_3214_18480.pdf"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/bd05c005d388191f5aad4907164f2b40162d5e3d.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "msi.com devolvió 403; datos de Icecat y de la hoja de datos MSI alojada en Icecat. Bahías: 3 x 2.5\" y 2 x 2.5\"/3.5\" combo; bays_3_5 cuenta las combo. El MPN es el BrandPartCode de Icecat."
+  },
+  {
+    "key": "case-msi-mag-pano-110r-pz",
+    "name": "MSI MAG Pano 110R PZ",
+    "brand": "MSI",
+    "mpn": "306-7G28R21-JA4",
+    "gtin": "4711377293181",
+    "category": "case",
+    "summary_es": "Gabinete mid-tower ATX panorámico de vidrio templado con cuatro ventiladores ARGB preinstalados.",
+    "market_evidence": "DL+IN",
+    "specs": {
+      "formats": [
+        "mini_itx",
+        "micro_atx",
+        "atx"
+      ],
+      "max_gpu_mm": 400,
+      "max_cooler_mm": 160,
+      "max_radiator_mm": 360,
+      "bays_2_5": 2,
+      "bays_3_5": 2
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=en&Brand=MSI&ProductCode=306-7G28R21-JA4",
+      "https://objects.icecat.biz/objects/mmo_129543757_1745405663_7335_1120256.pdf"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/8890f8e80a1eb89149083f7acff3cb29653ef3e8.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "msi.com devolvió 403. La hoja de datos MSI alojada en Icecat prevalece: GPU 400 mm y PSU 200 mm. Los campos estructurados de Icecat dicen GPU 20 cm y PSU 40 cm (contradicen la hoja) y listan radiadores lateral e inferior que la hoja marca como NA; el máximo de 360 mm coincide. La hoja lista además 2 bahías combo 2.5\"/3.5\" no sumadas. El MPN se usó como código de consulta y Icecat lo resolvió a este producto."
+  },
+  {
+    "key": "case-msi-mag-pano-130r-pz",
+    "name": "MSI MAG Pano 130R PZ",
+    "brand": "MSI",
+    "mpn": "MAG PANO 130R PZ",
+    "gtin": "4711377365758",
+    "category": "case",
+    "summary_es": "Gabinete mid-tower ATX panorámico con cuatro ventiladores ARGB preinstalados.",
+    "market_evidence": "DL+IN",
+    "specs": {
+      "formats": [
+        "mini_itx",
+        "micro_atx",
+        "atx"
+      ],
+      "max_gpu_mm": 400,
+      "max_cooler_mm": 165,
+      "max_radiator_mm": 360,
+      "bays_2_5": 3,
+      "bays_3_5": 2
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=en&Brand=MSI&ProductCode=MAG%20PANO%20130R%20PZ",
+      "https://objects.icecat.biz/objects/mmo_134865731_1760945968_7271_1492363.pdf"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/85088c6c9fb9ebe0c1c2f253c292001f79adad01.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "msi.com devolvió 403; datos de Icecat y de la hoja de datos MSI alojada en Icecat. Bahías: hasta 3 x 2.5\" y hasta 2 x 3.5\", con máximo de 3 unidades instaladas a la vez. El MPN es el BrandPartCode de Icecat."
+  },
+  {
+    "key": "case-asus-tuf-gaming-gt302-argb",
+    "name": "ASUS TUF Gaming GT302 ARGB",
+    "brand": "ASUS",
+    "mpn": null,
+    "gtin": null,
+    "category": "case",
+    "summary_es": "Gabinete ATX con cuatro ventiladores ARGB de 140 mm preinstalados.",
+    "market_evidence": "DL",
+    "specs": {
+      "formats": [
+        "mini_itx",
+        "micro_atx",
+        "atx"
+      ],
+      "max_gpu_mm": 407,
+      "max_cooler_mm": 165,
+      "max_radiator_mm": 360,
+      "bays_2_5": 2,
+      "bays_3_5": 2
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/cases/tuf-gaming/tuf-gaming-gt302-argb/techspec/"
+    ],
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/26a5c1b0-b8a9-49ed-8721-2609fcc6bb60/",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "También admite EATX de hasta 12\" x 10.9\" (valor fuera del esquema). Bahías: 2 x 2.5\"/3.5\" combo y 2 x 2.5\"; bays_3_5 cuenta las combo. La imagen muestra las versiones negra y blanca."
+  },
+  {
+    "key": "case-asus-prime-ap202-argb",
+    "name": "ASUS Prime AP202 ARGB",
+    "brand": "ASUS",
+    "mpn": null,
+    "gtin": null,
+    "category": "case",
+    "summary_es": "Gabinete Micro-ATX con tres ventiladores ARGB de 120 mm preinstalados.",
+    "market_evidence": "DL",
+    "specs": {
+      "formats": [
+        "mini_itx",
+        "micro_atx"
+      ],
+      "max_gpu_mm": 420,
+      "max_cooler_mm": 175,
+      "max_radiator_mm": 360,
+      "bays_2_5": 2,
+      "bays_3_5": 2
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/cases/prime/asus-prime-ap202-argb/techspec/"
+    ],
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/b4ff7bf9-1a79-4ed4-8a86-728eed735cc6/",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "Bahías: 2 x 2.5\"/3.5\" combo, compartidas entre ambos campos (máximo 2 unidades). La imagen muestra las versiones negra y blanca."
+  },
+  {
+    "key": "case-antec-nx410",
+    "name": "Antec NX410",
+    "brand": "Antec",
+    "mpn": null,
+    "gtin": "0761345810418",
+    "category": "case",
+    "summary_es": "Gabinete ATX con frontal de malla, panel lateral de vidrio templado y tres ventiladores ARGB preinstalados.",
+    "market_evidence": "IN",
+    "specs": {
+      "formats": [
+        "mini_itx",
+        "micro_atx",
+        "atx"
+      ],
+      "max_gpu_mm": 335,
+      "max_cooler_mm": 168,
+      "max_radiator_mm": 360,
+      "bays_2_5": 3,
+      "bays_3_5": 2
+    },
+    "sources": [
+      "https://www.antec.com/product/case/nx410"
+    ],
+    "image_url": "https://www.antec.com/product/case/images/nx410-pdt01.png",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "Bahías publicadas: 3.5\"/2.5\" (convertible) 2/1 y 2.5\" 3; bays_2_5 no suma la convertible. GTIN del campo UPC# de la versión negra. La imagen muestra las versiones negra y blanca."
+  },
+  {
+    "key": "case-montech-xr",
+    "name": "Montech XR",
+    "brand": "Montech",
+    "mpn": null,
+    "gtin": null,
+    "category": "case",
+    "summary_es": "Gabinete ATX con tres ventiladores ARGB PWM de 120 mm preinstalados.",
+    "market_evidence": "IN+PB",
+    "specs": {
+      "formats": [
+        "mini_itx",
+        "micro_atx",
+        "atx"
+      ],
+      "max_gpu_mm": 420,
+      "max_cooler_mm": 175,
+      "max_radiator_mm": 360,
+      "bays_2_5": 2,
+      "bays_3_5": 2
+    },
+    "sources": [
+      "https://www.montechpc.com/xr"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "El fabricante lista dos EAN (4710562741421 / 4710562741476) sin indicar qué color corresponde a cada uno; gtin queda null. La página no expuso URL de imagen."
+  },
+  {
+    "key": "case-corsair-3000d-rgb-airflow",
+    "name": "Corsair 3000D RGB Airflow",
+    "brand": "Corsair",
+    "mpn": "CC-9011256-WW",
+    "gtin": null,
+    "category": "case",
+    "summary_es": "Gabinete mid-tower ATX con tres ventiladores AR120 RGB incluidos, versión blanca.",
+    "market_evidence": "PB",
+    "specs": {
+      "formats": [
+        "mini_itx",
+        "micro_atx",
+        "atx"
+      ],
+      "max_gpu_mm": 360,
+      "max_cooler_mm": 170,
+      "max_radiator_mm": 360,
+      "bays_2_5": 2,
+      "bays_3_5": 2
+    },
+    "sources": [
+      "https://www.corsair.com/us/en/p/pc-cases/cc-9011256-ww/3000d-rgb-tempered-glass-mid-tower-white-cc-9011256-ww",
+      "https://www.corsair.com/us/en/explorer/diy-builder/cases/3000-series-vs-4000-series-whats-the-difference/",
+      "https://www.corsair.com/us/en/explorer/diy-builder/cases/3000d-rgb-airflow-mid-tower-case/"
+    ],
+    "image_url": "https://res.cloudinary.com/corsair-pwa/image/upload/products/Cases/CC-9011256-WW/3000D_RGB_AF_WHITE_RENDER_01.png",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "SKU blanco, el observado en mercado. Formatos tomados de la tabla oficial de la serie 3000, que nombra al 3000D RGB AIRFLOW como variante; la ficha del producto no los lista. Bahías publicadas: 2 x 3.5\" o 2 x 2.5\" en caja combo, compartidas (máximo 2 unidades). El manual marca los radiadores como dependientes de la GPU, sin publicar una cifra de GPU reducida."
+  },
+  {
+    "key": "case-antryx-elegant-530m",
+    "name": "Antryx Elegant 530M",
+    "brand": "Antryx",
+    "mpn": null,
+    "gtin": null,
+    "category": "case",
+    "summary_es": "Gabinete Micro-ATX compacto con chasis SPCC de 0.45 mm y una bahía externa de 5.25\".",
+    "market_evidence": "IN+PB",
+    "specs": {
+      "formats": [
+        "mini_itx",
+        "micro_atx"
+      ],
+      "max_gpu_mm": 270,
+      "max_cooler_mm": 140,
+      "max_radiator_mm": null,
+      "bays_2_5": 2,
+      "bays_3_5": 2
+    },
+    "sources": [
+      "https://www.antryx.com/producto/case-elegant-530m/"
+    ],
+    "image_url": "https://www.antryx.com/wp-content/uploads/2022/12/ELEGANT-530M-01.png",
+    "image_source": "fabricante",
+    "verified": false,
+    "notes": "Incompleto: la ficha oficial no publica soporte de radiador, por lo que max_radiator_mm es null (no se asume 0). La ficha oficial no muestra MPN."
+  },
+  {
+    "key": "case-antryx-fx-800",
+    "name": "Antryx FX 800 Black",
+    "brand": "Antryx",
+    "mpn": "AC-FX800K",
+    "gtin": null,
+    "category": "case",
+    "summary_es": "Gabinete con panel frontal y lateral de vidrio templado y cuatro ventiladores ARGB instalados.",
+    "market_evidence": "IN",
+    "specs": {
+      "formats": [
+        "mini_itx",
+        "micro_atx",
+        "atx"
+      ],
+      "max_gpu_mm": 420,
+      "max_cooler_mm": 155,
+      "max_radiator_mm": 360,
+      "bays_2_5": 3,
+      "bays_3_5": 2
+    },
+    "sources": [
+      "https://www.antryx.com/producto/fx-800-black/"
+    ],
+    "image_url": "https://www.antryx.com/wp-content/uploads/2025/06/FX-800-BLACK-01R.png",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "También admite E-ATX (valor fuera del esquema) y placas BTF."
+  },
+  {
+    "key": "case-halion-dragon-cr15",
+    "name": "Halion Dragon CR15",
+    "brand": "Halion",
+    "mpn": null,
+    "gtin": null,
+    "category": "case",
+    "summary_es": "Gabinete mid-tower ATX con fuente de 500 W incluida y cuatro ventiladores LED rainbow de 120 mm.",
+    "market_evidence": "IN+PB",
+    "specs": {
+      "formats": [
+        "mini_itx",
+        "micro_atx",
+        "atx"
+      ],
+      "max_gpu_mm": null,
+      "max_cooler_mm": null,
+      "max_radiator_mm": 360,
+      "bays_2_5": 2,
+      "bays_3_5": 2
+    },
+    "sources": [
+      "https://halion.com.pe/shop/cases/cases-gamer/halion-cases-gamer/case-gamer-halion-dragon-cr15-con-fuente/"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": false,
+    "notes": "Incompleto: la ficha de la versión negra no publica largo de GPU ni altura de cooler. La ficha de la versión blanca indica \"hasta 31cm\" de GPU, pero no se traslada a otro SKU. Fuente: halion.com.pe, que se identifica como importador exclusivo en Perú y también ofrece otras marcas; no es un sitio confirmado del fabricante. Imagen null: el archivo devolvió 403."
+  },
+  {
+    "key": "case-teros-te-1033s",
+    "name": "Teros TE-1033S",
+    "brand": "Teros",
+    "mpn": "TE-1033S",
+    "gtin": null,
+    "category": "case",
+    "summary_es": "Gabinete mini tower Micro-ATX con fuente de 250 W incluida en posición superior y chasis de acero.",
+    "market_evidence": "DL+IN",
+    "specs": {
+      "formats": [
+        "mini_itx",
+        "micro_atx"
+      ],
+      "max_gpu_mm": 180,
+      "max_cooler_mm": 110,
+      "max_radiator_mm": null,
+      "bays_2_5": 2,
+      "bays_3_5": 2
+    },
+    "sources": [
+      "https://www.teroslatinamerica.com/producto-te-1033s.html",
+      "https://www.teroslatinamerica.com/descargas/te-1033s-ficha-tecnica.pdf"
+    ],
+    "image_url": "https://www.teroslatinamerica.com/img/te-1033s/main.webp",
+    "image_source": "fabricante",
+    "verified": false,
+    "notes": "Incompleto: ni la ficha web ni el PDF oficial publican soporte de radiador, por lo que max_radiator_mm es null (no se asume 0)."
+  },
+  {
+    "key": "case-teros-te-1323g",
+    "name": "Teros TE-1323G",
+    "brand": "Teros",
+    "mpn": "TE-1323G",
+    "gtin": null,
+    "category": "case",
+    "summary_es": "Gabinete mid-tower ATX con malla y vidrio y cuatro ventiladores ARGB de 120 mm incluidos.",
+    "market_evidence": "DL",
+    "specs": {
+      "formats": [
+        "mini_itx",
+        "micro_atx",
+        "atx"
+      ],
+      "max_gpu_mm": 370,
+      "max_cooler_mm": 174,
+      "max_radiator_mm": 360,
+      "bays_2_5": 2,
+      "bays_3_5": 2
+    },
+    "sources": [
+      "https://www.teroslatinamerica.com/producto-te-1323g.html"
+    ],
+    "image_url": "https://www.teroslatinamerica.com/img/te-1323g/main.webp",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": ""
+  }
+]

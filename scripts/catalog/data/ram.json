@@ -1,0 +1,379 @@
+[
+  {
+    "key": "ram-kingston-fury-beast-ddr4-3200-8",
+    "name": "Kingston FURY Beast DDR4-3200 8GB",
+    "brand": "Kingston",
+    "mpn": "KF432C16BB/8",
+    "gtin": "0740617319910",
+    "category": "ram",
+    "summary_es": "Módulo DDR4-3200 de 8 GB en formato DIMM de 288 pines con latencia CL16.",
+    "market_evidence": "IN+DL+PB",
+    "specs": {
+      "memory_type": "ddr4",
+      "capacity_gb": 8,
+      "modules": 1,
+      "speed_mts": 3200
+    },
+    "sources": [
+      "https://www.kingston.com/datasheets/KF432C16BB_8.pdf",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Kingston&ProductCode=KF432C16BB%2F8"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/7d12906b625b228f02f9435afc2253a18ca44287.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Velocidad nominal por perfil XMP; perfil JEDEC por defecto DDR4-2400 según la ficha. Imagen de serie: Icecat la comparte con otras capacidades o variantes y no muestra capacidad ni MPN."
+  },
+  {
+    "key": "ram-kingston-fury-beast-ddr4-3200-16",
+    "name": "Kingston FURY Beast DDR4-3200 16GB",
+    "brand": "Kingston",
+    "mpn": "KF432C16BB1/16",
+    "gtin": "0740617319880",
+    "category": "ram",
+    "summary_es": "Módulo DDR4-3200 de 16 GB en formato DIMM de 288 pines con latencia CL16.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "memory_type": "ddr4",
+      "capacity_gb": 16,
+      "modules": 1,
+      "speed_mts": 3200
+    },
+    "sources": [
+      "https://www.kingston.com/datasheets/KF432C16BB1_16.pdf",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Kingston&ProductCode=KF432C16BB1%2F16"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/7d12906b625b228f02f9435afc2253a18ca44287.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Velocidad nominal por perfil XMP; perfil JEDEC por defecto DDR4-2400 según la ficha. Imagen de serie: Icecat la comparte con otras capacidades o variantes y no muestra capacidad ni MPN."
+  },
+  {
+    "key": "ram-teamgroup-t-force-vulcan-z-ddr4-3200-8",
+    "name": "TeamGroup T-Force Vulcan Z DDR4-3200 8GB",
+    "brand": "TeamGroup",
+    "mpn": "TLZGD48G3200HC16F01",
+    "gtin": null,
+    "category": "ram",
+    "summary_es": "Módulo DDR4-3200 de 8 GB para escritorio, color gris, con latencia CL16.",
+    "market_evidence": "IN",
+    "specs": {
+      "memory_type": "ddr4",
+      "capacity_gb": 8,
+      "modules": 1,
+      "speed_mts": 3200
+    },
+    "sources": [
+      "https://www.teamgroupinc.com/en/product-detail/memory/T-FORCE/vulcan-z-ddr4-gray/vulcan-z-ddr4-gray-TLZGD48G3200HC16F01/",
+      "https://images.teamgroupinc.com/products/memory/u-dimm/ddr4/vulcan-z/spec-sheet/vulcan-z-en.pdf"
+    ],
+    "image_url": "https://images.teamgroupinc.com/products/memory/u-dimm/ddr4/vulcan-z/gray/01.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "La hoja oficial lo declara 288 Pin Non-ECC Unbuffered DIMM. Imagen común a la serie gris. PB vende el sufijo FBK y DL no precisa sufijo; no se cuentan como evidencia de F01."
+  },
+  {
+    "key": "ram-teamgroup-t-create-classic-ddr4-3200-16-kit",
+    "name": "TeamGroup T-Create Classic DDR4-3200 16GB (2x8GB)",
+    "brand": "TeamGroup",
+    "mpn": "TTCCD416G3200HC22DC01",
+    "gtin": null,
+    "category": "ram",
+    "summary_es": "Kit de dos módulos DDR4-3200 de 8 GB para escritorio, 16 GB en total, con latencia CL22.",
+    "market_evidence": "DL",
+    "specs": {
+      "memory_type": "ddr4",
+      "capacity_gb": 16,
+      "modules": 2,
+      "speed_mts": 3200
+    },
+    "sources": [
+      "https://www.teamgroupinc.com/en/product-detail/memory/T-CREATE/classic-u-dimm-ddr4/classic-u-dimm-ddr4-TTCCD416G3200HC22DC01/"
+    ],
+    "image_url": "https://images.teamgroupinc.com/products/memory/u-dimm/ddr4/classic-10l/dual_01.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "Kit. La página lo declara DESKTOP MEMORY; no menciona 288 pines. Existe una variante SO-DIMM con otro P/N (termina en DC-S01), no es este producto."
+  },
+  {
+    "key": "ram-adata-xpg-spectrix-d35g-ddr4-3200-16",
+    "name": "XPG Spectrix D35G DDR4-3200 16GB",
+    "brand": "XPG",
+    "mpn": "AX4U320016G16A-SBKD35G",
+    "gtin": "4711085943316",
+    "category": "ram",
+    "summary_es": "Módulo DDR4-3200 de 16 GB en formato DIMM de 288 pines, sin búfer y con compatibilidad XMP 2.0.",
+    "market_evidence": "IN",
+    "specs": {
+      "memory_type": "ddr4",
+      "capacity_gb": 16,
+      "modules": 1,
+      "speed_mts": 3200
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ADATA&ProductCode=AX4U320016G16A-SBKD35G"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/416031e04031003f4e1bcd75181b47af19b918a5.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única Icecat: xpg.com y adata.com respondieron 403. Icecat expresa la velocidad en MHz; se registra el mismo valor nominal en MT/s."
+  },
+  {
+    "key": "ram-hiksemi-armor-ddr4-3200-16",
+    "name": "Hiksemi ARMOR DDR4-3200 16GB",
+    "brand": "Hiksemi",
+    "mpn": null,
+    "gtin": null,
+    "category": "ram",
+    "summary_es": "Módulo UDIMM DDR4-3200 de 16 GB de 288 pines de la serie ARMOR.",
+    "market_evidence": "IN+DL+PB",
+    "specs": {
+      "memory_type": "ddr4",
+      "capacity_gb": 16,
+      "modules": 1,
+      "speed_mts": 3200
+    },
+    "sources": [
+      "https://www.hiksemitech.com/en/hiksemi/all-products/memory/memory-udimm/hs-udimm-armor.html",
+      "https://www.hiksemitech.com/en/hiksemi/all-products/memory/memory-udimm/hs-udimm-armor-black.html"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": false,
+    "notes": "No se marca verificado: las páginas oficiales son de serie y no publican número de parte, y las tiendas venden la versión negra con MPN HSC416U32D2-16G, que no pude confirmar en fuente permitida. La página ARMOR indica DDR4, 3200 MHz y 8GB|16GB, sin color; la página ARMOR Black solo da rangos (DDR4/DDR5, 3200 a 6400). Sus PDF por SKU en webassets.hiksemitech.com dieron 403. mpn e imagen quedan en null."
+  },
+  {
+    "key": "ram-kingston-fury-beast-ddr5-5600-16",
+    "name": "Kingston FURY Beast DDR5-5600 16GB",
+    "brand": "Kingston",
+    "mpn": "KF556C40BB-16",
+    "gtin": "0740617325713",
+    "category": "ram",
+    "summary_es": "Módulo DDR5-5600 de 16 GB en formato DIMM de 288 pines con latencia CL40.",
+    "market_evidence": "DL+PB",
+    "specs": {
+      "memory_type": "ddr5",
+      "capacity_gb": 16,
+      "modules": 1,
+      "speed_mts": 5600
+    },
+    "sources": [
+      "https://www.kingston.com/datasheets/KF556C40BB-16.pdf",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Kingston&ProductCode=KF556C40BB-16"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/fa14ed9c448dc7d778c892ecbca577915705430d.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Velocidad nominal por perfil XMP; perfil JEDEC por defecto DDR5-4800 según la ficha. Imagen de serie: Icecat la comparte con otras capacidades o variantes y no muestra capacidad ni MPN."
+  },
+  {
+    "key": "ram-kingston-fury-beast-ddr5-5600-32",
+    "name": "Kingston FURY Beast DDR5-5600 32GB",
+    "brand": "Kingston",
+    "mpn": "KF556C40BB-32",
+    "gtin": "0740617326567",
+    "category": "ram",
+    "summary_es": "Módulo DDR5-5600 de 32 GB en formato DIMM de 288 pines con latencia CL40.",
+    "market_evidence": "DL",
+    "specs": {
+      "memory_type": "ddr5",
+      "capacity_gb": 32,
+      "modules": 1,
+      "speed_mts": 5600
+    },
+    "sources": [
+      "https://www.kingston.com/datasheets/KF556C40BB-32.pdf",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Kingston&ProductCode=KF556C40BB-32"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/fa14ed9c448dc7d778c892ecbca577915705430d.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Velocidad nominal por perfil XMP; perfil JEDEC por defecto DDR5-4800 según la ficha. Imagen de serie: Icecat la comparte con otras capacidades o variantes y no muestra capacidad ni MPN."
+  },
+  {
+    "key": "ram-kingston-fury-beast-ddr5-6000-16",
+    "name": "Kingston FURY Beast DDR5-6000 16GB",
+    "brand": "Kingston",
+    "mpn": "KF560C36BBE-16",
+    "gtin": "0740617330762",
+    "category": "ram",
+    "summary_es": "Módulo DDR5-6000 de 16 GB en formato DIMM de 288 pines con latencia CL36.",
+    "market_evidence": "DL",
+    "specs": {
+      "memory_type": "ddr5",
+      "capacity_gb": 16,
+      "modules": 1,
+      "speed_mts": 6000
+    },
+    "sources": [
+      "https://www.kingston.com/datasheets/KF560C36BBE-16.pdf",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Kingston&ProductCode=KF560C36BBE-16"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/fa14ed9c448dc7d778c892ecbca577915705430d.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Velocidad nominal por perfil EXPO/XMP; perfil JEDEC por defecto DDR5-4800 según la ficha. Imagen de serie: Icecat la comparte con otras capacidades o variantes y no muestra capacidad ni MPN."
+  },
+  {
+    "key": "ram-kingston-fury-beast-rgb-ddr5-6000-32",
+    "name": "Kingston FURY Beast RGB DDR5-6000 32GB",
+    "brand": "Kingston",
+    "mpn": "KF560C36BBEA-32",
+    "gtin": "0740617331899",
+    "category": "ram",
+    "summary_es": "Módulo DDR5-6000 de 32 GB con iluminación RGB, en formato DIMM de 288 pines y latencia CL36.",
+    "market_evidence": "DL",
+    "specs": {
+      "memory_type": "ddr5",
+      "capacity_gb": 32,
+      "modules": 1,
+      "speed_mts": 6000
+    },
+    "sources": [
+      "https://www.kingston.com/datasheets/KF560C36BBEA-32.pdf",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Kingston&ProductCode=KF560C36BBEA-32"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/e059e296b80ab7706e06ed2f792ecd848157075c.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Velocidad nominal por perfil EXPO/XMP; perfil JEDEC por defecto DDR5-4800 según la ficha."
+  },
+  {
+    "key": "ram-kingston-ddr5-5600-16",
+    "name": "Kingston DDR5-5600 16GB",
+    "brand": "Kingston",
+    "mpn": "KCP556US8-16",
+    "gtin": "0740617334357",
+    "category": "ram",
+    "summary_es": "Módulo DDR5-5600 de 16 GB en formato DIMM de 288 pines, sin búfer.",
+    "market_evidence": "DL",
+    "specs": {
+      "memory_type": "ddr5",
+      "capacity_gb": 16,
+      "modules": 1,
+      "speed_mts": 5600
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Kingston&ProductCode=KCP556US8-16"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/be6920e2b37f7fb802ac7215fda1db1547c9a50e.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única Icecat: las páginas de producto de kingston.com dieron 403 y no hay ficha PDF con este nombre."
+  },
+  {
+    "key": "ram-kingston-ddr5-5600-32",
+    "name": "Kingston DDR5-5600 32GB",
+    "brand": "Kingston",
+    "mpn": "KCP556UD8-32",
+    "gtin": "0740617334395",
+    "category": "ram",
+    "summary_es": "Módulo DDR5-5600 de 32 GB en formato DIMM de 288 pines, sin búfer.",
+    "market_evidence": "DL",
+    "specs": {
+      "memory_type": "ddr5",
+      "capacity_gb": 32,
+      "modules": 1,
+      "speed_mts": 5600
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Kingston&ProductCode=KCP556UD8-32"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/ffeedcfd00e90ef4139f1c97b0810f32585b9540.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única Icecat: las páginas de producto de kingston.com dieron 403 y no hay ficha PDF con este nombre."
+  },
+  {
+    "key": "ram-adata-xpg-lancer-blade-ddr5-5600-16",
+    "name": "XPG Lancer Blade DDR5-5600 16GB",
+    "brand": "XPG",
+    "mpn": "AX5U5600C4616G-SLABBK",
+    "gtin": "4711085945440",
+    "category": "ram",
+    "summary_es": "Módulo DDR5-5600 de 16 GB en formato DIMM de 288 pines, sin búfer y con compatibilidad XMP 3.0.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "memory_type": "ddr5",
+      "capacity_gb": 16,
+      "modules": 1,
+      "speed_mts": 5600
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ADATA&ProductCode=AX5U5600C4616G-SLABBK"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/94873681fcd7d35c179c360bd53bdd116690f6d7.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única Icecat: xpg.com y adata.com respondieron 403. Icecat expresa la velocidad en MHz; se registra el mismo valor nominal en MT/s. Icecat marca ECC=Sí con búfer unregistered; no tratar como módulo ECC sin confirmar con el fabricante."
+  },
+  {
+    "key": "ram-adata-xpg-lancer-blade-ddr5-6000-16",
+    "name": "XPG Lancer Blade DDR5-6000 16GB",
+    "brand": "XPG",
+    "mpn": "AX5U6000C3616G-SLABRWH",
+    "gtin": "4711658152299",
+    "category": "ram",
+    "summary_es": "Módulo DDR5-6000 de 16 GB en formato DIMM de 288 pines, con compatibilidad XMP 3.0.",
+    "market_evidence": "IN",
+    "specs": {
+      "memory_type": "ddr5",
+      "capacity_gb": 16,
+      "modules": 1,
+      "speed_mts": 6000
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ADATA&ProductCode=AX5U6000C3616G-SLABRWH"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/d8c4c4e19582a44fc0f9cbbd0cd91e63d879a970.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única Icecat: xpg.com y adata.com respondieron 403. Icecat marca ECC y On-Die ECC=Sí; no tratar como módulo ECC. Icecat no nombra la serie: \"Lancer Blade\" viene del listado de IN."
+  },
+  {
+    "key": "ram-teamgroup-t-force-delta-rgb-ddr5-6000-16",
+    "name": "TeamGroup T-Force Delta RGB DDR5-6000 16GB",
+    "brand": "TeamGroup",
+    "mpn": "FF3D516G6000HC38A01",
+    "gtin": null,
+    "category": "ram",
+    "summary_es": "Módulo DDR5-6000 de 16 GB para escritorio, color negro con RGB, con latencia CL38.",
+    "market_evidence": "DL",
+    "specs": {
+      "memory_type": "ddr5",
+      "capacity_gb": 16,
+      "modules": 1,
+      "speed_mts": 6000
+    },
+    "sources": [
+      "https://www.teamgroupinc.com/en/product-detail/memory/T-FORCE/delta-rgb-ddr5-black/delta-rgb-ddr5-black-FF3D516G6000HC38A01/",
+      "https://images.teamgroupinc.com/products/memory/u-dimm/ddr5/delta-rgb/spec-sheet/delta-rgb-en.pdf"
+    ],
+    "image_url": "https://images.teamgroupinc.com/products/memory/u-dimm/ddr5/delta-rgb/black/01.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "La hoja oficial declara DDR5 288 Pin Non-ECC Unbuffered DIMM. Imagen común a la serie negra. La misma página lista variantes J01 y G01 con otro P/N; los datos son solo de A01."
+  },
+  {
+    "key": "ram-corsair-vengeance-ddr5-6000-16",
+    "name": "Corsair Vengeance DDR5-6000 16GB",
+    "brand": "Corsair",
+    "mpn": "CMK16GX5M1E6000Z36",
+    "gtin": null,
+    "category": "ram",
+    "summary_es": "Módulo UDIMM DDR5-6000 de 16 GB, color gris, con latencia CL36 y perfiles AMD EXPO e Intel XMP.",
+    "market_evidence": "DL",
+    "specs": {
+      "memory_type": "ddr5",
+      "capacity_gb": 16,
+      "modules": 1,
+      "speed_mts": 6000
+    },
+    "sources": [
+      "https://www.corsair.com/us/en/p/memory/cmk16gx5m1e6000z36/vengeance-16gb-1x16gb-ddr5-dram-6000mts-cl36-amd-expo-intel-xmp-memory-kit-cmk16gx5m1e6000z36"
+    ],
+    "image_url": "https://assets.corsair.com/image/upload/c_limit,f_auto,q_85,w_1600,h_1600/products/Memory/vengeance-ddr5-amd-blk-config/2up/VENGEANCE_DDR5_GREY_AMD_RENDER_06.webp",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "Imagen de la página del SKU: render gris de un módulo, común a la serie. Icecat no dio acceso a este SKU (requiere app_key)."
+  }
+]

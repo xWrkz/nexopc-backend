@@ -609,6 +609,9 @@ add_action('graphql_register_types', function () {
         'gpuSlots' => array('type' => 'Float'), 'recommendedPsuWatts' => array('type' => 'Int'), 'maxGpuLengthMm' => array('type' => 'Int'),
         'maxCoolerHeightMm' => array('type' => 'Int'), 'bays25' => array('type' => 'Int'), 'bays35' => array('type' => 'Int'),
         'continuousWatts' => array('type' => 'Int'), 'm2Slots' => array('type' => 'Int'), 'sataPorts' => array('type' => 'Int'),
+        'integratedGraphics' => array('type' => 'Boolean'), 'coolerIncluded' => array('type' => 'Boolean'), 'ramSlots' => array('type' => 'Int'), 'modules' => array('type' => 'Int'), 'speedMts' => array('type' => 'Int'),
+        'maxRadiatorMm' => array('type' => 'Int'), 'coolerType' => array('type' => 'String'), 'coolerHeightMm' => array('type' => 'Int'), 'radiatorMm' => array('type' => 'Int'), 'maxTdpWatts' => array('type' => 'Int'),
+        'supportedSocketIds' => array('type' => array('list_of' => 'Int')),
     )));
     register_graphql_object_type('NexoPcKit', array('fields' => array(
         'pricingMode' => array('type' => 'String'), 'discount' => array('type' => 'Float'), 'items' => array('type' => array('list_of' => 'String')),

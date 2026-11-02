@@ -1,0 +1,479 @@
+[
+  {
+    "key": "cooler-deepcool-ag400-g2",
+    "name": "DeepCool AG400 G2",
+    "brand": "DeepCool",
+    "mpn": "R-AG400-BKNPMG2-G",
+    "gtin": "6933412730026",
+    "category": "cooler",
+    "summary_es": "Disipador de aire de torre única con cuatro heatpipes y ventilador de 120 mm.",
+    "market_evidence": "IN",
+    "specs": {
+      "type": "aire",
+      "sockets": [
+        "am4",
+        "am5",
+        "lga1700",
+        "lga1851"
+      ],
+      "height_mm": 152,
+      "radiator_mm": null,
+      "tdp_max_w": 230
+    },
+    "sources": [
+      "https://www.deepcool.com/products/Cooling/cpuaircoolers/AG400-G2-Superior-Performance-4-Heatpipe-Single-Tower-CPU-Cooler/2025/22515.shtml",
+      "https://www.deepcool.com/ProductCompatibilityS_New/Default.aspx?id=undefined"
+    ],
+    "image_url": "https://cdn.deepcool.com/public/ProductFile/DEEPCOOL/Cooling/CPUAirCoolers/AG400_G2/Gallery/800X800/01.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "TDP tomado de la tabla oficial de compatibilidad de DeepCool."
+  },
+  {
+    "key": "cooler-deepcool-ag620-g2-argb",
+    "name": "DeepCool AG620 G2 ARGB",
+    "brand": "DeepCool",
+    "mpn": "R-AG620-BKAMMG2-G",
+    "gtin": "6933412729914",
+    "category": "cooler",
+    "summary_es": "Disipador de aire de doble torre con seis heatpipes e iluminación ARGB.",
+    "market_evidence": "IN",
+    "specs": {
+      "type": "aire",
+      "sockets": [
+        "am4",
+        "am5",
+        "lga1700",
+        "lga1851"
+      ],
+      "height_mm": 159,
+      "radiator_mm": null,
+      "tdp_max_w": 270
+    },
+    "sources": [
+      "https://www.deepcool.com/products/Cooling/cpuaircoolers/AG620-G2-ARGB-Superior-Performance-6-Heatpipe-Dual-Tower-CPU-Cooler/2026/22801.shtml",
+      "https://www.deepcool.com/ProductCompatibilityS_New/Default.aspx?id=undefined"
+    ],
+    "image_url": "https://cdn.deepcool.com/public/ProductFile/DEEPCOOL/Cooling/CPUAirCoolers/AG620_G2_ARGB/Gallery/800X800/01.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "TDP tomado de la tabla oficial de compatibilidad de DeepCool."
+  },
+  {
+    "key": "cooler-deepcool-ak400-g2",
+    "name": "DeepCool AK400 G2",
+    "brand": "DeepCool",
+    "mpn": "R-AK400G2-BKNNMN-GJD",
+    "gtin": "6933412729655",
+    "category": "cooler",
+    "summary_es": "Disipador de aire de torre única con cuatro heatpipes y cubierta superior con acabado de madera.",
+    "market_evidence": "IN",
+    "specs": {
+      "type": "aire",
+      "sockets": [
+        "am4",
+        "am5",
+        "lga1700",
+        "lga1851"
+      ],
+      "height_mm": 156,
+      "radiator_mm": null,
+      "tdp_max_w": 240
+    },
+    "sources": [
+      "https://www.deepcool.com/products/Cooling/cpuaircoolers/AK400-G2-Wood-Grain-Top-Cover-CPU-Cooler/2025/21908.shtml",
+      "https://www.deepcool.com/ProductCompatibilityS_New/Default.aspx?id=undefined"
+    ],
+    "image_url": "https://cdn.deepcool.com/public/ProductFile/DEEPCOOL/Cooling/CPUAirCoolers/AK400_G2/Gallery/800X800/01.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "TDP tomado de la tabla oficial de compatibilidad de DeepCool."
+  },
+  {
+    "key": "cooler-deepcool-ak500-zero-dark",
+    "name": "DeepCool AK500 Zero Dark",
+    "brand": "DeepCool",
+    "mpn": "R-AK500-BKNNMT-G-1",
+    "gtin": "6933412727972",
+    "category": "cooler",
+    "summary_es": "Disipador de aire de torre única con cinco heatpipes y ventilador de 120 mm.",
+    "market_evidence": "IN",
+    "specs": {
+      "type": "aire",
+      "sockets": [
+        "am4",
+        "am5",
+        "lga1700",
+        "lga1851"
+      ],
+      "height_mm": 158,
+      "radiator_mm": null,
+      "tdp_max_w": 240
+    },
+    "sources": [
+      "https://www.deepcool.com/products/Cooling/cpuaircoolers/AK500-ZERO-DARK-High-Performance-CPU-Cooler-1851-1700-AM5/2022/16396.shtml",
+      "https://www.deepcool.com/ProductCompatibilityS_New/Default.aspx?id=undefined"
+    ],
+    "image_url": "https://cdn.deepcool.com/public/ProductFile/DEEPCOOL/Cooling/CPUAirCoolers/AK500_ZERO_DARK/Gallery/800X800/01.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "TDP tomado de la tabla oficial de compatibilidad de DeepCool."
+  },
+  {
+    "key": "cooler-deepcool-ak620",
+    "name": "DeepCool AK620",
+    "brand": "DeepCool",
+    "mpn": "R-AK620-BKNNMT-G",
+    "gtin": "6933412727316",
+    "category": "cooler",
+    "summary_es": "Disipador de aire de doble torre con seis heatpipes y dos ventiladores de 120 mm.",
+    "market_evidence": "IN+PB",
+    "specs": {
+      "type": "aire",
+      "sockets": [
+        "am4",
+        "am5",
+        "lga1700",
+        "lga1851"
+      ],
+      "height_mm": 160,
+      "radiator_mm": null,
+      "tdp_max_w": 260
+    },
+    "sources": [
+      "https://www.deepcool.com/products/Cooling/cpuaircoolers/AK620-High-Performance-CPU-Cooler-1851-1700-AM5/2024/13067.shtml",
+      "https://www.deepcool.com/ProductCompatibilityS_New/Default.aspx?id=undefined"
+    ],
+    "image_url": "https://cdn.deepcool.com/public/ProductFile/DEEPCOOL/Cooling/CPUAirCoolers/AK620/Gallery/800X800/01.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "height_mm es la altura total del producto; solo el disipador mide 157 mm. PB lista la versión negra e IN la blanca."
+  },
+  {
+    "key": "cooler-deepcool-assassin-iv",
+    "name": "DeepCool Assassin IV",
+    "brand": "DeepCool",
+    "mpn": "R-ASN4-BKNNMT-G",
+    "gtin": "6933412728092",
+    "category": "cooler",
+    "summary_es": "Disipador de aire con siete heatpipes, ventiladores de 140 mm y 120 mm y modos de rendimiento y silencio.",
+    "market_evidence": "IN+PB",
+    "specs": {
+      "type": "aire",
+      "sockets": [
+        "am4",
+        "am5",
+        "lga1700",
+        "lga1851"
+      ],
+      "height_mm": 164,
+      "radiator_mm": null,
+      "tdp_max_w": 280
+    },
+    "sources": [
+      "https://www.deepcool.com/products/Cooling/cpuaircoolers/Assassin-IV-Premium-CPU-Air-Cooler-1851-1700-AM5/2024/17129.shtml",
+      "https://www.deepcool.com/ProductCompatibilityS_New/Default.aspx?id=undefined"
+    ],
+    "image_url": "https://cdn.deepcool.com/public/ProductFile/DEEPCOOL/Cooling/CPUAirCoolers/ASSASSIN_IV/Gallery/800X800/01.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "TDP tomado de la tabla oficial de compatibilidad de DeepCool."
+  },
+  {
+    "key": "cooler-coolermaster-hyper-212-spectrum-v3",
+    "name": "Cooler Master Hyper 212 Spectrum V3",
+    "brand": "Cooler Master",
+    "mpn": "RR-S4NA-17PA-R1",
+    "gtin": null,
+    "category": "cooler",
+    "summary_es": "Disipador de aire con cuatro heatpipes y ventilador ARGB de 120 mm.",
+    "market_evidence": "DL+PB",
+    "specs": {
+      "type": "aire",
+      "sockets": [
+        "am4",
+        "am5",
+        "lga1700",
+        "lga1851"
+      ],
+      "height_mm": 152,
+      "radiator_mm": null,
+      "tdp_max_w": 200
+    },
+    "sources": [
+      "https://www.coolermaster.com/en-global/products/hyper-212-spectrum-v3.html",
+      "https://www.coolermaster.com/en-us/cpu-compatibility.html"
+    ],
+    "image_url": "https://www.coolermaster.com/dw/image/v2/BMJD_PRD/on/demandware.static/-/Sites-cooler-master-main/default/dw8e4028e9/Assets/hyper-212-spectrum-v3/large/hyper-212-spectrum-v301-gallery-01-png.png",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "TDP tomado de la tabla oficial de compatibilidad de Cooler Master."
+  },
+  {
+    "key": "cooler-teros-te-8166n",
+    "name": "Teros TE-8166N",
+    "brand": "Teros",
+    "mpn": "TE-8166N",
+    "gtin": null,
+    "category": "cooler",
+    "summary_es": "Disipador de aire de bajo perfil con seis heatpipes y ventilador PWM de 120 mm.",
+    "market_evidence": "DL",
+    "specs": {
+      "type": "aire",
+      "sockets": [
+        "am4",
+        "am5",
+        "lga1700",
+        "lga1851"
+      ],
+      "height_mm": 69,
+      "radiator_mm": null,
+      "tdp_max_w": 200
+    },
+    "sources": [
+      "https://www.teroslatinamerica.com/producto-te-8166n.html"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "Altura publicada como 69 mm y 6,92 cm; se usa 69. La ficha no expone imagen propia."
+  },
+  {
+    "key": "cooler-deepcool-le720",
+    "name": "DeepCool LE720",
+    "brand": "DeepCool",
+    "mpn": "R-LE720-BKAMMN-G-1",
+    "gtin": "6933412728191",
+    "category": "cooler",
+    "summary_es": "Refrigeración líquida todo en uno con radiador de 360 mm y tres ventiladores ARGB de 120 mm.",
+    "market_evidence": "IN+PB",
+    "specs": {
+      "type": "liquido",
+      "sockets": [
+        "am4",
+        "am5",
+        "lga1700",
+        "lga1851"
+      ],
+      "height_mm": null,
+      "radiator_mm": 360,
+      "tdp_max_w": 250
+    },
+    "sources": [
+      "https://de.deepcool.com/products/Cooling/cpuliquidcoolers/LE720-360mm-Liquid-CPU-Cooler-1851-1700-AM5/2024/16987.shtml",
+      "https://www.deepcool.com/ProductCompatibilityS_New/Default.aspx?id=undefined",
+      "https://www.deepcool.com/products/Cooling/cpuliquidcoolers/LE720-360mm-Liquid-CPU-Cooler-1700-AM5/2023/16983.shtml"
+    ],
+    "image_url": "https://cdn.deepcool.com/public/ProductFile/DEEPCOOL/Cooling/CPULiquidCoolers/LE720/Gallery/800X800/01.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "LGA1851: confirmado por la tabla oficial de compatibilidad y por la ficha alemana con el mismo P/N; la ficha global antigua aún lista hasta LGA1700."
+  },
+  {
+    "key": "cooler-deepcool-le520",
+    "name": "DeepCool LE520",
+    "brand": "DeepCool",
+    "mpn": "R-LE520-BKAMMN-G-1",
+    "gtin": "6933412728047",
+    "category": "cooler",
+    "summary_es": "Refrigeración líquida todo en uno con radiador de 240 mm y dos ventiladores ARGB de 120 mm.",
+    "market_evidence": "IN",
+    "specs": {
+      "type": "liquido",
+      "sockets": [
+        "am4",
+        "am5",
+        "lga1700",
+        "lga1851"
+      ],
+      "height_mm": null,
+      "radiator_mm": 240,
+      "tdp_max_w": 220
+    },
+    "sources": [
+      "https://www.deepcool.com/products/Cooling/cpuliquidcoolers/LE520-240mm-Liquid-CPU-Cooler-1851-1700-AM5/2024/16608.shtml",
+      "https://www.deepcool.com/ProductCompatibilityS_New/Default.aspx?id=undefined"
+    ],
+    "image_url": "https://cdn.deepcool.com/public/ProductFile/DEEPCOOL/Cooling/CPULiquidCoolers/LE520/Gallery/800X800/01.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": ""
+  },
+  {
+    "key": "cooler-deepcool-lm240",
+    "name": "DeepCool LM240",
+    "brand": "DeepCool",
+    "mpn": "R-LM240-BKDMMC-1",
+    "gtin": "6933412729457",
+    "category": "cooler",
+    "summary_es": "Refrigeración líquida todo en uno con radiador de 240 mm, pantalla LCD de 2.4 pulgadas e iluminación ARGB.",
+    "market_evidence": "IN+PB",
+    "specs": {
+      "type": "liquido",
+      "sockets": [
+        "am4",
+        "am5",
+        "lga1700",
+        "lga1851"
+      ],
+      "height_mm": null,
+      "radiator_mm": 240,
+      "tdp_max_w": 280
+    },
+    "sources": [
+      "https://www.deepcool.com/products/Cooling/cpuliquidcoolers/LM240-6th-Gen-ARGB-Liquid-Cooler-with-mini-LCD-Screen/2025/21342.shtml",
+      "https://www.deepcool.com/ProductCompatibilityS_New/Default.aspx?id=undefined"
+    ],
+    "image_url": "https://cdn.deepcool.com/public/ProductFile/DEEPCOOL/Cooling/CPULiquidCoolers/LM240/Gallery/800X800/01.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "TDP tomado de la tabla oficial de compatibilidad de DeepCool."
+  },
+  {
+    "key": "cooler-msi-mag-coreliquid-a13-360",
+    "name": "MSI MAG CoreLiquid A13 360",
+    "brand": "MSI",
+    "mpn": "306-7ZWDA11-L80",
+    "gtin": "4711377273770",
+    "category": "cooler",
+    "summary_es": "Refrigeración líquida todo en uno con radiador de 360 mm y tres ventiladores de 120 mm.",
+    "market_evidence": "DL+IN",
+    "specs": {
+      "type": "liquido",
+      "sockets": [
+        "am4",
+        "am5",
+        "lga1700",
+        "lga1851"
+      ],
+      "height_mm": null,
+      "radiator_mm": 360,
+      "tdp_max_w": null
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=en&Brand=MSI&ProductCode=306-7ZWDA11-L80",
+      "https://objects.icecat.biz/objects/mmo_122965989_1731683618_9804_2109874.pdf"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/f280b9213574e17a2c0eab39c84cace48fee19ab.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "msi.com devolvió 403; datos de Icecat y de la hoja de datos MSI alojada en Icecat. TDP no publicado."
+  },
+  {
+    "key": "cooler-asus-tuf-gaming-lc-240-argb",
+    "name": "ASUS TUF Gaming LC 240 ARGB",
+    "brand": "ASUS",
+    "mpn": null,
+    "gtin": null,
+    "category": "cooler",
+    "summary_es": "Refrigeración líquida todo en uno con radiador de 240 mm y dos ventiladores ARGB de 120 mm.",
+    "market_evidence": "PB",
+    "specs": {
+      "type": "liquido",
+      "sockets": [
+        "am4",
+        "am5",
+        "lga1700"
+      ],
+      "height_mm": null,
+      "radiator_mm": 240,
+      "tdp_max_w": null
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/cooling/tuf-gaming/tuf-gaming-lc-240-argb/techspec/",
+      "https://www.asus.com/motherboards-components/cooling/tuf-gaming/tuf-gaming-lc-240-argb/"
+    ],
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/dbd96d28-a64a-4f48-ab4e-12d2ee258b18/",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "Conflicto oficial en LGA1851: la página general lo lista, pero la hoja técnica solo llega a LGA1700. Se excluye hasta confirmar con ASUS. TDP no publicado."
+  },
+  {
+    "key": "cooler-montech-hyperflow-argb-240",
+    "name": "Montech HyperFlow ARGB 240",
+    "brand": "Montech",
+    "mpn": null,
+    "gtin": null,
+    "category": "cooler",
+    "summary_es": "Refrigeración líquida todo en uno con radiador de 240 mm y dos ventiladores de 120 mm.",
+    "market_evidence": "IN+PB",
+    "specs": {
+      "type": "liquido",
+      "sockets": [
+        "am4",
+        "am5",
+        "lga1700",
+        "lga1851"
+      ],
+      "height_mm": null,
+      "radiator_mm": 240,
+      "tdp_max_w": null
+    },
+    "sources": [
+      "https://www.montechpc.com/hyperflow-argb-240"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "El fabricante lista dos EAN (4710562740820 / 4710562741827) sin indicar a qué color corresponde cada uno; gtin queda null. TDP no publicado. La página no expuso URL de imagen."
+  },
+  {
+    "key": "cooler-montech-hyperflow-argb-360",
+    "name": "Montech HyperFlow ARGB 360",
+    "brand": "Montech",
+    "mpn": null,
+    "gtin": null,
+    "category": "cooler",
+    "summary_es": "Refrigeración líquida todo en uno con radiador de 360 mm y tres ventiladores de 120 mm.",
+    "market_evidence": "IN",
+    "specs": {
+      "type": "liquido",
+      "sockets": [
+        "am4",
+        "am5",
+        "lga1700",
+        "lga1851"
+      ],
+      "height_mm": null,
+      "radiator_mm": 360,
+      "tdp_max_w": null
+    },
+    "sources": [
+      "https://www.montechpc.com/hyperflow-argb-360"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "El fabricante lista dos EAN (4710562742824 / 4710562743821) sin indicar a qué color corresponde cada uno; gtin queda null. TDP no publicado. La página no expuso URL de imagen."
+  },
+  {
+    "key": "cooler-coolermaster-masterliquid-240l-core-argb",
+    "name": "Cooler Master MasterLiquid 240L Core ARGB",
+    "brand": "Cooler Master",
+    "mpn": "MLW-D24M-A18PZ-R1",
+    "gtin": null,
+    "category": "cooler",
+    "summary_es": "Refrigeración líquida todo en uno con radiador de 240 mm y dos ventiladores ARGB de 120 mm.",
+    "market_evidence": "DL",
+    "specs": {
+      "type": "liquido",
+      "sockets": [
+        "am4",
+        "am5",
+        "lga1700",
+        "lga1851"
+      ],
+      "height_mm": null,
+      "radiator_mm": 240,
+      "tdp_max_w": 250
+    },
+    "sources": [
+      "https://www.coolermaster.com/en-global/products/masterliquid-240l-core-argb.html",
+      "https://www.coolermaster.com/en-us/cpu-compatibility.html"
+    ],
+    "image_url": "https://www.coolermaster.com/dw/image/v2/BMJD_PRD/on/demandware.static/-/Sites-cooler-master-main/default/dw5af869ae/Assets/masterliquid-240l-core-argb/large/masterliquid-240l-core-argb-01-gallery-01.png",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "TDP tomado de la tabla oficial de compatibilidad de Cooler Master."
+  }
+]

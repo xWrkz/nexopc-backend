@@ -1,0 +1,375 @@
+[
+  {
+    "key": "psu-asus-prime-650b-black",
+    "name": "ASUS Prime 650W Bronze (PRIME-650B-BLACK)",
+    "brand": "ASUS",
+    "mpn": "PRIME-650B-BLACK",
+    "gtin": "4711387635285",
+    "category": "psu",
+    "summary_es": "Fuente de poder ATX de 650 W con certificación 80 PLUS Bronze y cableado no modular.",
+    "market_evidence": "DL",
+    "specs": {
+      "watts": 650,
+      "certification": "80+ Bronze",
+      "modular": "no",
+      "form": "atx"
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/power-supply-units/prime/prime-650b-black/techspec/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ASUS&ProductCode=PRIME-650B-BLACK"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/b459f859305ee6a3b81d82a6db649bbdcf35ab61.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "modular de Icecat (asus.com no publica ese dato); el resto de asus.com."
+  },
+  {
+    "key": "psu-deepcool-pl650d-v2",
+    "name": "DeepCool PL650D V2",
+    "brand": "DeepCool",
+    "mpn": "R-PL650D-FC0B-US-V2",
+    "gtin": "6933412721185",
+    "category": "psu",
+    "summary_es": "Fuente de poder ATX de 650 W con certificación 80 PLUS Bronze y cableado no modular.",
+    "market_evidence": "IN",
+    "specs": {
+      "watts": 650,
+      "certification": "80+ Bronze",
+      "modular": "no",
+      "form": "atx"
+    },
+    "sources": [
+      "https://www.deepcool.com/products/PowerSupplyUnits/powersupplyunits/PL650D-V2-ATX3.1-Direct-Power-Supply/2024/19091.shtml",
+      "https://www.deepcool.com/download/pdf/PL_D_V2.pdf"
+    ],
+    "image_url": "https://cdn.deepcool.com/public/ProductFile/DEEPCOOL/PowerSupplyUnits/PL650D_V2/Gallery/608X760/01.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "watts leído del manual PL_D_V2.pdf (página impresa 6, PL650D-FC, Total Output 650W); la página web no lo indica. form de \"Type: ATX12V V3.1\"."
+  },
+  {
+    "key": "psu-msi-mag-a750bn-pcie5",
+    "name": "MSI MAG A750BN PCIE5",
+    "brand": "MSI",
+    "mpn": "MAG A750BN PCIE5",
+    "gtin": "4711377126595",
+    "category": "psu",
+    "summary_es": "Fuente de poder ATX de 750 W con certificación 80 PLUS Bronze y cableado no modular.",
+    "market_evidence": "IN",
+    "specs": {
+      "watts": 750,
+      "certification": "80+ Bronze",
+      "modular": "no",
+      "form": "atx"
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=MSI&ProductCode=MAG%20A750BN%20PCIE5"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/9cac803985ce8bc6683a0c4bca06bb43fce658a0.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Datos de Icecat; msi.com devolvió 403. Es distinta de la A750BN PCIE5 III, ausente en Open Icecat."
+  },
+  {
+    "key": "psu-gigabyte-p750bs",
+    "name": "Gigabyte P750BS",
+    "brand": "Gigabyte",
+    "mpn": "GP-P750BS EU",
+    "gtin": null,
+    "category": "psu",
+    "summary_es": "Fuente de poder ATX de 750 W con certificación 80 PLUS Bronze y cableado no modular.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "watts": 750,
+      "certification": "80+ Bronze",
+      "modular": "no",
+      "form": "atx"
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Gigabyte&ProductCode=GP-P750BS%20EU"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/61fc263ed5161651b4291220e9af65d4650c13ad.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Datos de Icecat; gigabyte.com devolvió 403. mpn y GTIN en Icecat son del SKU con enchufe EU (4719331555238); GTIN omitido porque el SKU vendido en Perú puede diferir."
+  },
+  {
+    "key": "psu-deepcool-pl750d-v2",
+    "name": "DeepCool PL750D V2",
+    "brand": "DeepCool",
+    "mpn": "R-PL750D-FC0B-US-V2",
+    "gtin": "6933412721369",
+    "category": "psu",
+    "summary_es": "Fuente de poder ATX de 750 W con certificación 80 PLUS Bronze y cableado no modular.",
+    "market_evidence": "IN",
+    "specs": {
+      "watts": 750,
+      "certification": "80+ Bronze",
+      "modular": "no",
+      "form": "atx"
+    },
+    "sources": [
+      "https://www.deepcool.com/products/PowerSupplyUnits/powersupplyunits/PL750D-V2-ATX3.1-Direct-Power-Supply/2024/19092.shtml",
+      "https://www.deepcool.com/download/pdf/PL_D_V2.pdf"
+    ],
+    "image_url": "https://cdn.deepcool.com/public/ProductFile/DEEPCOOL/PowerSupplyUnits/PL750D_V2/Gallery/608X760/01.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "watts leído del manual PL_D_V2.pdf (página impresa 6, PL750D-FC, Total Output 750W); la página web no lo indica. form de \"Type: ATX12V V3.1\"."
+  },
+  {
+    "key": "psu-gigabyte-ud750gm-pg5",
+    "name": "Gigabyte UD750GM PG5",
+    "brand": "Gigabyte",
+    "mpn": "GP-UD750GM PG5",
+    "gtin": null,
+    "category": "psu",
+    "summary_es": "Fuente de poder ATX de 750 W con certificación 80 PLUS Gold y cableado totalmente modular.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "watts": 750,
+      "certification": "80+ Gold",
+      "modular": "total",
+      "form": "atx"
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Gigabyte&ProductCode=GP-UD750GM%20PG5"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/bfe08d7cba5cbe97cbf06b2c52c7ca9a85d64610.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Datos de Icecat; gigabyte.com devolvió 403. GTIN omitido: los de Icecat (4719331553647, 4719331553609) corresponden a otro SKU regional."
+  },
+  {
+    "key": "psu-asus-tuf-gaming-750g-evo",
+    "name": "ASUS TUF Gaming 750G EVO",
+    "brand": "ASUS",
+    "mpn": "TUF-GAMING-750G-EVO",
+    "gtin": "4711636287944",
+    "category": "psu",
+    "summary_es": "Fuente de poder ATX de 750 W con certificación 80 PLUS Gold y cableado totalmente modular.",
+    "market_evidence": "DL",
+    "specs": {
+      "watts": 750,
+      "certification": "80+ Gold",
+      "modular": "total",
+      "form": "atx"
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/power-supply-units/tuf-gaming/tuf-gaming-750g-evo/techspec/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ASUS&ProductCode=TUF-GAMING-750G-EVO"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/8642301ada4788a51cee57d8b4c2f14b6ab4c676.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "modular de Icecat (asus.com no publica ese dato); el resto de asus.com."
+  },
+  {
+    "key": "psu-coolermaster-gx-ii-gold-750",
+    "name": "Cooler Master GX II Gold 750",
+    "brand": "Cooler Master",
+    "mpn": null,
+    "gtin": null,
+    "category": "psu",
+    "summary_es": "Fuente de poder ATX de 750 W con certificación 80 PLUS Gold y cableado totalmente modular.",
+    "market_evidence": "IN",
+    "specs": {
+      "watts": 750,
+      "certification": "80+ Gold",
+      "modular": "total",
+      "form": "atx"
+    },
+    "sources": [
+      "https://www.coolermaster.com/en-global/products/gx-ii-gold-750.html"
+    ],
+    "image_url": "https://www.coolermaster.com/on/demandware.static/-/Sites-cooler-master-main/default/dw7e6f7f8f/Assets/gx-ii-gold-750/large/gx-ii-gold-750-gallery-1-0629.png",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "mpn null: la página oficial solo muestra el patrón MPX-7503-AFAG-2*** y no el sufijo regional."
+  },
+  {
+    "key": "psu-msi-mag-a750gls-pcie5",
+    "name": "MSI MAG A750GLS PCIE5",
+    "brand": "MSI",
+    "mpn": "MAG A750GLS PCIE5",
+    "gtin": "4711377292283",
+    "category": "psu",
+    "summary_es": "Fuente de poder ATX de 750 W con certificación 80 PLUS Gold y cableado totalmente modular.",
+    "market_evidence": "PB",
+    "specs": {
+      "watts": 750,
+      "certification": "80+ Gold",
+      "modular": "total",
+      "form": "atx"
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=MSI&ProductCode=MAG%20A750GLS%20PCIE5"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/7e6b9b5ae3f306a63e0658bf72a8a7ceecd26aea.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Datos de Icecat; msi.com devolvió 403."
+  },
+  {
+    "key": "psu-gigabyte-ud850gm-pg5-v2",
+    "name": "Gigabyte UD850GM PG5 V2",
+    "brand": "Gigabyte",
+    "mpn": "GP-UD850GM PG5 V2 EU",
+    "gtin": null,
+    "category": "psu",
+    "summary_es": "Fuente de poder ATX de 850 W con certificación 80 PLUS Gold y cableado totalmente modular.",
+    "market_evidence": "DL",
+    "specs": {
+      "watts": 850,
+      "certification": "80+ Gold",
+      "modular": "total",
+      "form": "atx"
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Gigabyte&ProductCode=GP-UD850GM%20PG5%20V2"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/9662315dc06e1cf49e02107fa55aac1122d5058c.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Datos de Icecat; gigabyte.com devolvió 403. mpn y GTIN en Icecat son del SKU con enchufe EU (4719331555993); GTIN omitido porque el SKU vendido en Perú puede diferir."
+  },
+  {
+    "key": "psu-asus-tuf-gaming-850g-evo",
+    "name": "ASUS TUF Gaming 850G EVO",
+    "brand": "ASUS",
+    "mpn": "TUF-GAMING-850G-EVO",
+    "gtin": "4711636287784",
+    "category": "psu",
+    "summary_es": "Fuente de poder ATX de 850 W con certificación 80 PLUS Gold y cableado totalmente modular.",
+    "market_evidence": "DL",
+    "specs": {
+      "watts": 850,
+      "certification": "80+ Gold",
+      "modular": "total",
+      "form": "atx"
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/power-supply-units/tuf-gaming/tuf-gaming-850g-evo/techspec/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ASUS&ProductCode=TUF-GAMING-850G-EVO"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/973e79995651c9ef6f652c95887d857bbd1b9e46.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "modular de Icecat (asus.com no publica ese dato); el resto de asus.com."
+  },
+  {
+    "key": "psu-msi-mag-a850gl-pcie5",
+    "name": "MSI MAG A850GL PCIE5",
+    "brand": "MSI",
+    "mpn": "MAG A850GL PCIE5",
+    "gtin": "4711377087254",
+    "category": "psu",
+    "summary_es": "Fuente de poder ATX de 850 W con certificación 80 PLUS Gold y cableado totalmente modular.",
+    "market_evidence": "PB",
+    "specs": {
+      "watts": 850,
+      "certification": "80+ Gold",
+      "modular": "total",
+      "form": "atx"
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=MSI&ProductCode=MAG%20A850GL%20PCIE5"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/20324afc225aff0381bb93da5b6c5962a6196cb3.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Datos de Icecat; msi.com devolvió 403. La fila de mercado dice MAG A850GL sin PCIE5; Icecat solo tiene la variante PCIE5."
+  },
+  {
+    "key": "psu-asus-prime-ap-850g",
+    "name": "ASUS Prime 850W Gold (AP-850G)",
+    "brand": "ASUS",
+    "mpn": "AP-850G",
+    "gtin": "0197105192720",
+    "category": "psu",
+    "summary_es": "Fuente de poder ATX de 850 W con certificación 80 PLUS Gold y cableado totalmente modular.",
+    "market_evidence": "DL",
+    "specs": {
+      "watts": 850,
+      "certification": "80+ Gold",
+      "modular": "total",
+      "form": "atx"
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ASUS&ProductCode=AP-850G"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/0112482472d754312b6945c1f094f4d7518f8496.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Datos de Icecat (SKU 90YE00U0-BVAA00); existe otro SKU regional, 90YE00U0-B0NA00, con otro GTIN."
+  },
+  {
+    "key": "psu-gigabyte-ud1000gm-pg5",
+    "name": "Gigabyte UD1000GM PG5",
+    "brand": "Gigabyte",
+    "mpn": "GP-UD1000GM PG5",
+    "gtin": "4719331552930",
+    "category": "psu",
+    "summary_es": "Fuente de poder ATX de 1000 W con certificación 80 PLUS Gold y cableado totalmente modular.",
+    "market_evidence": "DL",
+    "specs": {
+      "watts": 1000,
+      "certification": "80+ Gold",
+      "modular": "total",
+      "form": "atx"
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Gigabyte&ProductCode=GP-UD1000GM%20PG5"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/50d23da1dc14b9e877f6f58d5f84fdd8a252caff.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Datos de Icecat; gigabyte.com devolvió 403."
+  },
+  {
+    "key": "psu-msi-mag-a1000gls-pcie5",
+    "name": "MSI MAG A1000GLS PCIE5",
+    "brand": "MSI",
+    "mpn": "MAG A1000GLS PCIE5",
+    "gtin": "4711377297776",
+    "category": "psu",
+    "summary_es": "Fuente de poder ATX de 1000 W con certificación 80 PLUS Gold y cableado totalmente modular.",
+    "market_evidence": "DL",
+    "specs": {
+      "watts": 1000,
+      "certification": "80+ Gold",
+      "modular": "total",
+      "form": "atx"
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=MSI&ProductCode=MAG%20A1000GLS%20PCIE5"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/c8ede5d1027e4b56cd9e5698bac3c6ac67b3633e.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Datos de Icecat; msi.com devolvió 403."
+  },
+  {
+    "key": "psu-asus-tuf-gaming-1000g-white",
+    "name": "ASUS TUF Gaming 1000W Gold White Edition",
+    "brand": "ASUS",
+    "mpn": "TUF-GAMING-1000G-WHITE",
+    "gtin": "4711387275993",
+    "category": "psu",
+    "summary_es": "Fuente de poder ATX de 1000 W con certificación 80 PLUS Gold y cableado totalmente modular.",
+    "market_evidence": "DL",
+    "specs": {
+      "watts": 1000,
+      "certification": "80+ Gold",
+      "modular": "total",
+      "form": "atx"
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ASUS&ProductCode=TUF-GAMING-1000G-WHITE"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/019b5938fcb2e9c487babf6f16f6bc980efcd1c5.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Datos de Icecat."
+  }
+]

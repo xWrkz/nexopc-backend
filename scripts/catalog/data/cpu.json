@@ -1,0 +1,625 @@
+[
+  {
+    "key": "cpu-ryzen-5-5500",
+    "name": "AMD Ryzen 5 5500",
+    "brand": "AMD",
+    "mpn": "100-100000457BOX",
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 6 núcleos y 12 hilos para socket AM4 con TDP de 65 W y disipador incluido en la versión en caja.",
+    "market_evidence": "IN+PB+DL",
+    "specs": {
+      "socket": "am4",
+      "tdp_w": 65,
+      "memory_types": [
+        "ddr4"
+      ],
+      "igpu": false,
+      "cooler_included": true,
+      "cores": 6,
+      "threads": 12
+    },
+    "sources": [
+      "https://ir.amd.com/news-events/press-releases/detail/1053/amd-launches-the-ultimate-gaming-processor-brings-enthusiast-performance-to-an-expanded-lineup-of-ryzen-desktop-processors",
+      "https://www.asus.com/motherboards-components/motherboards/prime/prime-a520m-k/helpdesk_cpu/",
+      "https://www.asus.com/motherboards-components/motherboards/prime/prime-a520m-k/techspec/",
+      "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "igpu null: ninguna fuente leída lo declara. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (ASUS A520M-K: AM4 para Ryzen 5000, solo DDR4), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
+  },
+  {
+    "key": "cpu-ryzen-5-5600",
+    "name": "AMD Ryzen 5 5600",
+    "brand": "AMD",
+    "mpn": null,
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 6 núcleos y 12 hilos para socket AM4 con TDP de 65 W y disipador incluido en la versión en caja.",
+    "market_evidence": "PB+DL",
+    "specs": {
+      "socket": "am4",
+      "tdp_w": 65,
+      "memory_types": [
+        "ddr4"
+      ],
+      "igpu": false,
+      "cooler_included": true,
+      "cores": 6,
+      "threads": 12
+    },
+    "sources": [
+      "https://ir.amd.com/news-events/press-releases/detail/1053/amd-launches-the-ultimate-gaming-processor-brings-enthusiast-performance-to-an-expanded-lineup-of-ryzen-desktop-processors",
+      "https://www.asus.com/motherboards-components/motherboards/prime/prime-a520m-k/helpdesk_cpu/",
+      "https://www.asus.com/motherboards-components/motherboards/prime/prime-a520m-k/techspec/",
+      "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "igpu null: ninguna fuente leída lo declara. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (ASUS A520M-K: AM4 para Ryzen 5000, solo DDR4), no ficha del producto. mpn null: el 100-100000927BOX del encargo no se pudo confirmar en una fuente leída ni en market.tsv. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
+  },
+  {
+    "key": "cpu-ryzen-7-5700x",
+    "name": "AMD Ryzen 7 5700X",
+    "brand": "AMD",
+    "mpn": "100-100000926WOF",
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 8 núcleos y 16 hilos para socket AM4 con TDP de 65 W y sin disipador incluido.",
+    "market_evidence": "IN+PB+DL",
+    "specs": {
+      "socket": "am4",
+      "tdp_w": 65,
+      "memory_types": [
+        "ddr4"
+      ],
+      "igpu": false,
+      "cooler_included": false,
+      "cores": 8,
+      "threads": 16
+    },
+    "sources": [
+      "https://ir.amd.com/news-events/press-releases/detail/1053/amd-launches-the-ultimate-gaming-processor-brings-enthusiast-performance-to-an-expanded-lineup-of-ryzen-desktop-processors",
+      "https://www.asus.com/motherboards-components/motherboards/prime/prime-a520m-k/helpdesk_cpu/",
+      "https://www.asus.com/motherboards-components/motherboards/prime/prime-a520m-k/techspec/",
+      "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "igpu null: ninguna fuente leída lo declara. cooler_included false: columna Cooler N/A en la nota de AMD. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (ASUS A520M-K: AM4 para Ryzen 5000, solo DDR4), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
+  },
+  {
+    "key": "cpu-ryzen-7-5700g",
+    "name": "AMD Ryzen 7 5700G",
+    "brand": "AMD",
+    "mpn": "100-100000263BOX",
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 8 núcleos para socket AM4 con TDP de 65 W, con gráficos integrados.",
+    "market_evidence": "IN+PB+DL",
+    "specs": {
+      "socket": "am4",
+      "tdp_w": 65,
+      "memory_types": [
+        "ddr4"
+      ],
+      "igpu": true,
+      "cooler_included": null,
+      "cores": 8,
+      "threads": 16
+    },
+    "sources": [
+      "https://ir.amd.com/news-events/press-releases/detail/1007/amd-showcases-industry-leading-innovation-across-the-high-performance-computing-ecosystem-at-computex-2021",
+      "https://www.asus.com/motherboards-components/motherboards/prime/prime-a520m-k/helpdesk_cpu/",
+      "https://www.asus.com/motherboards-components/motherboards/prime/prime-a520m-k/techspec/",
+      "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "threads y cooler_included null: sin fuente leída. tdp_w: ASUS lista 45-65W y se registra el máximo. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (ASUS A520M-K: AM4 para Ryzen 5000, solo DDR4), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
+  },
+  {
+    "key": "cpu-ryzen-5-8400f",
+    "name": "AMD Ryzen 5 8400F",
+    "brand": "AMD",
+    "mpn": "100-100001591BOX",
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 6 núcleos para socket AM5 con TDP de 65 W.",
+    "market_evidence": "IN+PB",
+    "specs": {
+      "socket": "am5",
+      "tdp_w": 65,
+      "memory_types": [
+        "ddr5"
+      ],
+      "igpu": false,
+      "cooler_included": null,
+      "cores": 6,
+      "threads": 12
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus-wifi/helpdesk_cpu/",
+      "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus-wifi/techspec/",
+      "https://ir.amd.com/news-events/press-releases/detail/1089/amdlaunches-ryzen-7000-series-desktop-processors-with-zen-4-architecture-the-fastest-core-in-gaming",
+      "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "threads, igpu y cooler_included null: sin fuente leída (no aparece en las notas de prensa de AMD consultadas). amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (AMD: Socket AM5 con DDR5 dual-channel), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
+  },
+  {
+    "key": "cpu-ryzen-5-8500g",
+    "name": "AMD Ryzen 5 8500G",
+    "brand": "AMD",
+    "mpn": "100-100000931BOX",
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 6 núcleos y 12 hilos para socket AM5 con TDP de 65 W, con gráficos integrados.",
+    "market_evidence": "IN+PB+DL",
+    "specs": {
+      "socket": "am5",
+      "tdp_w": 65,
+      "memory_types": [
+        "ddr5"
+      ],
+      "igpu": true,
+      "cooler_included": null,
+      "cores": 6,
+      "threads": 12
+    },
+    "sources": [
+      "https://ir.amd.com/news-events/press-releases/detail/1177/amd-reveals-next-gen-desktop-processors-for-extreme-pc-gaming-and-creator-performance",
+      "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus-wifi/helpdesk_cpu/",
+      "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus-wifi/techspec/",
+      "https://ir.amd.com/news-events/press-releases/detail/1089/amdlaunches-ryzen-7000-series-desktop-processors-with-zen-4-architecture-the-fastest-core-in-gaming",
+      "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "cooler_included null: sin fuente leída. igpu true: AMD declara gráficos integrados para toda la serie 8000G. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (AMD: Socket AM5 con DDR5 dual-channel), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
+  },
+  {
+    "key": "cpu-ryzen-5-7600",
+    "name": "AMD Ryzen 5 7600",
+    "brand": "AMD",
+    "mpn": "100-100001015BOX",
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 6 núcleos y 12 hilos para socket AM5 con TDP de 65 W, con gráficos integrados y disipador incluido en la versión en caja.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "socket": "am5",
+      "tdp_w": 65,
+      "memory_types": [
+        "ddr5"
+      ],
+      "igpu": true,
+      "cooler_included": true,
+      "cores": 6,
+      "threads": 12
+    },
+    "sources": [
+      "https://ir.amd.com/news-events/press-releases/detail/1111/amdextends-its-leadership-with-the-introduction-of-its-broadest-portfolio-of-high-performance-pc-products-for-mobile-and-desktop",
+      "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus-wifi/helpdesk_cpu/",
+      "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus-wifi/techspec/",
+      "https://ir.amd.com/news-events/press-releases/detail/1089/amdlaunches-ryzen-7000-series-desktop-processors-with-zen-4-architecture-the-fastest-core-in-gaming",
+      "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "verified false solo porque memory_types e igpu son de nivel serie o plataforma: AMD describe gráficos en el I/O die de la serie Ryzen 7000, sin ficha del producto legible. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (AMD: Socket AM5 con DDR5 dual-channel), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
+  },
+  {
+    "key": "cpu-ryzen-5-9600x",
+    "name": "AMD Ryzen 5 9600X",
+    "brand": "AMD",
+    "mpn": "100-100001405WOF",
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 6 núcleos y 12 hilos para socket AM5 con TDP de 65 W.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "socket": "am5",
+      "tdp_w": 65,
+      "memory_types": [
+        "ddr5"
+      ],
+      "igpu": true,
+      "cooler_included": null,
+      "cores": 6,
+      "threads": 12
+    },
+    "sources": [
+      "https://ir.amd.com/news-events/press-releases/detail/1202/amd-unveils-next-gen-zen-5-ryzen-processors-to-power-advanced-ai-experiences",
+      "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus-wifi/helpdesk_cpu/",
+      "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus-wifi/techspec/",
+      "https://ir.amd.com/news-events/press-releases/detail/1089/amdlaunches-ryzen-7000-series-desktop-processors-with-zen-4-architecture-the-fastest-core-in-gaming",
+      "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "igpu y cooler_included null: sin fuente leída. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (AMD: Socket AM5 con DDR5 dual-channel), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
+  },
+  {
+    "key": "cpu-ryzen-7-7700",
+    "name": "AMD Ryzen 7 7700",
+    "brand": "AMD",
+    "mpn": "100-100000592BOX",
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 8 núcleos y 16 hilos para socket AM5 con TDP de 65 W, con gráficos integrados y disipador incluido en la versión en caja.",
+    "market_evidence": "IN+PB+DL",
+    "specs": {
+      "socket": "am5",
+      "tdp_w": 65,
+      "memory_types": [
+        "ddr5"
+      ],
+      "igpu": true,
+      "cooler_included": true,
+      "cores": 8,
+      "threads": 16
+    },
+    "sources": [
+      "https://ir.amd.com/news-events/press-releases/detail/1111/amdextends-its-leadership-with-the-introduction-of-its-broadest-portfolio-of-high-performance-pc-products-for-mobile-and-desktop",
+      "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus-wifi/helpdesk_cpu/",
+      "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus-wifi/techspec/",
+      "https://ir.amd.com/news-events/press-releases/detail/1089/amdlaunches-ryzen-7000-series-desktop-processors-with-zen-4-architecture-the-fastest-core-in-gaming",
+      "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "verified false solo porque memory_types e igpu son de nivel serie o plataforma: AMD describe gráficos en el I/O die de la serie Ryzen 7000, sin ficha del producto legible. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (AMD: Socket AM5 con DDR5 dual-channel), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. Otra tienda lista la variante 100-100000592SBX, no evaluada. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
+  },
+  {
+    "key": "cpu-ryzen-7-9700x",
+    "name": "AMD Ryzen 7 9700X",
+    "brand": "AMD",
+    "mpn": "100-100001404WOF",
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 8 núcleos y 16 hilos para socket AM5 con TDP de 65 W.",
+    "market_evidence": "IN+PB+DL",
+    "specs": {
+      "socket": "am5",
+      "tdp_w": 65,
+      "memory_types": [
+        "ddr5"
+      ],
+      "igpu": true,
+      "cooler_included": null,
+      "cores": 8,
+      "threads": 16
+    },
+    "sources": [
+      "https://ir.amd.com/news-events/press-releases/detail/1202/amd-unveils-next-gen-zen-5-ryzen-processors-to-power-advanced-ai-experiences",
+      "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus-wifi/helpdesk_cpu/",
+      "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus-wifi/techspec/",
+      "https://ir.amd.com/news-events/press-releases/detail/1089/amdlaunches-ryzen-7000-series-desktop-processors-with-zen-4-architecture-the-fastest-core-in-gaming",
+      "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "igpu y cooler_included null: sin fuente leída. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (AMD: Socket AM5 con DDR5 dual-channel), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
+  },
+  {
+    "key": "cpu-ryzen-7-9800x3d",
+    "name": "AMD Ryzen 7 9800X3D",
+    "brand": "AMD",
+    "mpn": null,
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 8 núcleos y 16 hilos para socket AM5 con TDP de 120 W.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "socket": "am5",
+      "tdp_w": 120,
+      "memory_types": [
+        "ddr5"
+      ],
+      "igpu": true,
+      "cooler_included": null,
+      "cores": 8,
+      "threads": 16
+    },
+    "sources": [
+      "https://ir.amd.com/news-events/press-releases/detail/1225/the-gaming-legend-continues-amd-introduces-next-generation-amd-ryzen-7-9800x3d-processor",
+      "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus-wifi/helpdesk_cpu/",
+      "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus-wifi/techspec/",
+      "https://ir.amd.com/news-events/press-releases/detail/1089/amdlaunches-ryzen-7000-series-desktop-processors-with-zen-4-architecture-the-fastest-core-in-gaming",
+      "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "igpu y cooler_included null: sin fuente leída. mpn null: market.tsv solo lista 100-1000001084WOF, con un dígito más que el patrón de los demás, y no se corrigió de memoria. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (AMD: Socket AM5 con DDR5 dual-channel), no ficha del producto. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
+  },
+  {
+    "key": "cpu-core-i3-12100f",
+    "name": "Intel Core i3-12100F",
+    "brand": "Intel",
+    "mpn": "BX8071512100F",
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 4 núcleos y 8 hilos para socket LGA1700 con potencia base de 58 W, sin gráficos integrados y disipador incluido en la versión en caja.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "socket": "lga1700",
+      "tdp_w": 58,
+      "memory_types": [
+        "ddr4",
+        "ddr5"
+      ],
+      "igpu": false,
+      "cooler_included": true,
+      "cores": 4,
+      "threads": 8
+    },
+    "sources": [
+      "https://www.intel.com/content/www/us/en/products/sku/132223/intel-core-i312100f-processor-12m-cache-up-to-4-30-ghz/specifications.html",
+      "https://www.intel.com/content/www/us/en/support/articles/000089190/processors/intel-core-processors.html",
+      "https://www.intel.com/content/www/us/en/support/articles/000027144/processors/intel-core-processors.html"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "Sin image_url: Intel solo ofrece logo genérico de familia, no foto del producto exacto."
+  },
+  {
+    "key": "cpu-core-i3-14100f",
+    "name": "Intel Core i3-14100F",
+    "brand": "Intel",
+    "mpn": "BX8071514100F",
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 4 núcleos y 8 hilos para socket LGA1700 con potencia base de 58 W, sin gráficos integrados y disipador incluido en la versión en caja.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "socket": "lga1700",
+      "tdp_w": 58,
+      "memory_types": [
+        "ddr4",
+        "ddr5"
+      ],
+      "igpu": false,
+      "cooler_included": true,
+      "cores": 4,
+      "threads": 8
+    },
+    "sources": [
+      "https://www.intel.com/content/www/us/en/products/sku/236786/intel-core-i3-processor-14100f-12m-cache-up-to-4-70-ghz/specifications.html",
+      "https://www.intel.com/content/www/us/en/support/articles/000089190/processors/intel-core-processors.html",
+      "https://www.intel.com/content/www/us/en/support/articles/000027144/processors/intel-core-processors.html"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "Sin image_url: Intel solo ofrece logo genérico de familia, no foto del producto exacto."
+  },
+  {
+    "key": "cpu-core-i5-12400f",
+    "name": "Intel Core i5-12400F",
+    "brand": "Intel",
+    "mpn": "BX8071512400F",
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 6 núcleos y 12 hilos para socket LGA1700 con potencia base de 65 W, sin gráficos integrados y disipador incluido en la versión en caja.",
+    "market_evidence": "IN+PB+DL",
+    "specs": {
+      "socket": "lga1700",
+      "tdp_w": 65,
+      "memory_types": [
+        "ddr4",
+        "ddr5"
+      ],
+      "igpu": false,
+      "cooler_included": true,
+      "cores": 6,
+      "threads": 12
+    },
+    "sources": [
+      "https://www.intel.com/content/www/us/en/products/sku/134587/intel-core-i512400f-processor-18m-cache-up-to-4-40-ghz/specifications.html",
+      "https://www.intel.com/content/www/us/en/support/articles/000089190/processors/intel-core-processors.html",
+      "https://www.intel.com/content/www/us/en/support/articles/000027144/processors/intel-core-processors.html"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "Sin image_url: Intel solo ofrece logo genérico de familia, no foto del producto exacto."
+  },
+  {
+    "key": "cpu-core-i5-14400f",
+    "name": "Intel Core i5-14400F",
+    "brand": "Intel",
+    "mpn": "BX8071514400F",
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 10 núcleos y 16 hilos para socket LGA1700 con potencia base de 65 W, sin gráficos integrados y disipador incluido en la versión en caja.",
+    "market_evidence": "IN+PB+DL",
+    "specs": {
+      "socket": "lga1700",
+      "tdp_w": 65,
+      "memory_types": [
+        "ddr4",
+        "ddr5"
+      ],
+      "igpu": false,
+      "cooler_included": true,
+      "cores": 10,
+      "threads": 16
+    },
+    "sources": [
+      "https://www.intel.com/content/www/us/en/products/sku/236777/intel-core-i5-processor-14400f-20m-cache-up-to-4-70-ghz/specifications.html",
+      "https://www.intel.com/content/www/us/en/support/articles/000089190/processors/intel-core-processors.html",
+      "https://www.intel.com/content/www/us/en/support/articles/000027144/processors/intel-core-processors.html"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "Sin image_url: Intel solo ofrece logo genérico de familia, no foto del producto exacto."
+  },
+  {
+    "key": "cpu-core-i7-14700",
+    "name": "Intel Core i7-14700",
+    "brand": "Intel",
+    "mpn": "BX8071514700",
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 20 núcleos y 28 hilos para socket LGA1700 con potencia base de 65 W, con gráficos integrados y disipador incluido en la versión en caja.",
+    "market_evidence": "IN+PB+DL",
+    "specs": {
+      "socket": "lga1700",
+      "tdp_w": 65,
+      "memory_types": [
+        "ddr4",
+        "ddr5"
+      ],
+      "igpu": true,
+      "cooler_included": true,
+      "cores": 20,
+      "threads": 28
+    },
+    "sources": [
+      "https://www.intel.com/content/www/us/en/products/sku/236781/intel-core-i7-processor-14700-33m-cache-up-to-5-40-ghz/specifications.html",
+      "https://www.intel.com/content/www/us/en/products/sku/236781/intel-core-i7-processor-14700-33m-cache-up-to-5-40-ghz/ordering.html",
+      "https://www.intel.com/content/www/us/en/support/articles/000089190/processors/intel-core-processors.html"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "Sin image_url: Intel solo ofrece logo genérico de familia, no foto del producto exacto."
+  },
+  {
+    "key": "cpu-core-ultra-5-225f",
+    "name": "Intel Core Ultra 5 225F",
+    "brand": "Intel",
+    "mpn": "BX80768225F",
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 10 núcleos y 10 hilos para socket LGA1851 con potencia base de 65 W, sin gráficos integrados y disipador incluido en la versión en caja.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "socket": "lga1851",
+      "tdp_w": 65,
+      "memory_types": [
+        "ddr5"
+      ],
+      "igpu": false,
+      "cooler_included": true,
+      "cores": 10,
+      "threads": 10
+    },
+    "sources": [
+      "https://www.intel.com/content/www/us/en/products/sku/241069/intel-core-ultra-5-processor-225f-20m-cache-up-to-4-90-ghz/specifications.html",
+      "https://www.intel.com/content/www/us/en/support/articles/000100172/processors.html",
+      "https://www.intel.com/content/www/us/en/support/articles/000027144/processors/intel-core-processors.html"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "Sin image_url: Intel solo ofrece logo genérico de familia, no foto del producto exacto."
+  },
+  {
+    "key": "cpu-core-ultra-5-225",
+    "name": "Intel Core Ultra 5 225",
+    "brand": "Intel",
+    "mpn": "BX80768225",
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 10 núcleos y 10 hilos para socket LGA1851 con potencia base de 65 W, con gráficos integrados y disipador incluido en la versión en caja.",
+    "market_evidence": "IN+PB+DL",
+    "specs": {
+      "socket": "lga1851",
+      "tdp_w": 65,
+      "memory_types": [
+        "ddr5"
+      ],
+      "igpu": true,
+      "cooler_included": true,
+      "cores": 10,
+      "threads": 10
+    },
+    "sources": [
+      "https://www.intel.com/content/www/us/en/products/sku/241070/intel-core-ultra-5-processor-225-20m-cache-up-to-4-90-ghz/specifications.html",
+      "https://www.intel.com/content/www/us/en/products/sku/241070/intel-core-ultra-5-processor-225-20m-cache-up-to-4-90-ghz/ordering.html",
+      "https://www.intel.com/content/www/us/en/support/articles/000100172/processors.html"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "Sin image_url: Intel solo ofrece logo genérico de familia, no foto del producto exacto."
+  },
+  {
+    "key": "cpu-core-ultra-5-245kf",
+    "name": "Intel Core Ultra 5 245KF",
+    "brand": "Intel",
+    "mpn": "BX80768245KF",
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 14 núcleos y 14 hilos para socket LGA1851 con potencia base de 125 W, sin gráficos integrados y sin disipador incluido.",
+    "market_evidence": "IN+PB+DL",
+    "specs": {
+      "socket": "lga1851",
+      "tdp_w": 125,
+      "memory_types": [
+        "ddr5"
+      ],
+      "igpu": false,
+      "cooler_included": false,
+      "cores": 14,
+      "threads": 14
+    },
+    "sources": [
+      "https://www.intel.com/content/www/us/en/products/sku/241066/intel-core-ultra-5-processor-245kf-24m-cache-up-to-5-20-ghz/specifications.html",
+      "https://www.intel.com/content/www/us/en/support/articles/000005940/processors.html",
+      "https://www.intel.com/content/www/us/en/support/articles/000027144/processors/intel-core-processors.html"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "cooler_included false por regla explícita de Intel para modelos con KF; la página no nombra este modelo. Sin image_url: Intel solo ofrece logo genérico de familia, no foto del producto exacto."
+  },
+  {
+    "key": "cpu-core-ultra-7-265f",
+    "name": "Intel Core Ultra 7 265F",
+    "brand": "Intel",
+    "mpn": "BX80768265F",
+    "gtin": null,
+    "category": "cpu",
+    "summary_es": "Procesador de 20 núcleos y 20 hilos para socket LGA1851 con potencia base de 65 W, sin gráficos integrados y disipador incluido en la versión en caja.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "socket": "lga1851",
+      "tdp_w": 65,
+      "memory_types": [
+        "ddr5"
+      ],
+      "igpu": false,
+      "cooler_included": true,
+      "cores": 20,
+      "threads": 20
+    },
+    "sources": [
+      "https://www.intel.com/content/www/us/en/products/sku/241064/intel-core-ultra-7-processor-265f-30m-cache-up-to-5-30-ghz/specifications.html",
+      "https://www.intel.com/content/www/us/en/products/sku/241064/intel-core-ultra-7-processor-265f-30m-cache-up-to-5-30-ghz/ordering.html",
+      "https://www.intel.com/content/www/us/en/support/articles/000100172/processors.html",
+      "https://www.intel.com/content/www/us/en/support/articles/000027144/processors/intel-core-processors.html"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "mpn de la página de pedidos de Intel; el artículo de procesadores sin gráficos muestra por error BX80768265KF. Sin image_url: Intel solo ofrece logo genérico de familia, no foto del producto exacto."
+  }
+]

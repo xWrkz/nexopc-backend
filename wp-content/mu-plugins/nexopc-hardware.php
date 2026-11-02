@@ -8,6 +8,7 @@
 if (!defined('ABSPATH')) exit;
 
 const NEXOPC_HARDWARE_SCHEMA_VERSION = '1.0.1';
+const NEXOPC_HARDWARE_COMPATIBILITY_VERSION = '1.1.0';
 
 function nexopc_hardware_table($name) { global $wpdb; return $wpdb->prefix . 'nexopc_' . $name; }
 
@@ -71,6 +72,28 @@ function nexopc_hardware_install_gpu_memory_capacity() {
 }
 add_action('plugins_loaded', 'nexopc_hardware_install_gpu_memory_capacity', 28);
 
+function nexopc_hardware_add_column($name, $column, $definition) {
+    global $wpdb;
+    $table = nexopc_hardware_table($name);
+    if (!$wpdb->get_var($wpdb->prepare("SHOW COLUMNS FROM $table LIKE %s", $column))) $wpdb->query("ALTER TABLE $table ADD COLUMN $column $definition");
+}
+function nexopc_hardware_install_compatibility_schema() {
+    global $wpdb;
+    if (get_option('nexopc_hardware_compatibility_version') === NEXOPC_HARDWARE_COMPATIBILITY_VERSION) return;
+    $charset = $wpdb->get_charset_collate();
+    nexopc_hardware_add_column('cpu_especificaciones', 'graficos_integrados', 'tinyint(1) NULL');
+    nexopc_hardware_add_column('cpu_especificaciones', 'cooler_incluido', 'tinyint(1) NULL');
+    nexopc_hardware_add_column('placa_especificaciones', 'ranuras_ram', 'smallint unsigned NULL');
+    nexopc_hardware_add_column('ram_especificaciones', 'modulos', 'smallint unsigned NULL');
+    nexopc_hardware_add_column('ram_especificaciones', 'velocidad_mts', 'int unsigned NULL');
+    nexopc_hardware_add_column('gabinete_especificaciones', 'radiador_max_mm', 'smallint unsigned NULL');
+    $wpdb->query('CREATE TABLE IF NOT EXISTS ' . nexopc_hardware_table('cpu_memoria_compatible') . " (cpu_product_id bigint unsigned NOT NULL, tipo_memoria_id bigint unsigned NOT NULL, PRIMARY KEY (cpu_product_id,tipo_memoria_id)) $charset");
+    $wpdb->query('CREATE TABLE IF NOT EXISTS ' . nexopc_hardware_table('refrigeracion_especificaciones') . " (product_id bigint unsigned NOT NULL, tipo varchar(16) NOT NULL, altura_mm smallint unsigned NULL, radiador_mm smallint unsigned NULL, tdp_max_w smallint unsigned NULL, PRIMARY KEY (product_id)) $charset");
+    $wpdb->query('CREATE TABLE IF NOT EXISTS ' . nexopc_hardware_table('refrigeracion_socket_compatible') . " (cooler_product_id bigint unsigned NOT NULL, socket_id bigint unsigned NOT NULL, PRIMARY KEY (cooler_product_id,socket_id)) $charset");
+    update_option('nexopc_hardware_compatibility_version', NEXOPC_HARDWARE_COMPATIBILITY_VERSION, false);
+}
+add_action('plugins_loaded', 'nexopc_hardware_install_compatibility_schema', 29);
+
 function nexopc_hardware_seed($table, $rows) { global $wpdb; foreach ($rows as $row) $wpdb->query($wpdb->prepare("INSERT IGNORE INTO $table (slug,nombre" . (isset($row[2]) ? ',familia' : '') . ") VALUES (%s,%s" . (isset($row[2]) ? ',%s' : '') . ')', ...$row)); }
 function nexopc_hardware_seed_catalogs() {
     nexopc_hardware_seed(nexopc_hardware_table('tipos_componente'), array(array('procesador','Procesador'),array('placa_madre','Placa madre'),array('memoria_ram','Memoria RAM'),array('tarjeta_grafica','Tarjeta gráfica'),array('almacenamiento','Almacenamiento'),array('gabinete','Gabinete'),array('fuente_poder','Fuente de poder'),array('refrigeracion','Refrigeración'),array('monitor','Monitor'),array('periferico','Periférico')));
@@ -85,16 +108,19 @@ function nexopc_hardware_seed_product_categories() {
 }
 add_action('init', 'nexopc_hardware_seed_product_categories', 30);
 
-function nexopc_hardware_rows($name) { global $wpdb; $table = nexopc_hardware_table($name); return $wpdb->get_results("SELECT id, slug, nombre" . ($name === 'tipos_memoria' ? ', familia' : '') . " FROM $table WHERE activo = 1 ORDER BY nombre", ARRAY_A); }
+function nexopc_hardware_rows($name) { global $wpdb; $table = nexopc_hardware_table($name); $rows = $wpdb->get_results("SELECT id, slug, nombre" . ($name === 'tipos_memoria' ? ', familia' : '') . " FROM $table WHERE activo = 1 ORDER BY nombre", ARRAY_A); return array_map(function ($row) { $row['id'] = (int) $row['id']; return $row; }, $rows); }
 function nexopc_hardware_catalogs() { return rest_ensure_response(array('tiposComponente'=>nexopc_hardware_rows('tipos_componente'),'sockets'=>nexopc_hardware_rows('sockets'),'tiposMemoria'=>nexopc_hardware_rows('tipos_memoria'),'formatos'=>nexopc_hardware_rows('formatos'),'interfacesAlmacenamiento'=>nexopc_hardware_rows('interfaces_almacenamiento'),'conectoresEnergia'=>nexopc_hardware_rows('conectores_energia'))); }
 function nexopc_hardware_id($table, $id) { global $wpdb; $id=absint($id); return $id && $wpdb->get_var($wpdb->prepare('SELECT id FROM ' . nexopc_hardware_table($table) . ' WHERE id = %d AND activo = 1',$id)) ? $id : 0; }
 function nexopc_hardware_number($data,$key,$label,$required=false) { $value=$data[$key] ?? null; if ($value === '' || $value === null) return $required ? nexopc_error('nexopc_hardware_validation','Revisa la ficha técnica.',422,array('hardware.specs.'.$key=>$label.' es obligatorio.')) : null; if (!is_numeric($value) || (float)$value < 0) return nexopc_error('nexopc_hardware_validation','Revisa la ficha técnica.',422,array('hardware.specs.'.$key=>$label.' debe ser un número igual o mayor que cero.')); return (float)$value; }
 function nexopc_hardware_relation($data,$key,$table,$label,$required=false) { $id=absint($data[$key] ?? 0); if (!$id && !$required) return 0; if (!nexopc_hardware_id($table,$id)) return nexopc_error('nexopc_hardware_validation','Revisa la ficha técnica.',422,array('hardware.specs.'.$key=>'Selecciona '.$label.' de la lista.')); return $id; }
-function nexopc_hardware_sync_ids($table,$foreign,$product_id,$ids,$valid_table) { global $wpdb; $column = $table === 'placa_memoria_compatible' ? 'tipo_memoria_id' : ($table === 'placa_interfaz_almacenamiento' ? 'interfaz_id' : 'formato_id'); $wpdb->delete(nexopc_hardware_table($table),array($foreign=>$product_id)); foreach (array_unique(array_filter(array_map('absint',(array)$ids))) as $id) if (nexopc_hardware_id($valid_table,$id)) $wpdb->insert(nexopc_hardware_table($table),array($foreign=>$product_id, $column=>$id)); }
+function nexopc_hardware_flag($data,$key) { $value=$data[$key] ?? null; return $value === null || $value === '' ? null : (filter_var($value, FILTER_VALIDATE_BOOLEAN) ? 1 : 0); }
+function nexopc_hardware_sync_ids($table,$foreign,$product_id,$ids,$valid_table) { global $wpdb; $columns = array('placa_memoria_compatible'=>'tipo_memoria_id','cpu_memoria_compatible'=>'tipo_memoria_id','placa_interfaz_almacenamiento'=>'interfaz_id','refrigeracion_socket_compatible'=>'socket_id'); $column = $columns[$table] ?? 'formato_id'; $wpdb->delete(nexopc_hardware_table($table),array($foreign=>$product_id)); foreach (array_unique(array_filter(array_map('absint',(array)$ids))) as $id) if (nexopc_hardware_id($valid_table,$id)) $wpdb->insert(nexopc_hardware_table($table),array($foreign=>$product_id, $column=>$id)); }
 function nexopc_hardware_clear_product($product_id) {
     global $wpdb;
-    foreach (array('cpu_especificaciones','placa_especificaciones','ram_especificaciones','gpu_especificaciones','almacenamiento_especificaciones','gabinete_especificaciones','fuente_especificaciones') as $table) $wpdb->delete(nexopc_hardware_table($table),array('product_id'=>$product_id));
+    foreach (array('cpu_especificaciones','placa_especificaciones','ram_especificaciones','gpu_especificaciones','almacenamiento_especificaciones','gabinete_especificaciones','fuente_especificaciones','refrigeracion_especificaciones') as $table) $wpdb->delete(nexopc_hardware_table($table),array('product_id'=>$product_id));
     $wpdb->delete(nexopc_hardware_table('placa_memoria_compatible'),array('placa_product_id'=>$product_id));
+    $wpdb->delete(nexopc_hardware_table('cpu_memoria_compatible'),array('cpu_product_id'=>$product_id));
+    $wpdb->delete(nexopc_hardware_table('refrigeracion_socket_compatible'),array('cooler_product_id'=>$product_id));
     $wpdb->delete(nexopc_hardware_table('placa_interfaz_almacenamiento'),array('placa_product_id'=>$product_id));
     $wpdb->delete(nexopc_hardware_table('gabinete_formato_compatible'),array('gabinete_product_id'=>$product_id));
     $wpdb->delete(nexopc_hardware_table('producto_conector_energia'),array('product_id'=>$product_id));
@@ -103,33 +129,43 @@ function nexopc_hardware_clear_product($product_id) {
 function nexopc_hardware_save_product($product_id, $hardware) {
     global $wpdb;
     if ($hardware === null) return true;
+    $wpdb->query('START TRANSACTION');
+    $result = nexopc_hardware_write_product($product_id, $hardware);
+    $wpdb->query(is_wp_error($result) ? 'ROLLBACK' : 'COMMIT');
+    return $result;
+}
+function nexopc_hardware_write_product($product_id, $hardware) {
+    global $wpdb;
     if (!is_array($hardware) || empty($hardware['componentTypeId'])) { nexopc_hardware_clear_product($product_id); return true; }
     $type_id=nexopc_hardware_relation($hardware,'componentTypeId','tipos_componente','un tipo de componente',true); if (is_wp_error($type_id)) return $type_id;
     $type=$wpdb->get_var($wpdb->prepare('SELECT slug FROM '.nexopc_hardware_table('tipos_componente').' WHERE id=%d',$type_id)); $spec=(array)($hardware['specs']??array());
     nexopc_hardware_clear_product($product_id);
     $wpdb->replace(nexopc_hardware_table('producto_componente'),array('product_id'=>$product_id,'tipo_componente_id'=>$type_id));
     $socket=nexopc_hardware_relation($spec,'socketId','sockets','un socket',$type==='procesador'||$type==='placa_madre'); if(is_wp_error($socket))return $socket;
-    if ($type==='procesador') { $tdp=nexopc_hardware_number($spec,'tdpWatts','El TDP');if(is_wp_error($tdp))return $tdp;$wpdb->insert(nexopc_hardware_table('cpu_especificaciones'),array('product_id'=>$product_id,'socket_id'=>$socket,'tdp_w'=>$tdp)); }
-    if ($type==='placa_madre') { $format=nexopc_hardware_relation($spec,'formFactorId','formatos','un formato');if(is_wp_error($format))return $format;$wpdb->insert(nexopc_hardware_table('placa_especificaciones'),array('product_id'=>$product_id,'socket_id'=>$socket,'formato_id'=>$format?:null,'ranuras_m2'=>absint($spec['m2Slots']??0),'puertos_sata'=>absint($spec['sataPorts']??0)));nexopc_hardware_sync_ids('placa_memoria_compatible','placa_product_id',$product_id,$spec['supportedMemoryTypeIds']??array(),'tipos_memoria');nexopc_hardware_sync_ids('placa_interfaz_almacenamiento','placa_product_id',$product_id,$spec['supportedStorageInterfaceIds']??array(),'interfaces_almacenamiento'); }
-    if ($type==='memoria_ram') { $memory=nexopc_hardware_relation($spec,'memoryTypeId','tipos_memoria','un tipo de memoria',true);if(is_wp_error($memory))return $memory;$capacity=nexopc_hardware_number($spec,'capacityGb','La capacidad');if(is_wp_error($capacity))return $capacity;$wpdb->insert(nexopc_hardware_table('ram_especificaciones'),array('product_id'=>$product_id,'tipo_memoria_id'=>$memory,'capacidad_gb'=>$capacity)); }
+    if ($type==='procesador') { $tdp=nexopc_hardware_number($spec,'tdpWatts','El TDP');if(is_wp_error($tdp))return $tdp;$wpdb->insert(nexopc_hardware_table('cpu_especificaciones'),array('product_id'=>$product_id,'socket_id'=>$socket,'tdp_w'=>$tdp,'graficos_integrados'=>nexopc_hardware_flag($spec,'integratedGraphics'),'cooler_incluido'=>nexopc_hardware_flag($spec,'coolerIncluded')));nexopc_hardware_sync_ids('cpu_memoria_compatible','cpu_product_id',$product_id,$spec['supportedMemoryTypeIds']??array(),'tipos_memoria'); }
+    if ($type==='placa_madre') { $format=nexopc_hardware_relation($spec,'formFactorId','formatos','un formato');if(is_wp_error($format))return $format;$wpdb->insert(nexopc_hardware_table('placa_especificaciones'),array('product_id'=>$product_id,'socket_id'=>$socket,'formato_id'=>$format?:null,'ranuras_m2'=>absint($spec['m2Slots']??0),'puertos_sata'=>absint($spec['sataPorts']??0),'ranuras_ram'=>absint($spec['ramSlots']??0)?:null));nexopc_hardware_sync_ids('placa_memoria_compatible','placa_product_id',$product_id,$spec['supportedMemoryTypeIds']??array(),'tipos_memoria');nexopc_hardware_sync_ids('placa_interfaz_almacenamiento','placa_product_id',$product_id,$spec['supportedStorageInterfaceIds']??array(),'interfaces_almacenamiento'); }
+    if ($type==='memoria_ram') { $memory=nexopc_hardware_relation($spec,'memoryTypeId','tipos_memoria','un tipo de memoria',true);if(is_wp_error($memory))return $memory;$capacity=nexopc_hardware_number($spec,'capacityGb','La capacidad');if(is_wp_error($capacity))return $capacity;$wpdb->insert(nexopc_hardware_table('ram_especificaciones'),array('product_id'=>$product_id,'tipo_memoria_id'=>$memory,'capacidad_gb'=>$capacity,'modulos'=>absint($spec['modules']??0)?:null,'velocidad_mts'=>absint($spec['speedMts']??0)?:null)); }
     if ($type==='tarjeta_grafica') { $memory=nexopc_hardware_relation($spec,'memoryTypeId','tipos_memoria','un tipo de memoria');if(is_wp_error($memory))return $memory;$memory_gb=nexopc_hardware_number($spec,'gpuMemoryGb','La memoria gráfica');if(is_wp_error($memory_gb))return $memory_gb;$length=nexopc_hardware_number($spec,'gpuLengthMm','La longitud de la GPU');if(is_wp_error($length))return $length;$tdp=nexopc_hardware_number($spec,'tdpWatts','El TDP');if(is_wp_error($tdp))return $tdp;$psu=nexopc_hardware_number($spec,'recommendedPsuWatts','La fuente recomendada');if(is_wp_error($psu))return $psu;$wpdb->insert(nexopc_hardware_table('gpu_especificaciones'),array('product_id'=>$product_id,'tipo_memoria_id'=>$memory?:null,'memoria_gb'=>$memory_gb,'longitud_mm'=>$length,'grosor_ranuras'=>$spec['gpuSlots']!==''?(float)($spec['gpuSlots']??0):null,'tdp_w'=>$tdp,'fuente_recomendada_w'=>$psu)); }
     if ($type==='almacenamiento') { $interface=nexopc_hardware_relation($spec,'storageInterfaceId','interfaces_almacenamiento','una interfaz',true);if(is_wp_error($interface))return $interface;$capacity=nexopc_hardware_number($spec,'capacityGb','La capacidad');if(is_wp_error($capacity))return $capacity;$wpdb->insert(nexopc_hardware_table('almacenamiento_especificaciones'),array('product_id'=>$product_id,'interfaz_id'=>$interface,'capacidad_gb'=>$capacity)); }
-    if ($type==='gabinete') { $gpu=nexopc_hardware_number($spec,'maxGpuLengthMm','La longitud máxima de GPU');if(is_wp_error($gpu))return $gpu;$wpdb->insert(nexopc_hardware_table('gabinete_especificaciones'),array('product_id'=>$product_id,'longitud_gpu_max_mm'=>$gpu,'altura_cooler_max_mm'=>nexopc_hardware_number($spec,'maxCoolerHeightMm','La altura máxima de cooler'),'bahias_2_5'=>absint($spec['bays25']??0),'bahias_3_5'=>absint($spec['bays35']??0)));nexopc_hardware_sync_ids('gabinete_formato_compatible','gabinete_product_id',$product_id,$spec['supportedFormFactorIds']??array(),'formatos'); }
+    if ($type==='gabinete') { $gpu=nexopc_hardware_number($spec,'maxGpuLengthMm','La longitud máxima de GPU');if(is_wp_error($gpu))return $gpu;$wpdb->insert(nexopc_hardware_table('gabinete_especificaciones'),array('product_id'=>$product_id,'longitud_gpu_max_mm'=>$gpu,'altura_cooler_max_mm'=>nexopc_hardware_number($spec,'maxCoolerHeightMm','La altura máxima de cooler'),'bahias_2_5'=>absint($spec['bays25']??0),'bahias_3_5'=>absint($spec['bays35']??0),'radiador_max_mm'=>absint($spec['maxRadiatorMm']??0)));nexopc_hardware_sync_ids('gabinete_formato_compatible','gabinete_product_id',$product_id,$spec['supportedFormFactorIds']??array(),'formatos'); }
     if ($type==='fuente_poder') { $watts=nexopc_hardware_number($spec,'continuousWatts','La potencia continua',true);if(is_wp_error($watts))return $watts;$wpdb->insert(nexopc_hardware_table('fuente_especificaciones'),array('product_id'=>$product_id,'potencia_continua_w'=>$watts)); }
+    if ($type==='refrigeracion') { $cooler=in_array($spec['coolerType']??'',array('aire','liquido'),true)?$spec['coolerType']:'';if(!$cooler)return nexopc_error('nexopc_hardware_validation','Revisa la ficha técnica.',422,array('hardware.specs.coolerType'=>'Selecciona si es refrigeración por aire o líquida.'));$height=nexopc_hardware_number($spec,'coolerHeightMm','La altura');if(is_wp_error($height))return $height;$radiator=nexopc_hardware_number($spec,'radiatorMm','El radiador');if(is_wp_error($radiator))return $radiator;$max_tdp=nexopc_hardware_number($spec,'maxTdpWatts','El TDP máximo');if(is_wp_error($max_tdp))return $max_tdp;$wpdb->insert(nexopc_hardware_table('refrigeracion_especificaciones'),array('product_id'=>$product_id,'tipo'=>$cooler,'altura_mm'=>$height,'radiador_mm'=>$radiator,'tdp_max_w'=>$max_tdp));nexopc_hardware_sync_ids('refrigeracion_socket_compatible','cooler_product_id',$product_id,$spec['supportedSocketIds']??array(),'sockets'); }
     return true;
 }
 function nexopc_hardware_product_item($product_id) { global $wpdb; $row=$wpdb->get_row($wpdb->prepare('SELECT p.tipo_componente_id,t.slug,t.nombre FROM '.nexopc_hardware_table('producto_componente').' p JOIN '.nexopc_hardware_table('tipos_componente').' t ON t.id=p.tipo_componente_id WHERE p.product_id=%d',$product_id),ARRAY_A); if(!$row)return null; return array('componentTypeId'=>(int)$row['tipo_componente_id'],'componentType'=>array('slug'=>$row['slug'],'name'=>$row['nombre']),'specs'=>nexopc_hardware_specs((int)$product_id,$row['slug'])); }
 function nexopc_hardware_specs($id,$type) {
     global $wpdb;
-    $tables=array('procesador'=>'cpu_especificaciones','placa_madre'=>'placa_especificaciones','memoria_ram'=>'ram_especificaciones','tarjeta_grafica'=>'gpu_especificaciones','almacenamiento'=>'almacenamiento_especificaciones','gabinete'=>'gabinete_especificaciones','fuente_poder'=>'fuente_especificaciones');
+    $tables=array('procesador'=>'cpu_especificaciones','placa_madre'=>'placa_especificaciones','memoria_ram'=>'ram_especificaciones','tarjeta_grafica'=>'gpu_especificaciones','almacenamiento'=>'almacenamiento_especificaciones','gabinete'=>'gabinete_especificaciones','fuente_poder'=>'fuente_especificaciones','refrigeracion'=>'refrigeracion_especificaciones');
     if(empty($tables[$type])) return array();
     $row=$wpdb->get_row($wpdb->prepare('SELECT * FROM '.nexopc_hardware_table($tables[$type]).' WHERE product_id=%d',$id),ARRAY_A)?:array();
-    if($type==='procesador') return array('socketId'=>(int)($row['socket_id']??0),'tdpWatts'=>$row['tdp_w']??null);
-    if($type==='placa_madre') return array('socketId'=>(int)($row['socket_id']??0),'formFactorId'=>(int)($row['formato_id']??0),'m2Slots'=>(int)($row['ranuras_m2']??0),'sataPorts'=>(int)($row['puertos_sata']??0),'supportedMemoryTypeIds'=>array_map('intval',$wpdb->get_col($wpdb->prepare('SELECT tipo_memoria_id FROM '.nexopc_hardware_table('placa_memoria_compatible').' WHERE placa_product_id=%d',$id))),'supportedStorageInterfaceIds'=>array_map('intval',$wpdb->get_col($wpdb->prepare('SELECT interfaz_id FROM '.nexopc_hardware_table('placa_interfaz_almacenamiento').' WHERE placa_product_id=%d',$id))));
-    if($type==='memoria_ram') return array('memoryTypeId'=>(int)($row['tipo_memoria_id']??0),'capacityGb'=>(int)($row['capacidad_gb']??0));
+    $flag=function ($key) use ($row) { return isset($row[$key]) ? (bool)$row[$key] : null; };
+    if($type==='procesador') return array('socketId'=>(int)($row['socket_id']??0),'tdpWatts'=>$row['tdp_w']??null,'integratedGraphics'=>$flag('graficos_integrados'),'coolerIncluded'=>$flag('cooler_incluido'),'supportedMemoryTypeIds'=>array_map('intval',$wpdb->get_col($wpdb->prepare('SELECT tipo_memoria_id FROM '.nexopc_hardware_table('cpu_memoria_compatible').' WHERE cpu_product_id=%d',$id))));
+    if($type==='placa_madre') return array('socketId'=>(int)($row['socket_id']??0),'formFactorId'=>(int)($row['formato_id']??0),'m2Slots'=>(int)($row['ranuras_m2']??0),'sataPorts'=>(int)($row['puertos_sata']??0),'ramSlots'=>(int)($row['ranuras_ram']??0),'supportedMemoryTypeIds'=>array_map('intval',$wpdb->get_col($wpdb->prepare('SELECT tipo_memoria_id FROM '.nexopc_hardware_table('placa_memoria_compatible').' WHERE placa_product_id=%d',$id))),'supportedStorageInterfaceIds'=>array_map('intval',$wpdb->get_col($wpdb->prepare('SELECT interfaz_id FROM '.nexopc_hardware_table('placa_interfaz_almacenamiento').' WHERE placa_product_id=%d',$id))));
+    if($type==='memoria_ram') return array('memoryTypeId'=>(int)($row['tipo_memoria_id']??0),'capacityGb'=>(int)($row['capacidad_gb']??0),'modules'=>(int)($row['modulos']??0),'speedMts'=>(int)($row['velocidad_mts']??0));
     if($type==='tarjeta_grafica') return array('memoryTypeId'=>(int)($row['tipo_memoria_id']??0),'gpuMemoryGb'=>(int)($row['memoria_gb']??0),'gpuLengthMm'=>(int)($row['longitud_mm']??0),'gpuSlots'=>$row['grosor_ranuras']??null,'tdpWatts'=>$row['tdp_w']??null,'recommendedPsuWatts'=>(int)($row['fuente_recomendada_w']??0));
     if($type==='almacenamiento') { $interface_id=(int)($row['interfaz_id']??0); return array('storageInterfaceId'=>$interface_id,'storageInterfaceSlug'=>$interface_id ? $wpdb->get_var($wpdb->prepare('SELECT slug FROM '.nexopc_hardware_table('interfaces_almacenamiento').' WHERE id=%d',$interface_id)) : null,'capacityGb'=>(int)($row['capacidad_gb']??0)); }
-    if($type==='gabinete') return array('maxGpuLengthMm'=>(int)($row['longitud_gpu_max_mm']??0),'maxCoolerHeightMm'=>(int)($row['altura_cooler_max_mm']??0),'bays25'=>(int)($row['bahias_2_5']??0),'bays35'=>(int)($row['bahias_3_5']??0),'supportedFormFactorIds'=>array_map('intval',$wpdb->get_col($wpdb->prepare('SELECT formato_id FROM '.nexopc_hardware_table('gabinete_formato_compatible').' WHERE gabinete_product_id=%d',$id))));
+    if($type==='gabinete') return array('maxGpuLengthMm'=>(int)($row['longitud_gpu_max_mm']??0),'maxCoolerHeightMm'=>(int)($row['altura_cooler_max_mm']??0),'bays25'=>(int)($row['bahias_2_5']??0),'bays35'=>(int)($row['bahias_3_5']??0),'maxRadiatorMm'=>(int)($row['radiador_max_mm']??0),'supportedFormFactorIds'=>array_map('intval',$wpdb->get_col($wpdb->prepare('SELECT formato_id FROM '.nexopc_hardware_table('gabinete_formato_compatible').' WHERE gabinete_product_id=%d',$id))));
     if($type==='fuente_poder') return array('continuousWatts'=>(int)($row['potencia_continua_w']??0));
+    if($type==='refrigeracion') return array('coolerType'=>$row['tipo']??null,'coolerHeightMm'=>(int)($row['altura_mm']??0),'radiatorMm'=>(int)($row['radiador_mm']??0),'maxTdpWatts'=>(int)($row['tdp_max_w']??0),'supportedSocketIds'=>array_map('intval',$wpdb->get_col($wpdb->prepare('SELECT socket_id FROM '.nexopc_hardware_table('refrigeracion_socket_compatible').' WHERE cooler_product_id=%d',$id))));
     return array();
 }

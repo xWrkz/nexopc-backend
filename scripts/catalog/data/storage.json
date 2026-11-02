@@ -1,0 +1,471 @@
+[
+  {
+    "key": "storage-kingston-nv3-500",
+    "name": "Kingston NV3 500GB",
+    "brand": "Kingston",
+    "mpn": "SNV3S/500G",
+    "gtin": "0740617344806",
+    "category": "storage",
+    "summary_es": "Unidad SSD NVMe PCIe 4.0 x4 de 500 GB en formato M.2 2280.",
+    "market_evidence": "IN+PB",
+    "specs": {
+      "interface": "m2_nvme",
+      "capacity_gb": 500,
+      "pcie_gen": 4,
+      "form": "M.2 2280"
+    },
+    "sources": [
+      "https://www.kingston.com/datasheets/snv3s_en.pdf",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Kingston&ProductCode=SNV3S%2F500G"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/bf9a6d417d44731e7b5eea0665d8b8775bafb19d.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "En DL no se cuenta: su código SNV3SM3 corresponde a la versión M.2 2230 y otro código no precisa formato."
+  },
+  {
+    "key": "storage-kingston-nv3-1000",
+    "name": "Kingston NV3 1TB",
+    "brand": "Kingston",
+    "mpn": "SNV3S/1000G",
+    "gtin": "0740617344790",
+    "category": "storage",
+    "summary_es": "Unidad SSD NVMe PCIe 4.0 x4 de 1 TB en formato M.2 2280.",
+    "market_evidence": "IN",
+    "specs": {
+      "interface": "m2_nvme",
+      "capacity_gb": 1000,
+      "pcie_gen": 4,
+      "form": "M.2 2280"
+    },
+    "sources": [
+      "https://www.kingston.com/datasheets/snv3s_en.pdf",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Kingston&ProductCode=SNV3S%2F1000G"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/ecce82f95f33dda4124a312e3820371c4a3a1d8e.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "PB lista SNV3S/1TB, que no coincide con el part number oficial, y no se cuenta como evidencia."
+  },
+  {
+    "key": "storage-kingston-nv3-2000",
+    "name": "Kingston NV3 2TB",
+    "brand": "Kingston",
+    "mpn": "SNV3S/2000G",
+    "gtin": "0740617344783",
+    "category": "storage",
+    "summary_es": "Unidad SSD NVMe PCIe 4.0 x4 de 2 TB en formato M.2 2280.",
+    "market_evidence": "IN",
+    "specs": {
+      "interface": "m2_nvme",
+      "capacity_gb": 2000,
+      "pcie_gen": 4,
+      "form": "M.2 2280"
+    },
+    "sources": [
+      "https://www.kingston.com/datasheets/snv3s_en.pdf",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Kingston&ProductCode=SNV3S%2F2000G"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/6af315e76ee0cfbb0f2d8c016ab6cb2933d72676.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": ""
+  },
+  {
+    "key": "storage-kingston-kc3000-1024",
+    "name": "Kingston KC3000 1024GB",
+    "brand": "Kingston",
+    "mpn": "SKC3000S/1024G",
+    "gtin": "0740617324433",
+    "category": "storage",
+    "summary_es": "Unidad SSD NVMe PCIe 4.0 de 1024 GB en formato M.2 2280 con disipador.",
+    "market_evidence": "PB",
+    "specs": {
+      "interface": "m2_nvme",
+      "capacity_gb": 1024,
+      "pcie_gen": 4,
+      "form": "M.2 2280"
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Kingston&ProductCode=SKC3000S%2F1024G"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/3729d5ab9bd52729203bd86ed65668a209e7b87c.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única Icecat; capacidad nominal 1024 tomada del título y del MPN (Icecat la redondea a 1 TB en su atributo). PB lista KC3000 1024GB sin MPN."
+  },
+  {
+    "key": "storage-kingston-fury-renegade-g5-1024",
+    "name": "Kingston FURY Renegade G5 1024GB",
+    "brand": "Kingston",
+    "mpn": "SFYR2S/1T0",
+    "gtin": "0740617349481",
+    "category": "storage",
+    "summary_es": "Unidad SSD NVMe PCIe 5.0 x4 de 1024 GB en formato M.2 2280.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "interface": "m2_nvme",
+      "capacity_gb": 1024,
+      "pcie_gen": 5,
+      "form": "M.2 2280"
+    },
+    "sources": [
+      "https://www.kingston.com/datasheets/SFYR2S_en.pdf",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Kingston&ProductCode=SFYR2S%2F1T0"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/b8109a32a9f7915b0b2312783365981d67779455.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Capacidad nominal 1,024GB según la ficha oficial; Icecat la redondea a 1 TB."
+  },
+  {
+    "key": "storage-adata-legend-860-500",
+    "name": "ADATA Legend 860 500GB",
+    "brand": "ADATA",
+    "mpn": "SLEG-860-500GCS",
+    "gtin": "4711085949486",
+    "category": "storage",
+    "summary_es": "Unidad SSD NVMe PCIe 4.0 x4 de 500 GB en formato M.2 2280.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "interface": "m2_nvme",
+      "capacity_gb": 500,
+      "pcie_gen": 4,
+      "form": "M.2 2280"
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ADATA&ProductCode=SLEG-860-500GCS"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/3cbdec9be6de4e2097d0d2f8a8e8bb2a7cee45fb.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única Icecat: adata.com respondió 403. Imagen de serie: Icecat la comparte con otras capacidades o variantes y no muestra capacidad ni MPN."
+  },
+  {
+    "key": "storage-adata-legend-860-1000",
+    "name": "ADATA Legend 860 1TB",
+    "brand": "ADATA",
+    "mpn": "SLEG-860-1000GCS",
+    "gtin": "4711085949493",
+    "category": "storage",
+    "summary_es": "Unidad SSD NVMe PCIe 4.0 x4 de 1 TB en formato M.2 2280.",
+    "market_evidence": "IN",
+    "specs": {
+      "interface": "m2_nvme",
+      "capacity_gb": 1000,
+      "pcie_gen": 4,
+      "form": "M.2 2280"
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ADATA&ProductCode=SLEG-860-1000GCS"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/3cbdec9be6de4e2097d0d2f8a8e8bb2a7cee45fb.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única Icecat: adata.com respondió 403. Imagen de serie: Icecat la comparte con otras capacidades o variantes y no muestra capacidad ni MPN."
+  },
+  {
+    "key": "storage-adata-legend-710-1000",
+    "name": "ADATA Legend 710 1TB",
+    "brand": "ADATA",
+    "mpn": "ALEG-710-1TCS",
+    "gtin": "4711085937841",
+    "category": "storage",
+    "summary_es": "Unidad SSD NVMe PCIe 3.0 x4 de 1 TB en formato M.2 2280.",
+    "market_evidence": "DL",
+    "specs": {
+      "interface": "m2_nvme",
+      "capacity_gb": 1000,
+      "pcie_gen": 3,
+      "form": "M.2 2280"
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ADATA&ProductCode=ALEG-710-1TCS"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/86ed1e01c35cf77837c4e3d078a0772b21d780ba.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única Icecat: adata.com respondió 403. Imagen de serie: Icecat la comparte con otras capacidades o variantes y no muestra capacidad ni MPN."
+  },
+  {
+    "key": "storage-wd-green-sn350-500",
+    "name": "WD Green SN350 500GB",
+    "brand": "WD",
+    "mpn": "WDS500G2G0C",
+    "gtin": null,
+    "category": "storage",
+    "summary_es": "Unidad SSD NVMe PCIe Gen3 de hasta 4 carriles, 500 GB, en formato M.2 2280.",
+    "market_evidence": "DL",
+    "specs": {
+      "interface": "m2_nvme",
+      "capacity_gb": 500,
+      "pcie_gen": 3,
+      "form": "M.2 2280"
+    },
+    "sources": [
+      "https://documents.westerndigital.com/content/dam/doc-library/en_us/assets/public/western-digital/product/internal-drives/wd-green-ssd/product-brief-wd-green-sn350-nvme-ssd.pdf"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "Sin imagen: Open Icecat no da acceso a esta marca y el brief no ofrece una URL de imagen por SKU. DL lo cataloga bajo SanDisk."
+  },
+  {
+    "key": "storage-wd-green-sn350-2000",
+    "name": "WD Green SN350 2TB",
+    "brand": "WD",
+    "mpn": "WDS200T3G0C",
+    "gtin": null,
+    "category": "storage",
+    "summary_es": "Unidad SSD NVMe PCIe Gen3 de hasta 4 carriles, 2 TB, en formato M.2 2280.",
+    "market_evidence": "DL",
+    "specs": {
+      "interface": "m2_nvme",
+      "capacity_gb": 2000,
+      "pcie_gen": 3,
+      "form": "M.2 2280"
+    },
+    "sources": [
+      "https://documents.westerndigital.com/content/dam/doc-library/en_us/assets/public/western-digital/product/internal-drives/wd-green-ssd/product-brief-wd-green-sn350-nvme-ssd.pdf"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "Sin imagen: Open Icecat no da acceso a esta marca y el brief no ofrece una URL de imagen por SKU. DL lo cataloga bajo SanDisk."
+  },
+  {
+    "key": "storage-hiksemi-wave-pro-p-512",
+    "name": "Hiksemi WAVE PRO(P) 512GB",
+    "brand": "Hiksemi",
+    "mpn": null,
+    "gtin": null,
+    "category": "storage",
+    "summary_es": "Unidad SSD NVMe PCIe 3.0 de 512 GB en formato M.2 2280.",
+    "market_evidence": "PB",
+    "specs": {
+      "interface": "m2_nvme",
+      "capacity_gb": 512,
+      "pcie_gen": 3,
+      "form": "M.2 2280"
+    },
+    "sources": [
+      "https://www.hiksemitech.com/en/hiksemi/all-products/solid-state-drive/consumer-ssd/hs-ssd-wave-pro-p.html"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "La página oficial lista capacidades discretas pero no publica número de parte por capacidad: mpn en null. Sus imágenes no indican capacidad: image_url en null."
+  },
+  {
+    "key": "storage-teamgroup-mp33-1000",
+    "name": "TeamGroup MP33 1TB",
+    "brand": "TeamGroup",
+    "mpn": "TM8FP6001T0C101",
+    "gtin": null,
+    "category": "storage",
+    "summary_es": "Unidad SSD NVMe PCIe Gen3 x4 de 1 TB en formato 2280.",
+    "market_evidence": "DL",
+    "specs": {
+      "interface": "m2_nvme",
+      "capacity_gb": 1000,
+      "pcie_gen": 3,
+      "form": "M.2 2280"
+    },
+    "sources": [
+      "https://www.teamgroupinc.com/en/product-detail/ssd/TEAMGROUP/mp33/mp33-TM8FP6001T0C101/"
+    ],
+    "image_url": "https://images.teamgroupinc.com/products/ssd/m2/mp33/1tb_01.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": ""
+  },
+  {
+    "key": "storage-kingston-a400-240",
+    "name": "Kingston A400 240GB",
+    "brand": "Kingston",
+    "mpn": "SA400S37/240G",
+    "gtin": "0740617261219",
+    "category": "storage",
+    "summary_es": "Unidad SSD SATA III de 240 GB en formato de 2.5 pulgadas.",
+    "market_evidence": "DL",
+    "specs": {
+      "interface": "sata_2_5",
+      "capacity_gb": 240,
+      "pcie_gen": null,
+      "form": "2.5\""
+    },
+    "sources": [
+      "https://www.kingston.com/datasheets/SA400S37_en.pdf",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Kingston&ProductCode=SA400S37%2F240G"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/9148614c384f2cf258135ec0898032b4706f5c7f.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Imagen de serie: Icecat la comparte con otras capacidades o variantes y no muestra capacidad ni MPN."
+  },
+  {
+    "key": "storage-kingston-a400-480",
+    "name": "Kingston A400 480GB",
+    "brand": "Kingston",
+    "mpn": "SA400S37/480G",
+    "gtin": "0740617263442",
+    "category": "storage",
+    "summary_es": "Unidad SSD SATA III de 480 GB en formato de 2.5 pulgadas.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "interface": "sata_2_5",
+      "capacity_gb": 480,
+      "pcie_gen": null,
+      "form": "2.5\""
+    },
+    "sources": [
+      "https://www.kingston.com/datasheets/SA400S37_en.pdf",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Kingston&ProductCode=SA400S37%2F480G"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/9148614c384f2cf258135ec0898032b4706f5c7f.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Imagen de serie: Icecat la comparte con otras capacidades o variantes y no muestra capacidad ni MPN."
+  },
+  {
+    "key": "storage-adata-su650-512",
+    "name": "ADATA SU650 512GB",
+    "brand": "ADATA",
+    "mpn": "ASU650SS-512GT-R",
+    "gtin": "4711085931528",
+    "category": "storage",
+    "summary_es": "Unidad SSD SATA III de 512 GB en formato de 2.5 pulgadas.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "interface": "sata_2_5",
+      "capacity_gb": 512,
+      "pcie_gen": null,
+      "form": "2.5\""
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ADATA&ProductCode=ASU650SS-512GT-R"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/424a69a0976179704f2a064c08dd277519e0fb98.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única Icecat: adata.com respondió 403. Imagen de serie: Icecat la comparte con otras capacidades o variantes y no muestra capacidad ni MPN."
+  },
+  {
+    "key": "storage-wd-green-sata-1000",
+    "name": "WD Green SATA 1TB",
+    "brand": "WD",
+    "mpn": "WDS100T3G0A",
+    "gtin": null,
+    "category": "storage",
+    "summary_es": "Unidad SSD SATA III de 1 TB en formato de 2.5 pulgadas y 7 mm.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "interface": "sata_2_5",
+      "capacity_gb": 1000,
+      "pcie_gen": null,
+      "form": "2.5\""
+    },
+    "sources": [
+      "https://documents.westerndigital.com/content/dam/doc-library/en_us/assets/public/western-digital/product/internal-drives/wd-green-ssd/product-brief-wd-green-sata-ssd.pdf"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "Sin imagen: Open Icecat no da acceso a esta marca y el brief no ofrece una URL de imagen por SKU. DL lo cataloga bajo SanDisk."
+  },
+  {
+    "key": "storage-kingston-kc600-1024",
+    "name": "Kingston KC600 1024GB",
+    "brand": "Kingston",
+    "mpn": "SKC600/1024G",
+    "gtin": "0740617300116",
+    "category": "storage",
+    "summary_es": "Unidad SSD SATA III de 1024 GB en formato de 2.5 pulgadas.",
+    "market_evidence": "DL+PB",
+    "specs": {
+      "interface": "sata_2_5",
+      "capacity_gb": 1024,
+      "pcie_gen": null,
+      "form": "2.5\""
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Kingston&ProductCode=SKC600%2F1024G"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/c12f53fc1bdd329404f767e3466ccfaa847fcf1a.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única Icecat; capacidad nominal 1024 tomada del título y del MPN (Icecat la redondea a 1 TB en su atributo). Imagen de serie: Icecat la comparte con otras capacidades o variantes y no muestra capacidad ni MPN."
+  },
+  {
+    "key": "storage-teamgroup-cx2-1000",
+    "name": "TeamGroup CX2 1TB",
+    "brand": "TeamGroup",
+    "mpn": "T253X6001T0C101",
+    "gtin": null,
+    "category": "storage",
+    "summary_es": "Unidad SSD SATA III de 1 TB en formato de 2.5 pulgadas.",
+    "market_evidence": "DL",
+    "specs": {
+      "interface": "sata_2_5",
+      "capacity_gb": 1000,
+      "pcie_gen": null,
+      "form": "2.5\""
+    },
+    "sources": [
+      "https://www.teamgroupinc.com/en/product-detail/ssd/TEAMGROUP/cx2/cx2-T253X6001T0C101/",
+      "https://images.teamgroupinc.com/products/ssd/internal/cx2/spec-sheet/cx2-en.pdf",
+      "https://www.teamgroupinc.com/en/product-category/ssd/internal/"
+    ],
+    "image_url": "https://images.teamgroupinc.com/products/ssd/internal/cx2/01.jpg",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "El 2.5\" sale de la categoría oficial \"2.5-inch SSD\", que lista CX2; la ficha solo da medidas. Imagen común a la serie, sin capacidad visible."
+  },
+  {
+    "key": "storage-wd-blue-1000",
+    "name": "WD Blue 1TB 7200 RPM",
+    "brand": "WD",
+    "mpn": "WD10EZEX",
+    "gtin": null,
+    "category": "storage",
+    "summary_es": "Disco duro de escritorio SATA de 1 TB y 3.5 pulgadas a 7200 RPM.",
+    "market_evidence": "PB",
+    "specs": {
+      "interface": "sata_3_5",
+      "capacity_gb": 1000,
+      "pcie_gen": null,
+      "form": "3.5\""
+    },
+    "sources": [
+      "https://documents.westerndigital.com/content/dam/doc-library/en_us/assets/public/western-digital/product/internal-drives/wd-blue-hdd/data-sheet-western-digital-wd-blue-pc-hdd.pdf"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": true,
+    "notes": "Sin imagen: Open Icecat no da acceso a esta marca y la página oficial leída no expuso imagen de producto."
+  },
+  {
+    "key": "storage-seagate-barracuda-2000",
+    "name": "Seagate BarraCuda 2TB",
+    "brand": "Seagate",
+    "mpn": "ST2000DM008",
+    "gtin": "0763649100165",
+    "category": "storage",
+    "summary_es": "Disco duro de escritorio SATA de 2 TB y 3.5 pulgadas.",
+    "market_evidence": "PB",
+    "specs": {
+      "interface": "sata_3_5",
+      "capacity_gb": 2000,
+      "pcie_gen": null,
+      "form": "3.5\""
+    },
+    "sources": [
+      "https://www.seagate.com/content/dam/seagate/migrated-assets/www-content/datasheets/pdfs/3-5-barracudaDS1900-14-2007US-en_US.pdf",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Seagate&ProductCode=ST2000DM008"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/55bf87708a96cfe4bd7651dd6b4bf3b6767c3b7f.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Revisar SKU con la tienda: PB titula ST2000DM001 (64MB) pero la URL de su ficha dice ST2000DM008; aquí se documenta ST2000DM008. Está en la ficha oficial de 2020, no en la versión 2026 consultada."
+  }
+]

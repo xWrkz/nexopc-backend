@@ -1,0 +1,784 @@
+[
+  {
+    "key": "mb-asus-prime-a520m-k",
+    "name": "ASUS PRIME A520M-K",
+    "brand": "ASUS",
+    "mpn": "90MB1500-M0EAY0",
+    "gtin": "4718017826921",
+    "category": "motherboard",
+    "summary_es": "Placa madre Micro-ATX con chipset AMD A520, socket AM4, 2 ranuras DDR4, 1 ranura M.2 y 4 puertos SATA.",
+    "market_evidence": "IN+PB+DL",
+    "specs": {
+      "chipset": "A520",
+      "socket": "am4",
+      "form": "micro_atx",
+      "memory_types": [
+        "ddr4"
+      ],
+      "ram_slots": 2,
+      "m2_slots": 1,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/motherboards/prime/prime-a520m-k/techspec/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ASUS&ProductCode=90MB1500-M0EAY0"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/72bf48ffcb821a52ca2c0f287c41a9699849a135.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": ""
+  },
+  {
+    "key": "mb-gigabyte-b550m-k",
+    "name": "Gigabyte B550M K",
+    "brand": "Gigabyte",
+    "mpn": "B550M K",
+    "gtin": "4719331852764",
+    "category": "motherboard",
+    "summary_es": "Placa madre Micro-ATX con chipset AMD B550, socket AM4, 4 ranuras DDR4, 2 ranuras M.2 y 4 puertos SATA.",
+    "market_evidence": "IN+PB+DL",
+    "specs": {
+      "chipset": "B550",
+      "socket": "am4",
+      "form": "micro_atx",
+      "memory_types": [
+        "ddr4"
+      ],
+      "ram_slots": 4,
+      "m2_slots": 2,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Gigabyte&ProductCode=B550M%20K"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/d28ceaccacb479e831abfa64528598be6e4d4129.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única: Open Icecat; gigabyte.com bloqueó el acceso (403)."
+  },
+  {
+    "key": "mb-gigabyte-b550-eagle-wifi6",
+    "name": "Gigabyte B550 EAGLE WIFI6",
+    "brand": "Gigabyte",
+    "mpn": "B550 EAGLE WIFI6",
+    "gtin": "4719331868406",
+    "category": "motherboard",
+    "summary_es": "Placa madre ATX con chipset AMD B550, socket AM4, 4 ranuras DDR4, 2 ranuras M.2 y 4 puertos SATA.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "chipset": "B550",
+      "socket": "am4",
+      "form": "atx",
+      "memory_types": [
+        "ddr4"
+      ],
+      "ram_slots": 4,
+      "m2_slots": 2,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Gigabyte&ProductCode=B550%20EAGLE%20WIFI6"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/313825bf7e8aa86e3086e71129af85e9e3d3fc7f.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única: Open Icecat; gigabyte.com bloqueó el acceso (403)."
+  },
+  {
+    "key": "mb-asrock-b550-phantom-gaming-4-ac",
+    "name": "ASRock B550 Phantom Gaming 4/ac",
+    "brand": "ASRock",
+    "mpn": null,
+    "gtin": null,
+    "category": "motherboard",
+    "summary_es": "Placa madre con chipset AMD B550; especificaciones pendientes de verificar en fuente oficial.",
+    "market_evidence": "DL",
+    "specs": {
+      "chipset": "B550",
+      "socket": null,
+      "form": null,
+      "memory_types": null,
+      "ram_slots": null,
+      "m2_slots": null,
+      "sata_ports": null
+    },
+    "sources": [
+      "https://www.asrock.com/mb/AMD/B550%20Phantom%20Gaming%204ac/"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": false,
+    "notes": "Sin datos leídos: asrock.com responde con desafío Incapsula, download.asrock.com con 403 e Icecat exige app_key o no tiene el producto. La URL en sources no se pudo leer y queda solo como referencia para revisión manual. chipset derivado del nombre del modelo."
+  },
+  {
+    "key": "mb-asus-prime-a620m-k",
+    "name": "ASUS PRIME A620M-K",
+    "brand": "ASUS",
+    "mpn": "90MB1F40-M0EAY0",
+    "gtin": "4711387242087",
+    "category": "motherboard",
+    "summary_es": "Placa madre Micro-ATX con chipset AMD A620, socket AM5, 2 ranuras DDR5, 1 ranura M.2 y 4 puertos SATA.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "chipset": "A620",
+      "socket": "am5",
+      "form": "micro_atx",
+      "memory_types": [
+        "ddr5"
+      ],
+      "ram_slots": 2,
+      "m2_slots": 1,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/motherboards/prime/prime-a620m-k/techspec/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ASUS&ProductCode=90MB1F40-M0EAY0"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/8b570db6fb084dec7483c5c29a1a9539a798cddd.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": ""
+  },
+  {
+    "key": "mb-gigabyte-a620m-ds3h",
+    "name": "Gigabyte A620M DS3H",
+    "brand": "Gigabyte",
+    "mpn": "A620M DS3H",
+    "gtin": "4719331855567",
+    "category": "motherboard",
+    "summary_es": "Placa madre Micro-ATX con chipset AMD A620, socket AM5, 4 ranuras DDR5, 1 ranura M.2 y 4 puertos SATA.",
+    "market_evidence": "IN",
+    "specs": {
+      "chipset": "A620",
+      "socket": "am5",
+      "form": "micro_atx",
+      "memory_types": [
+        "ddr5"
+      ],
+      "ram_slots": 4,
+      "m2_slots": 1,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Gigabyte&ProductCode=A620M%20DS3H"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/30d66b907ea2d15c418fd59a27e6a1493694c376.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única: Open Icecat; gigabyte.com bloqueó el acceso (403)."
+  },
+  {
+    "key": "mb-gigabyte-b650m-d3hp-ax",
+    "name": "Gigabyte B650M D3HP AX",
+    "brand": "Gigabyte",
+    "mpn": "B650M D3HP AX",
+    "gtin": "4719331859510",
+    "category": "motherboard",
+    "summary_es": "Placa madre Micro-ATX con chipset AMD B650, socket AM5, 4 ranuras DDR5, 2 ranuras M.2 y 4 puertos SATA.",
+    "market_evidence": "IN+PB+DL",
+    "specs": {
+      "chipset": "B650",
+      "socket": "am5",
+      "form": "micro_atx",
+      "memory_types": [
+        "ddr5"
+      ],
+      "ram_slots": 4,
+      "m2_slots": 2,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Gigabyte&ProductCode=B650M%20D3HP%20AX"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/c0c60f4d0e2e37c71eadf3125dcd14e706257925.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única: Open Icecat; gigabyte.com bloqueó el acceso (403)."
+  },
+  {
+    "key": "mb-asus-prime-b650m-f",
+    "name": "ASUS PRIME B650M-F",
+    "brand": "ASUS",
+    "mpn": null,
+    "gtin": null,
+    "category": "motherboard",
+    "summary_es": "Placa madre Micro-ATX con chipset AMD B650, socket AM5, 2 ranuras DDR5, 1 ranura M.2 y 4 puertos SATA.",
+    "market_evidence": "PB+DL",
+    "specs": {
+      "chipset": "B650",
+      "socket": "am5",
+      "form": "micro_atx",
+      "memory_types": [
+        "ddr5"
+      ],
+      "ram_slots": 2,
+      "m2_slots": 1,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/motherboards/prime/prime-b650m-f/techspec/"
+    ],
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/0f2a16f5-f72b-4bcd-b29c-d1226ddae2dd/",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "mpn no visto en fuente oficial."
+  },
+  {
+    "key": "mb-msi-mpg-b650i-edge-wifi",
+    "name": "MSI MPG B650I EDGE WIFI",
+    "brand": "MSI",
+    "mpn": "MPG B650I EDGE WIFI",
+    "gtin": "4711377010146",
+    "category": "motherboard",
+    "summary_es": "Placa madre Mini-ITX con chipset AMD B650, socket AM5, 2 ranuras DDR5, 2 ranuras M.2 y 4 puertos SATA.",
+    "market_evidence": "DL",
+    "specs": {
+      "chipset": "B650",
+      "socket": "am5",
+      "form": "mini_itx",
+      "memory_types": [
+        "ddr5"
+      ],
+      "ram_slots": 2,
+      "m2_slots": 2,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=MSI&ProductCode=MPG%20B650I%20EDGE%20WIFI"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/e0582966a4966b1cbc9a68aaa0932f14e4c99c1c.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Única placa Mini-ITX presente en market.tsv. Fuente única: Open Icecat; msi.com bloqueó el acceso (403)."
+  },
+  {
+    "key": "mb-asus-tuf-gaming-b850m-plus-wifi",
+    "name": "ASUS TUF GAMING B850M-PLUS WIFI",
+    "brand": "ASUS",
+    "mpn": "90MB1IY0-M0EAY0",
+    "gtin": "4711387764916",
+    "category": "motherboard",
+    "summary_es": "Placa madre Micro-ATX con chipset AMD B850, socket AM5, 4 ranuras DDR5, 3 ranuras M.2 y 4 puertos SATA.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "chipset": "B850",
+      "socket": "am5",
+      "form": "micro_atx",
+      "memory_types": [
+        "ddr5"
+      ],
+      "ram_slots": 4,
+      "m2_slots": 3,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b850m-plus-wifi/techspec/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ASUS&ProductCode=90MB1IY0-M0EAY0"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/b5a61b37707ee741723855a18e683cf5cd746b8b.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": ""
+  },
+  {
+    "key": "mb-msi-b850-gaming-plus-wifi",
+    "name": "MSI B850 GAMING PLUS WIFI",
+    "brand": "MSI",
+    "mpn": "B850 GAMING PLUS WIFI",
+    "gtin": "4711377285438",
+    "category": "motherboard",
+    "summary_es": "Placa madre ATX con chipset AMD B850, socket AM5, 4 ranuras DDR5, 3 ranuras M.2 y 4 puertos SATA.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "chipset": "B850",
+      "socket": "am5",
+      "form": "atx",
+      "memory_types": [
+        "ddr5"
+      ],
+      "ram_slots": 4,
+      "m2_slots": 3,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=MSI&ProductCode=B850%20GAMING%20PLUS%20WIFI"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/75bad5dc872e32e4877d05399d4189a923b18d13.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única: Open Icecat; msi.com bloqueó el acceso (403)."
+  },
+  {
+    "key": "mb-gigabyte-x870-eagle-wifi7",
+    "name": "Gigabyte X870 EAGLE WIFI7",
+    "brand": "Gigabyte",
+    "mpn": "X870 EAGLE WIFI7",
+    "gtin": "4719331864996",
+    "category": "motherboard",
+    "summary_es": "Placa madre ATX con chipset AMD X870, socket AM5, 4 ranuras DDR5, 3 ranuras M.2 y 4 puertos SATA.",
+    "market_evidence": "IN",
+    "specs": {
+      "chipset": "X870",
+      "socket": "am5",
+      "form": "atx",
+      "memory_types": [
+        "ddr5"
+      ],
+      "ram_slots": 4,
+      "m2_slots": 3,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Gigabyte&ProductCode=X870%20EAGLE%20WIFI7"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/b4273a3a5b48310af22bf601eea59f74128e6452.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única: Open Icecat; gigabyte.com bloqueó el acceso (403)."
+  },
+  {
+    "key": "mb-msi-pro-x870-p-wifi",
+    "name": "MSI PRO X870-P WIFI",
+    "brand": "MSI",
+    "mpn": "PRO X870-P WIFI",
+    "gtin": "4711377256339",
+    "category": "motherboard",
+    "summary_es": "Placa madre ATX con chipset AMD X870, socket AM5, 4 ranuras DDR5, 3 ranuras M.2 y 4 puertos SATA.",
+    "market_evidence": "DL",
+    "specs": {
+      "chipset": "X870",
+      "socket": "am5",
+      "form": "atx",
+      "memory_types": [
+        "ddr5"
+      ],
+      "ram_slots": 4,
+      "m2_slots": 3,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=MSI&ProductCode=PRO%20X870-P%20WIFI"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/f5b7b2b168149e208d7bda7e6b03e71a6cd32c4f.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única: Open Icecat; msi.com bloqueó el acceso (403)."
+  },
+  {
+    "key": "mb-asrock-x870-pro-rs-wifi",
+    "name": "ASRock X870 Pro RS WiFi",
+    "brand": "ASRock",
+    "mpn": null,
+    "gtin": null,
+    "category": "motherboard",
+    "summary_es": "Placa madre con chipset AMD X870; especificaciones pendientes de verificar en fuente oficial.",
+    "market_evidence": "DL",
+    "specs": {
+      "chipset": "X870",
+      "socket": null,
+      "form": null,
+      "memory_types": null,
+      "ram_slots": null,
+      "m2_slots": null,
+      "sata_ports": null
+    },
+    "sources": [
+      "https://www.asrock.com/mb/AMD/X870%20Pro%20RS%20WiFi/index.asp"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": false,
+    "notes": "Sin datos leídos: asrock.com responde con desafío Incapsula, download.asrock.com con 403 e Icecat exige app_key o no tiene el producto. La URL en sources no se pudo leer y queda solo como referencia para revisión manual. chipset derivado del nombre del modelo."
+  },
+  {
+    "key": "mb-msi-pro-h610m-g-ddr4",
+    "name": "MSI PRO H610M-G DDR4",
+    "brand": "MSI",
+    "mpn": "PRO H610M-G DDR4",
+    "gtin": "4719072925024",
+    "category": "motherboard",
+    "summary_es": "Placa madre Micro-ATX con chipset Intel H610, socket LGA1700, 2 ranuras DDR4, 1 ranura M.2 y 4 puertos SATA.",
+    "market_evidence": "PB+DL",
+    "specs": {
+      "chipset": "H610",
+      "socket": "lga1700",
+      "form": "micro_atx",
+      "memory_types": [
+        "ddr4"
+      ],
+      "ram_slots": 2,
+      "m2_slots": 1,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=MSI&ProductCode=PRO%20H610M-G%20DDR4"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/fbd314a33817e9f2fef33f860d6cb74682612812.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única: Open Icecat; msi.com bloqueó el acceso (403)."
+  },
+  {
+    "key": "mb-asrock-h610m-hdv-m2",
+    "name": "ASRock H610M-HDV/M.2",
+    "brand": "ASRock",
+    "mpn": null,
+    "gtin": null,
+    "category": "motherboard",
+    "summary_es": "Placa madre con chipset Intel H610; especificaciones pendientes de verificar en fuente oficial.",
+    "market_evidence": "PB",
+    "specs": {
+      "chipset": "H610",
+      "socket": null,
+      "form": null,
+      "memory_types": null,
+      "ram_slots": null,
+      "m2_slots": null,
+      "sata_ports": null
+    },
+    "sources": [
+      "https://www.asrock.com/mb/Intel/H610M-HDVM.2/index.asp"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": false,
+    "notes": "La revisión R2.0 es otro producto y no se incluye. Sin datos leídos: asrock.com responde con desafío Incapsula, download.asrock.com con 403 e Icecat exige app_key o no tiene el producto. La URL en sources no se pudo leer y queda solo como referencia para revisión manual. chipset derivado del nombre del modelo."
+  },
+  {
+    "key": "mb-gigabyte-b760m-d3hp-ddr4",
+    "name": "Gigabyte B760M D3HP DDR4",
+    "brand": "Gigabyte",
+    "mpn": "B760M D3HP DDR4",
+    "gtin": "4719331862848",
+    "category": "motherboard",
+    "summary_es": "Placa madre Micro-ATX con chipset Intel B760, socket LGA1700, 4 ranuras DDR4, 2 ranuras M.2 y 4 puertos SATA.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "chipset": "B760",
+      "socket": "lga1700",
+      "form": "micro_atx",
+      "memory_types": [
+        "ddr4"
+      ],
+      "ram_slots": 4,
+      "m2_slots": 2,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Gigabyte&ProductCode=B760M%20D3HP%20DDR4"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/3815d50349e3db2d53b66a13163459d3050e5f76.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única: Open Icecat; gigabyte.com bloqueó el acceso (403)."
+  },
+  {
+    "key": "mb-asus-prime-b760m-a-d4",
+    "name": "ASUS PRIME B760M-A D4",
+    "brand": "ASUS",
+    "mpn": "90MB1D00-M0EAY0",
+    "gtin": "4711081984030",
+    "category": "motherboard",
+    "summary_es": "Placa madre Micro-ATX con chipset Intel B760, socket LGA1700, 4 ranuras DDR4, 2 ranuras M.2 y 4 puertos SATA.",
+    "market_evidence": "DL",
+    "specs": {
+      "chipset": "B760",
+      "socket": "lga1700",
+      "form": "micro_atx",
+      "memory_types": [
+        "ddr4"
+      ],
+      "ram_slots": 4,
+      "m2_slots": 2,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/motherboards/prime/prime-b760m-a-d4/techspec/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ASUS&ProductCode=PRIME%20B760M-A%20D4"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/cb90fc7dfaf220501fe6980463eecaa1fe2dba5c.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Variante DDR4; la versión D4-CSM es otro SKU y no se contó en market_evidence."
+  },
+  {
+    "key": "mb-msi-pro-b760m-p",
+    "name": "MSI PRO B760M-P",
+    "brand": "MSI",
+    "mpn": "PRO B760M-P",
+    "gtin": "4711377086578",
+    "category": "motherboard",
+    "summary_es": "Placa madre Micro-ATX con chipset Intel B760, socket LGA1700, 4 ranuras DDR5, 2 ranuras M.2 y 4 puertos SATA.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "chipset": "B760",
+      "socket": "lga1700",
+      "form": "micro_atx",
+      "memory_types": [
+        "ddr5"
+      ],
+      "ram_slots": 4,
+      "m2_slots": 2,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=MSI&ProductCode=PRO%20B760M-P"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/c4b22b8cfb88def7892f58547374c4631b67dbff.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Variante DDR5; PRO B760M-P DDR4 es otro producto. Fuente única: Open Icecat; msi.com bloqueó el acceso (403)."
+  },
+  {
+    "key": "mb-asus-tuf-gaming-b760-plus-wifi",
+    "name": "ASUS TUF GAMING B760-PLUS WIFI",
+    "brand": "ASUS",
+    "mpn": "90MB1ER0-M0AAY0",
+    "gtin": null,
+    "category": "motherboard",
+    "summary_es": "Placa madre ATX con chipset Intel B760, socket LGA1700, 4 ranuras DDR5, 3 ranuras M.2 y 4 puertos SATA.",
+    "market_evidence": "IN+PB+DL",
+    "specs": {
+      "chipset": "B760",
+      "socket": "lga1700",
+      "form": "atx",
+      "memory_types": [
+        "ddr5"
+      ],
+      "ram_slots": 4,
+      "m2_slots": 3,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b760-plus-wifi/techspec/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ASUS&ProductCode=90MB1ER0-M0AAY0"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/2d9a1b4029b097a7977990a934dd7d0fc02ff685.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Variante DDR5, distinta de la versión D4."
+  },
+  {
+    "key": "mb-gigabyte-z790-d-ddr4",
+    "name": "Gigabyte Z790 D DDR4",
+    "brand": "Gigabyte",
+    "mpn": "Z790 D DDR4",
+    "gtin": "4719331849832",
+    "category": "motherboard",
+    "summary_es": "Placa madre ATX con chipset Intel Z790, socket LGA1700, 4 ranuras DDR4, 3 ranuras M.2 y 6 puertos SATA.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "chipset": "Z790",
+      "socket": "lga1700",
+      "form": "atx",
+      "memory_types": [
+        "ddr4"
+      ],
+      "ram_slots": 4,
+      "m2_slots": 3,
+      "sata_ports": 6
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Gigabyte&ProductCode=Z790%20D%20DDR4"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/9168dac118090dc00010efcbde3630dfc4c85248.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única: Open Icecat; gigabyte.com bloqueó el acceso (403)."
+  },
+  {
+    "key": "mb-asus-tuf-gaming-z790-plus-wifi",
+    "name": "ASUS TUF GAMING Z790-PLUS WIFI",
+    "brand": "ASUS",
+    "mpn": "90MB1D80-M1AAY0",
+    "gtin": null,
+    "category": "motherboard",
+    "summary_es": "Placa madre ATX con chipset Intel Z790, socket LGA1700, 4 ranuras DDR5, 4 ranuras M.2 y 4 puertos SATA.",
+    "market_evidence": "PB+DL",
+    "specs": {
+      "chipset": "Z790",
+      "socket": "lga1700",
+      "form": "atx",
+      "memory_types": [
+        "ddr5"
+      ],
+      "ram_slots": 4,
+      "m2_slots": 4,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-z790-plus-wifi/techspec/"
+    ],
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/391f8852-89ee-4429-bf08-48b3be125099/",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "Variante DDR5, distinta de la versión D4. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial."
+  },
+  {
+    "key": "mb-gigabyte-h810m-k",
+    "name": "Gigabyte H810M K",
+    "brand": "Gigabyte",
+    "mpn": "H810M K",
+    "gtin": "4719331868697",
+    "category": "motherboard",
+    "summary_es": "Placa madre Micro-ATX con chipset Intel H810, socket LGA1851, 2 ranuras DDR5, 1 ranura M.2 y 4 puertos SATA.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "chipset": "H810",
+      "socket": "lga1851",
+      "form": "micro_atx",
+      "memory_types": [
+        "ddr5"
+      ],
+      "ram_slots": 2,
+      "m2_slots": 1,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=Gigabyte&ProductCode=H810M%20K"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/0c181f391cfc4284e3a03e9ed55daa6ff758ba5f.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única: Open Icecat; gigabyte.com bloqueó el acceso (403)."
+  },
+  {
+    "key": "mb-msi-pro-h810m-b",
+    "name": "MSI PRO H810M-B",
+    "brand": "MSI",
+    "mpn": "PRO H810M-B",
+    "gtin": "4711377337977",
+    "category": "motherboard",
+    "summary_es": "Placa madre Micro-ATX con chipset Intel H810, socket LGA1851, 2 ranuras DDR5, 1 ranura M.2 y 4 puertos SATA.",
+    "market_evidence": "IN+PB+DL",
+    "specs": {
+      "chipset": "H810",
+      "socket": "lga1851",
+      "form": "micro_atx",
+      "memory_types": [
+        "ddr5"
+      ],
+      "ram_slots": 2,
+      "m2_slots": 1,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=MSI&ProductCode=PRO%20H810M-B"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/de3af5251e395a2483aaffe336107bce6a39f182.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única: Open Icecat; msi.com bloqueó el acceso (403)."
+  },
+  {
+    "key": "mb-asus-prime-b860m-k",
+    "name": "ASUS PRIME B860M-K",
+    "brand": "ASUS",
+    "mpn": "90MB1JT0-M0EAY0",
+    "gtin": "4711387808498",
+    "category": "motherboard",
+    "summary_es": "Placa madre Micro-ATX con chipset Intel B860, socket LGA1851, 2 ranuras DDR5, 2 ranuras M.2 y 4 puertos SATA.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "chipset": "B860",
+      "socket": "lga1851",
+      "form": "micro_atx",
+      "memory_types": [
+        "ddr5"
+      ],
+      "ram_slots": 2,
+      "m2_slots": 2,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/motherboards/prime/prime-b860m-k/techspec/",
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=ASUS&ProductCode=PRIME%20B860M-K"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/9028f32472545fee429451743e2c862db0129359.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": ""
+  },
+  {
+    "key": "mb-asrock-b860-challenger-wifi",
+    "name": "ASRock B860 Challenger WiFi",
+    "brand": "ASRock",
+    "mpn": null,
+    "gtin": null,
+    "category": "motherboard",
+    "summary_es": "Placa madre con chipset Intel B860; especificaciones pendientes de verificar en fuente oficial.",
+    "market_evidence": "DL",
+    "specs": {
+      "chipset": "B860",
+      "socket": null,
+      "form": null,
+      "memory_types": null,
+      "ram_slots": null,
+      "m2_slots": null,
+      "sata_ports": null
+    },
+    "sources": [
+      "https://www.asrock.com/mb/Intel/B860%20Challenger%20WiFi/index.us.asp"
+    ],
+    "image_url": null,
+    "image_source": null,
+    "verified": false,
+    "notes": "Sin datos leídos: asrock.com responde con desafío Incapsula, download.asrock.com con 403 e Icecat exige app_key o no tiene el producto. La URL en sources no se pudo leer y queda solo como referencia para revisión manual. chipset derivado del nombre del modelo."
+  },
+  {
+    "key": "mb-asus-tuf-gaming-z890-plus-wifi",
+    "name": "ASUS TUF GAMING Z890-PLUS WIFI",
+    "brand": "ASUS",
+    "mpn": "90MB1LQ0-M0EAY0",
+    "gtin": null,
+    "category": "motherboard",
+    "summary_es": "Placa madre ATX con chipset Intel Z890, socket LGA1851, 4 ranuras DDR5, 4 ranuras M.2 y 4 puertos SATA.",
+    "market_evidence": "IN+DL",
+    "specs": {
+      "chipset": "Z890",
+      "socket": "lga1851",
+      "form": "atx",
+      "memory_types": [
+        "ddr5"
+      ],
+      "ram_slots": 4,
+      "m2_slots": 4,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-z890-plus-wifi/techspec/"
+    ],
+    "image_url": "https://dlcdnwebimgs.asus.com/gain/e8c6fe24-aba5-44cf-a13e-abef2679fdd2/",
+    "image_source": "fabricante",
+    "verified": true,
+    "notes": "mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial."
+  },
+  {
+    "key": "mb-msi-pro-z890-p-wifi",
+    "name": "MSI PRO Z890-P WIFI",
+    "brand": "MSI",
+    "mpn": "PRO Z890-P WIFI",
+    "gtin": "4711377257701",
+    "category": "motherboard",
+    "summary_es": "Placa madre ATX con chipset Intel Z890, socket LGA1851, 4 ranuras DDR5, 4 ranuras M.2 y 4 puertos SATA.",
+    "market_evidence": "DL",
+    "specs": {
+      "chipset": "Z890",
+      "socket": "lga1851",
+      "form": "atx",
+      "memory_types": [
+        "ddr5"
+      ],
+      "ram_slots": 4,
+      "m2_slots": 4,
+      "sata_ports": 4
+    },
+    "sources": [
+      "https://live.icecat.biz/api/?UserName=openIcecat-live&Language=es&Brand=MSI&ProductCode=PRO%20Z890-P%20WIFI"
+    ],
+    "image_url": "https://images.icecat.biz/img/gallery/9f653239c8b1146d61cfafc4de3f59fa5965e0c7.jpg",
+    "image_source": "icecat",
+    "verified": true,
+    "notes": "Fuente única: Open Icecat; msi.com bloqueó el acceso (403)."
+  }
+]
