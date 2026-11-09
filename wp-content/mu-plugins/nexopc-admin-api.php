@@ -140,7 +140,7 @@ function nexopc_validate_common_product($data, $is_publish, $requires_sellable_f
     if ($is_publish && empty($data['categories'])) $errors['categories'] = 'Selecciona al menos una categoría para publicar.';
     if ($is_publish && $requires_sellable_fields && empty(trim((string) ($data['sku'] ?? '')))) $errors['sku'] = 'El SKU es obligatorio para publicar.';
     if ($is_publish && $requires_sellable_fields && ($data['regularPrice'] ?? '') === '') $errors['regularPrice'] = 'El precio regular es obligatorio para publicar.';
-    if (isset($data['regularPrice']) && $data['regularPrice'] !== '' && !is_numeric($data['regularPrice'])) $errors['regularPrice'] = 'El precio regular no es válido.';
+    if (isset($data['regularPrice']) && $data['regularPrice'] !== '' && (!is_numeric($data['regularPrice']) || (float) $data['regularPrice'] <= 0)) $errors['regularPrice'] = 'El precio regular debe ser un número mayor que cero.';
     if (isset($data['salePrice']) && $data['salePrice'] !== '' && !is_numeric($data['salePrice'])) $errors['salePrice'] = 'El precio de oferta no es válido.';
     if (($data['salePrice'] ?? '') !== '' && ($data['regularPrice'] ?? '') !== '' && (float) $data['salePrice'] > (float) $data['regularPrice']) $errors['salePrice'] = 'El precio de oferta no puede ser mayor que el precio regular.';
     $weight = trim((string) ($data['weight'] ?? ''));

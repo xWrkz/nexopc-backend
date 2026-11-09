@@ -86,13 +86,28 @@ products.forEach((product) => validateProduct(product, errors));
 const keys = products.map((product) => product.key);
 keys.filter((key, index) => keys.indexOf(key) !== index).forEach((key) => errors.push(`Key duplicada: ${key}`));
 checkCoverage(products, errors);
+const prices = checkPrices(products, errors);
+
+function checkPrices(products, errors) {
+  const file = path.join(__dirname, 'prices.json');
+  if (!fs.existsSync(file)) return {};
+  const prices = JSON.parse(fs.readFileSync(file, 'utf8')).products || {};
+  const known = new Set(products.map((product) => product.key));
+  for (const [key, price] of Object.entries(prices)) {
+    if (!known.has(key)) errors.push(`prices.json: ${key} no existe en el catálogo`);
+    if (!(typeof price.pen === 'number' && price.pen > 0)) errors.push(`prices.json: ${key} sin precio válido`);
+    if (!price.source || !/^\d{4}-\d{2}-\d{2}$/.test(price.checked_at || '')) errors.push(`prices.json: ${key} sin fuente o fecha`);
+  }
+  return prices;
+}
 
 const summary = {};
 for (const product of products) {
-  const row = summary[product.category] ??= { total: 0, verificados: 0, conImagen: 0 };
+  const row = summary[product.category] ??= { total: 0, verificados: 0, conImagen: 0, conPrecio: 0 };
   row.total += 1;
   row.verificados += product.verified ? 1 : 0;
   row.conImagen += product.image_url ? 1 : 0;
+  row.conPrecio += prices[product.key] ? 1 : 0;
 }
 console.table(summary);
 console.log(`Total: ${products.length}`);

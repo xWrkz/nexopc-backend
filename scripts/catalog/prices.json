@@ -1,0 +1,1429 @@
+{
+  "currency": "PEN",
+  "includes_tax": true,
+  "products": {
+    "case-antec-nx410": {
+      "pen": 239,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 3,
+      "min": 239,
+      "max": 279,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159415833/antec-nx410-case-mid-tower-negro",
+      "seller": "Prosmart Retail"
+    },
+    "case-antryx-elegant-530m": {
+      "pen": 189,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 189,
+      "max": 189,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/150201950/caja-mid-tower-antryx-elegant-530m-350w-diseno-moderno-y-espacioso-para-tus-componentes",
+      "seller": "Prosmart Retail"
+    },
+    "case-antryx-fx-800": {
+      "pen": 390,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 390,
+      "max": 390,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/156071932/case-antryx-fx-800-infinity-argb-fan-x4-usb-tipo-c-ac-fx800k-black-s-fuente",
+      "seller": "Memorytech S.a.c."
+    },
+    "case-asus-prime-ap202-argb": {
+      "pen": 575,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 5,
+      "min": 473.2,
+      "max": 599,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/155252810/case-asus-prime-ap202-argb-black",
+      "seller": "Simi Peru"
+    },
+    "case-asus-tuf-gaming-gt302-argb": {
+      "pen": 621,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 4,
+      "min": 579,
+      "max": 721,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/143735595/Case-ASUS-TUF-Gaming-GT302-ARGB-Mid-Tower-Color-Blanco",
+      "seller": "Simi Peru"
+    },
+    "case-corsair-3000d-rgb-airflow": {
+      "pen": 319,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 319,
+      "max": 319,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/144349714/caja-mid-tower-corsair-3000d-rgb-airflow-blanca-con-excelente-ventilacion-y-diseno-optimiz",
+      "seller": "Prosmart Retail"
+    },
+    "case-deepcool-cc560-v2": {
+      "pen": 330,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 330,
+      "max": 330,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/145800065/Case-CC560-V2-WHITE-Placa-Base-ITX-M-ATX-ATX-DeepCool",
+      "seller": "Pcevolution"
+    },
+    "case-deepcool-cg580": {
+      "pen": 309,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 309,
+      "max": 309,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/151512519/case-deepcool-gaming-cg580-atx-paneles-de-vidrio-templado-color-negro-sin-fuente-inclu",
+      "seller": "Prosmart Retail"
+    },
+    "case-deepcool-ch260": {
+      "pen": 289,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 289,
+      "max": 385,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/154880001/case-deepcool-ch260-black",
+      "seller": "Maqtech"
+    },
+    "case-halion-dragon-cr15": {
+      "pen": 259,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 6,
+      "min": 219,
+      "max": 279,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159404687/gabinete-halion-dragon-cr15-atx-negro-con-fuente-de-500-w-y-4-ventiladores",
+      "seller": "Prosmart Retail"
+    },
+    "case-montech-xr": {
+      "pen": 330,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 330,
+      "max": 395,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/147748846/Case-gamer-XR-CPU-Cooler-175mm-MONTECH",
+      "seller": "Pcevolution"
+    },
+    "case-msi-mag-forge-120a-airflow": {
+      "pen": 269,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 269,
+      "max": 269,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159424284/msi-mag-forge-120a-airflow-argb-mid-tower",
+      "seller": "Prosmart Retail"
+    },
+    "case-msi-mag-pano-110r-pz": {
+      "pen": 369,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 3,
+      "min": 367,
+      "max": 416,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/144521291/caja-msi-mag-pano-110r-mid-tower-para-mini-itx-micro-atx-y-atx-diseno-moderno-y-refriger",
+      "seller": "Prosmart Retail"
+    },
+    "case-msi-mag-pano-130r-pz": {
+      "pen": 389,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 7,
+      "min": 369,
+      "max": 416,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159424420/msi-mag-pano-130r-pz-white-case-mid-tower-atx",
+      "seller": "Prosmart Retail"
+    },
+    "case-teros-te-1033s": {
+      "pen": 119,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 5,
+      "min": 107.9,
+      "max": 170,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159417176/teros-te-1033s-caja-mini-tower-atx-negra-con-fuente-de-250-w-usb-3-0-y-audio-hd",
+      "seller": "Prosmart Retail"
+    },
+    "case-teros-te-1323g": {
+      "pen": 179,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 7,
+      "min": 159,
+      "max": 224.6,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/150645124/caja-gamer-teros-te-1323g-compatibilidad-itx-m-atx-atx-espacio-para-3-5-y-2-5-color-n",
+      "seller": "Prosmart Retail"
+    },
+    "cooler-coolermaster-hyper-212-spectrum-v3": {
+      "pen": 99,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 99,
+      "max": 130,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/143448173/Cooler-Master-Hyper-212-Spectrum-V3-ARGB",
+      "seller": "Grupo Lpc"
+    },
+    "cooler-coolermaster-masterliquid-240l-core-argb": {
+      "pen": 279,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 279,
+      "max": 319,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/151368736/refrigeracion-liquida-cooler-master-masterliquid-240l-doble-ventilador-argb-compatibilidad",
+      "seller": "Prosmart Retail"
+    },
+    "cooler-deepcool-ag400-g2": {
+      "pen": 99,
+      "source": "infotec.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 99,
+      "max": 99,
+      "url": "https://infotec.com.pe/cooler-para-procesador/31860-cooler-de-procesador-deepcool-ag400-g2-r-ag400-bknpmg2-g.html",
+      "seller": null,
+      "notes": "cyccomputer.pe lists 'AG400 G2 PLUS' (R-AG400-BKNPMG2-1) at S/92.75. That is the G2 Plus variant, so it is excluded."
+    },
+    "cooler-deepcool-ag620-g2-argb": {
+      "pen": 220.63,
+      "source": "cyccomputer.pe, infotec.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 219,
+      "max": 222.25,
+      "url": "https://cyccomputer.pe/producto/refrigeracion-aire/18398552-deepcool-ag620-g2-argb-black-refrigeracion-aire-amdintel-pnr-ag620-bkammg2-g.html",
+      "seller": null
+    },
+    "cooler-deepcool-ak400-g2": {
+      "pen": 330,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 330,
+      "max": 330,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/156594186/cooler-para-cpu-ak400-g2-deepcool",
+      "seller": "Pcevolution"
+    },
+    "cooler-deepcool-ak500-zero-dark": {
+      "pen": 339,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 339,
+      "max": 339,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/151512544/cooler-deepcool-ak500-zero-dark-120mm-para-procesador-eficiente-y-silencioso-ideal-para",
+      "seller": "Prosmart Retail"
+    },
+    "cooler-deepcool-assassin-iv": {
+      "pen": 569,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 5,
+      "min": 499,
+      "max": 890,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/151512589/cooler-deepcool-assassin-iv-negro-para-procesador-2-ventiladores-alto-rendimiento-y-efic",
+      "seller": "Prosmart Retail"
+    },
+    "cooler-deepcool-le520": {
+      "pen": 189,
+      "source": "infotec.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 189,
+      "max": 189,
+      "url": "https://infotec.com.pe/zona-gamer/25093-sistema-de-enfriamiento-liquido-deep-cool-le520-argb-r-le520-bkammn-g-1-am5-lga-1700-led-argb-6933412728047.html",
+      "seller": null,
+      "notes": "Unverified search snippets: Sercoplus S/187.26, Impacto S/286.11. Falabella has a third-party listing 'LE520 RGB' (seller Computer Corporacion SAC) at S/239, but it could not be confirmed as the non-CMR price. None of these were used."
+    },
+    "cooler-deepcool-le720": {
+      "pen": 229,
+      "source": "infotec.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 229,
+      "max": 229,
+      "url": "https://www.infotec.com.pe/mas-vendido/25531-sistema-de-enfriamiento-liquido-deep-cool-gammaxx-le720-r-le720-bkammn-g-1-led-argb-6933412728191.html",
+      "seller": null,
+      "notes": "Search snippets also show Impacto (~S/382.79 cash) and Sercoplus (~S/360-384). Both sites block direct fetch, so those prices were not verified or used. The white LE720 WH is S/259 at Infotec (different variant)."
+    },
+    "cooler-deepcool-lm240": {
+      "pen": 379,
+      "source": "infotec.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 379,
+      "max": 379,
+      "url": "https://infotec.com.pe/enfriamiento-liquido/30378-sistema-liquido-deepcool-lm240-r-lm240-bkdmmc-1-pantalla-24-ips-led-argb-6933412729457.html",
+      "seller": null,
+      "notes": "The white LM240 WH (R-LM240-WHDMMC-1) is S/419 at Infotec (different variant)."
+    },
+    "cooler-montech-hyperflow-argb-240": {
+      "pen": 640,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 640,
+      "max": 640,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/157407296/refrigeracion-liquida-aio-hyperflow-argb-240-montech",
+      "seller": "Pcevolution"
+    },
+    "cooler-montech-hyperflow-argb-360": {
+      "pen": 740,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 740,
+      "max": 740,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/157027098/refrigeracion-liquida-aio-hyperflow-argb-360-black-montech",
+      "seller": "Pcevolution"
+    },
+    "cooler-msi-mag-coreliquid-a13-360": {
+      "pen": 329,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 5,
+      "min": 316,
+      "max": 359,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159408551/msi-mag-coreliquid-a13-360-refrigeracion-liquida-para-cpu-de-360-mm",
+      "seller": "Prosmart Retail"
+    },
+    "cooler-teros-te-8166n": {
+      "pen": 159,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 7,
+      "min": 128.82,
+      "max": 200.7,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/153234642/fan-cooler-teros-te-8166n-para-procesadores-intel-y-amd-200w-de-tdp-refrigeracion-efici",
+      "seller": "Prosmart Retail"
+    },
+    "cpu-core-i3-12100f": {
+      "pen": 506,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 7,
+      "min": 447.9,
+      "max": 635,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/128500444/Procesador-Intel-Core-i3-12100F,-3.30-4.30GHz,-12MB,-LGA1700,-12-gen",
+      "seller": "Simi Peru"
+    },
+    "cpu-core-i3-14100f": {
+      "pen": 562,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 6,
+      "min": 513,
+      "max": 659,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/133734203/Procesador-Intel-Core-i3-14100F-3-50-a-4-70GHz-12-MB-LGA1700-58W-110W",
+      "seller": "Simi Peru"
+    },
+    "cpu-core-i5-12400f": {
+      "pen": 764.44,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 8,
+      "min": 719.9,
+      "max": 963,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/152626800/procesador-intel-core-i5-12400f-2-50-4-40ghz-l-p-n-bx8071512400f",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    },
+    "cpu-core-i5-14400f": {
+      "pen": 887,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 6,
+      "min": 837,
+      "max": 1071.11,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/133734256/Procesador-Intel-Core-i5-14400F-2-50-a-4-70GHz-20-MB-LGA1700-65W-148W",
+      "seller": "Simi Peru"
+    },
+    "cpu-core-i7-14700": {
+      "pen": 2019,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 4,
+      "min": 1915.56,
+      "max": 2129,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/155550459/procesador-intel-core-i7-14700-2-1-ghz",
+      "seller": "Prosmart Retail"
+    },
+    "cpu-core-ultra-5-225": {
+      "pen": 999,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 9,
+      "min": 910,
+      "max": 1181.9,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/155012877/procesador-intel-core-ultra-5-225-lga1851-10-nucleos-bx80768225",
+      "seller": "Surcom"
+    },
+    "cpu-core-ultra-5-225f": {
+      "pen": 849,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 10,
+      "min": 769,
+      "max": 1468.89,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/144216950/Procesador-Intel-Core-Ultra-5-225F-4.90Ghz-20MB-Smart-Cache-LGA1851",
+      "seller": "Technopshops"
+    },
+    "cpu-core-ultra-5-245kf": {
+      "pen": 1089,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 9,
+      "min": 889,
+      "max": 1619.9,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/144358440/procesador-intel-core-ultra-5-245kf-4-20-5-20ghz-24mb-cache-lga1851-alto-rendimiento-pa",
+      "seller": "Prosmart Retail"
+    },
+    "cpu-core-ultra-7-265f": {
+      "pen": 1795.56,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 9,
+      "min": 1659,
+      "max": 2276.9,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/152500745/procesador-intel-core-ultra-7-265f-2-40-5-30ghz-30-mb-p-n-cpilu7265f",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    },
+    "cpu-ryzen-5-5500": {
+      "pen": 496.67,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 5,
+      "min": 475,
+      "max": 790,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/157702204/procesador-amd-ryzen-5-5500-6-core-am4-7nm-65w-p-n-100-100000457box",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    },
+    "cpu-ryzen-5-7600": {
+      "pen": 965,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 965,
+      "max": 1179,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/154381102/procesador-ryzen-5-7600-5-10ghz-cache-32mb-am5-6-nucleos-con-disipador-100-100001015box",
+      "seller": "Technopshops"
+    },
+    "cpu-ryzen-5-8400f": {
+      "pen": 864.44,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 3,
+      "min": 688.89,
+      "max": 871,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/157702202/procesador-amd-ryzen-5-8400f-4-2-ghz-4-7-ghz-p-n-100-100001591box",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    },
+    "cpu-ryzen-5-8500g": {
+      "pen": 759,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 3,
+      "min": 649,
+      "max": 975.56,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/157009851/procesador-ryzen-5-8500g-3-9-5-0-ghz-16mb-am5-graficos-radeon-740m-fan-cooler-036232",
+      "seller": "Cd Store"
+    },
+    "cpu-ryzen-5-9600x": {
+      "pen": 1259,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 3,
+      "min": 1132.22,
+      "max": 1378.89,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/157021960/procesador-ryzen-5-9600x-3-9-5-4-ghz-32mb-am5-graficos-radeon-037465",
+      "seller": "Cd Store"
+    },
+    "cpu-ryzen-7-5700g": {
+      "pen": 999,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 5,
+      "min": 829,
+      "max": 1796.67,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/155936281/procesador-amd-ryzen-7-5700g-3-80-4-60ghz-8-core-con-graficos-integrados",
+      "seller": "Global Tech"
+    },
+    "cpu-ryzen-7-5700x": {
+      "pen": 991.11,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 3,
+      "min": 949,
+      "max": 1497.78,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/158693912/procesador-amd-ryzen-7-5700x-3-40-4-60ghz-p-n-100-100000926wof",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    },
+    "cpu-ryzen-7-7700": {
+      "pen": 1309,
+      "source": "infotec.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 1309,
+      "max": 1309,
+      "url": "https://infotec.com.pe/procesadores/31953-procesador-amd-ryzen-7-7700-100-100000592sbx-53ghz-am5.html",
+      "seller": null,
+      "notes": "Memory Kings' 7700 page is delisted. Its AM5 listing has only the 7700X/7700X3D."
+    },
+    "cpu-ryzen-7-9700x": {
+      "pen": 1632.22,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 1632.22,
+      "max": 1729,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/158693922/procesador-amd-ryzen-7-9700x-3-80-5-50ghz-am5-p-n-100-100001404wof",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    },
+    "cpu-ryzen-7-9800x3d": {
+      "pen": 2399,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 2399,
+      "max": 2399,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/157023733/procesador-ryzen-7-9800x3d-4-7-5-2-ghz-96mb-am5-graficos-radeon-038601",
+      "seller": "Cd Store"
+    },
+    "gpu-asus-rtx3050-dual-oc-6g": {
+      "pen": 1407,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 8,
+      "min": 1199,
+      "max": 1479,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/145324822/Tarjeta-de-video-ASUS-Dual-GeForce-RTX-3050-OC-Edition-6GB-GDDR6",
+      "seller": "Gidat"
+    },
+    "gpu-asus-rtx5050-dual-oc-8g": {
+      "pen": 1779,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 6,
+      "min": 1599,
+      "max": 3089,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/152452913/asus-geforce-rtx-5050-8gb-dual-oc-tarjeta-grafica-128-bit-para-gaming-de-alto-rendimient",
+      "seller": "Prosmart Retail"
+    },
+    "gpu-asus-rtx5060-dual-oc-8g": {
+      "pen": 2319,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 8,
+      "min": 2041,
+      "max": 2589,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/154952734/tarjeta-de-video-asus-dual-rtx5060-o8g-evo-8gb-gddr7-pcie-5-0",
+      "seller": "Technopshops"
+    },
+    "gpu-asus-rtx5070-prime-oc-12g": {
+      "pen": 4399,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 3,
+      "min": 4041,
+      "max": 4469,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/153233319/tarjeta-de-video-asus-prime-rtx-5070-12gb-oc-gddr7-192-bit-hdmi-dp",
+      "seller": "Prosmart Retail"
+    },
+    "gpu-asus-rtx5070-tuf-gaming-oc-12g": {
+      "pen": 4469,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 4469,
+      "max": 4469,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/153233355/tarjeta-grafica-asus-tuf-rtx-5070-12gb-gddr7-pcie-5-0-salida-hdmi-y-displayport",
+      "seller": "Prosmart Retail"
+    },
+    "gpu-asus-rtx5070ti-prime-oc-16g": {
+      "pen": 6370,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 6370,
+      "max": 6370,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/158876955/tarjeta-de-video-gddr7-16gb-rtx-5070ti-asus-prime-oc-nvidia-geforce-256-bits",
+      "seller": "Maqtech"
+    },
+    "gpu-asus-rtx5070ti-tuf-gaming-oc-16g": {
+      "pen": 7529,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 7529,
+      "max": 7529,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159407225/asus-tuf-gaming-geforce-rtx-5070-ti-tarjeta-de-video-de-16-gb-gddr7",
+      "seller": "Prosmart Retail"
+    },
+    "gpu-asus-rx9060xt-prime-oc-8g": {
+      "pen": 1949,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 1949,
+      "max": 2179,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/150353516/tarjeta-de-video-asus-prime-rx9060xt-o8g-gddr6",
+      "seller": "Didoor Store"
+    },
+    "gpu-gigabyte-rtx5050-windforce-oc-v2-8g": {
+      "pen": 1699.9,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 1699.9,
+      "max": 1699.9,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/153746450/tarjeta-de-video-gigabyte-rtx-5050-windforce-oc-v2-8g-gddr6",
+      "seller": "Silicon Solutioms Peru S.a.c"
+    },
+    "gpu-gigabyte-rtx5060-windforce-max-oc-8g": {
+      "pen": 2319,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 3,
+      "min": 2049,
+      "max": 2379,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/154329439/tarjeta-de-video-gigabyte-geforce-rtx-5060-windforce-max-oc-8g-8-gb-gddr7-pcie-gen-5-0",
+      "seller": "Gidat"
+    },
+    "gpu-gigabyte-rtx5060ti-eagle-oc-8g": {
+      "pen": 2060.75,
+      "source": "cyccomputer.pe, infotec.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 2039,
+      "max": 2082.5,
+      "url": "https://cyccomputer.pe/producto/nvidia-geforce-rtx/18397164-gigabyte-geforce-rtx-5060ti-8gb-gddr7-128bits-eagle-oc-pngv-n506teagle-oc-8gd.html",
+      "seller": null
+    },
+    "gpu-gigabyte-rtx5060ti-windforce-oc-8g": {
+      "pen": 2583,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 2583,
+      "max": 2583,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/152112476/tarjeta-de-video-gigabyte-rtx-5060-ti-windforce-gv-n506twf2oc-8gd-8gb-gddr7-x2-fan",
+      "seller": "Corporacion Luana"
+    },
+    "gpu-msi-rtx3050-ventus-2x-oc-6g": {
+      "pen": 1419,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 8,
+      "min": 1169,
+      "max": 1459,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/132846349/Tarjeta-de-Video-MSI-GeForce-RTX-3050-Ventus-2X-6G-OC-6GB-GDDR6-PCIe-4",
+      "seller": "Technopshops"
+    },
+    "gpu-msi-rtx5070-ventus-2x-oc-12g": {
+      "pen": 3290,
+      "source": "cyccomputer.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 3290,
+      "max": 3290,
+      "url": "https://cyccomputer.pe/producto/nvidia-geforce-rtx/18396994-msi-geforce-rtx-5070-12gb-gddr7-192bits-ventus-2x-oc-pn912-v532-009.html",
+      "seller": null,
+      "notes": "Infotec and Memory Kings do not list this card. Memory Kings has only the ASUS Dual OC 5070."
+    },
+    "gpu-xfx-rx7600-speedster-qick-308-8g": {
+      "pen": 1279,
+      "source": "infotec.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 1279,
+      "max": 1279,
+      "url": "https://infotec.com.pe/tarjetas-de-video-tarjeta-grafica/32179-tarjeta-de-video-xfx-speedster-qick-308-rx-7600-8gb-rx-76pqickby-gddr6128-bits.html",
+      "seller": null,
+      "notes": "Cyccomputer lists only the SWFT 210 (RX-76PSWFTFY, S/1330), a different model. Unverified snippets: Sercoplus ~S/1151-1206, Memory Kings ~S/1197-1274 (page appears delisted)."
+    },
+    "gpu-xfx-rx7600-speedster-swft-210-8g": {
+      "pen": 1499,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 4,
+      "min": 1399.9,
+      "max": 1649,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/150355828/tarjeta-de-video-xfx-speedster-swft-210-amd-radeon-rx-7600-8gb-gddr6",
+      "seller": "Didoor Store"
+    },
+    "gpu-xfx-rx9060xt-swift-oc-white-triple-16g": {
+      "pen": 2529,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 3,
+      "min": 2389,
+      "max": 2530.9,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159405818/xfx-swift-amd-radeon-rx-9060-xt-oc-16gb-gddr6-triple-fan-blanca",
+      "seller": "Prosmart Retail"
+    },
+    "gpu-xfx-rx9070xt-swift-triple-16g": {
+      "pen": 3419,
+      "source": "infotec.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 3419,
+      "max": 3419,
+      "url": "https://infotec.com.pe/tarjetas-de-video-tarjeta-grafica/32220-tarjeta-de-video-vga-xfx-swift-rx-9070-xt-16gb-rx-97tswf3b9256bits-gddr6.html",
+      "seller": null,
+      "notes": "The Memory Kings Swift OC page is delisted (not in its RX 9070 listing). An Impacto snippet shows ~S/2,946.24, unverified."
+    },
+    "gpu-xfx-rx9070xt-swift-white-triple-16g": {
+      "pen": 3429,
+      "source": "infotec.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 3429,
+      "max": 3429,
+      "url": "https://infotec.com.pe/tarjetas-de-video-tarjeta-grafica/32221-tarjeta-de-video-vga-xfx-swift-rx-9070-xt-white-16gb-rx-97tswf3w9-gddr6256-bits.html",
+      "seller": null,
+      "notes": "The Memory Kings Swift OC White page is delisted."
+    },
+    "mb-asrock-b550-phantom-gaming-4-ac": {
+      "pen": 426.67,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 426.67,
+      "max": 634.44,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/152471137/placa-base-asrock-b550-phantom-gaming-4-ac-amd-b550-p-n-mbarb550pg4ac",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    },
+    "mb-asrock-b860-challenger-wifi": {
+      "pen": 698,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 698,
+      "max": 698,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/153729847/motherboard-asrock-b860-challenger-wifi-ddr5-atx",
+      "seller": "Simi Peru"
+    },
+    "mb-asrock-h610m-hdv-m2": {
+      "pen": 385.56,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 385.56,
+      "max": 429,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/152254989/placa-asrock-h610m-hdv-m-2-lga-1700-p-n-90-mxbh60-a0uayz",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    },
+    "mb-asus-prime-a520m-k": {
+      "pen": 292,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 12,
+      "min": 249,
+      "max": 420,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/133848360/Motherboard-ASUS-PRIME-A520M-K-Chipset-AMD-A520-Socket-AMD-AM4-mATX",
+      "seller": "Simi Peru"
+    },
+    "mb-asus-prime-a620m-k": {
+      "pen": 410,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 9,
+      "min": 366,
+      "max": 669,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/157024953/motherboard-asus-prime-a620m-k-chipset-amd-a620-socket-amd-am5-matx",
+      "seller": "Simi Peru"
+    },
+    "mb-asus-prime-b650m-f": {
+      "pen": 429,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 4,
+      "min": 380,
+      "max": 499,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/148436281/motherboard-asus-prime-b650m-f-matx-con-chipset-amd-b650-y-socket-am5-para-alto-rendimient",
+      "seller": "Prosmart Retail"
+    },
+    "mb-asus-prime-b760m-a-d4": {
+      "pen": 489,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 489,
+      "max": 519,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/137843127/MOTHERBOARD-ASUS-PRIME-B760M-A-D4-CHIPSET-INTEL-B760-LGA1700",
+      "seller": "Global Tech"
+    },
+    "mb-asus-prime-b860m-k": {
+      "pen": 629,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 3,
+      "min": 589,
+      "max": 659,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159414114/asus-prime-b860m-k-placa-madre-intel-b860-lga1851-ddr5-micro-atx",
+      "seller": "Prosmart Retail"
+    },
+    "mb-asus-tuf-gaming-b760-plus-wifi": {
+      "pen": 979,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 5,
+      "min": 869,
+      "max": 1009,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159404758/asus-tuf-gaming-b760-plus-wifi-placa-base-atx-intel-b760-lga1700",
+      "seller": "Prosmart Retail"
+    },
+    "mb-asus-tuf-gaming-b850m-plus-wifi": {
+      "pen": 1005,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 6,
+      "min": 959,
+      "max": 1229,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/142625892/Motherboard-ASUS-TUF-GAMING-B850M-PLUS-WIFI-Chipset-AMD-B850-AM5-mATX",
+      "seller": "Simi Peru"
+    },
+    "mb-asus-tuf-gaming-z790-plus-wifi": {
+      "pen": 1199,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 3,
+      "min": 1129,
+      "max": 1429,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159406677/placa-madre-asus-tuf-gaming-z790-plus-wifi-ddr5-chipset-intel-z790-socket-lga1700",
+      "seller": "Prosmart Retail"
+    },
+    "mb-asus-tuf-gaming-z890-plus-wifi": {
+      "pen": 1527,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 6,
+      "min": 1459,
+      "max": 1777,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/139678351/Motherboard-ASUS-TUF-GAMING-Z890-PLUS-WIFI-LGA-1851-HDMI-DP-ATX",
+      "seller": "Gidat"
+    },
+    "mb-gigabyte-a620m-ds3h": {
+      "pen": 629,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 629,
+      "max": 639,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/144358159/placa-base-gigabyte-a620m-ds3h-d5-matx-para-procesadores-am5-rendimiento-y-eficiencia-op",
+      "seller": "Prosmart Retail"
+    },
+    "mb-gigabyte-b550-eagle-wifi6": {
+      "pen": 562.22,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 4,
+      "min": 540,
+      "max": 609,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/152470067/placa-madre-gigabyte-b550-eagle-wifi6-chipset-hdmi-pn-mbgbb550eagwf6",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    },
+    "mb-gigabyte-b550m-k": {
+      "pen": 391,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 11,
+      "min": 348,
+      "max": 522.22,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/128528864/motherboard-gigabyte-b550m-k-rev-10-amd-b550-am4-micro-atx",
+      "seller": "Simi Peru"
+    },
+    "mb-gigabyte-b650m-d3hp-ax": {
+      "pen": 632.22,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 9,
+      "min": 605.56,
+      "max": 759,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/152435874/placa-madre-gigabyte-b650m-d3hp-atx-am5-ddr5-wifi-p-n-b650m-d3hp-ax",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    },
+    "mb-gigabyte-b760m-d3hp-ddr4": {
+      "pen": 469,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 8,
+      "min": 445,
+      "max": 549,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/137840524/MOTHERBOARD-GIGABYTE-B760M-D3HP-DDR4-CHIPSET-INTEL-B760-LGA1700",
+      "seller": "Global Tech"
+    },
+    "mb-gigabyte-h810m-k": {
+      "pen": 429,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 8,
+      "min": 371.4,
+      "max": 499,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159414431/gigabyte-h810m-k-placa-base-micro-atx-lga1851-ddr5",
+      "seller": "Prosmart Retail"
+    },
+    "mb-gigabyte-x870-eagle-wifi7": {
+      "pen": 1079,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 1079,
+      "max": 1099,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/151511968/placa-base-gigabyte-x870-eagle-wifi-7-atx-amd-am5-chipset-x870-conectividad-avanzada-y",
+      "seller": "Prosmart Retail"
+    },
+    "mb-gigabyte-z790-d-ddr4": {
+      "pen": 1079,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 6,
+      "min": 994,
+      "max": 1179,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/156337430/motherboard-gigabyte-z790-d-ddr4-chipset-intel-z790-lga1700-atx",
+      "seller": "Prosmart Retail"
+    },
+    "mb-msi-b850-gaming-plus-wifi": {
+      "pen": 1095.56,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 1095.56,
+      "max": 1139,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/152437037/placa-madre-msi-b850-gaming-plus-wifi-atx-socket-am5-pn-824142392133",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    },
+    "mb-msi-mpg-b650i-edge-wifi": {
+      "pen": 1089,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 5,
+      "min": 976,
+      "max": 1329,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159417520/msi-mpg-b650i-edge-wifi-placa-base-mini-itx-amd-b650-socket-am5",
+      "seller": "Prosmart Retail"
+    },
+    "mb-msi-pro-b760m-p": {
+      "pen": 440,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 8,
+      "min": 396,
+      "max": 659,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/128544833/Motherboard-MSI-PRO-B760M-P-Intel-B760-LGA1700-mATX-DDR4",
+      "seller": "Simi Peru"
+    },
+    "mb-msi-pro-h610m-g-ddr4": {
+      "pen": 327.78,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 5,
+      "min": 299.9,
+      "max": 349,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/155988184/placa-base-msi-ddr4-chipset-intel-h610m-3200mhz-p-n-pro-h610m-g-ddr4",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    },
+    "mb-msi-pro-h810m-b": {
+      "pen": 459,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 6,
+      "min": 395,
+      "max": 559,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/151847227/placa-base-msi-pro-h810m-b-d5-1851-matx-compatible-con-intel-y-conexiones-avanzadas",
+      "seller": "Prosmart Retail"
+    },
+    "mb-msi-pro-x870-p-wifi": {
+      "pen": 1123,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 6,
+      "min": 1001,
+      "max": 1289,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/141173157/Motherboard-MSI-PRO-X870-P-WIFI-Chipset-AMD-X870-Socket-AMD-AM5-ATX",
+      "seller": "Simi Peru"
+    },
+    "mb-msi-pro-z890-p-wifi": {
+      "pen": 1119,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 5,
+      "min": 991,
+      "max": 1260,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159404852/msi-pro-z890-p-wifi-placa-base-atx-intel-z890-con-wi-fi-6e",
+      "seller": "Prosmart Retail"
+    },
+    "psu-asus-prime-650b-black": {
+      "pen": 216.5,
+      "source": "memorykings.pe, cyccomputer.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 209,
+      "max": 224,
+      "url": "https://www.memorykings.pe/producto/355021/fuente-650w-80-plus-bronze-asus-prime-psu",
+      "seller": null
+    },
+    "psu-asus-prime-ap-850g": {
+      "pen": 519,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 519,
+      "max": 569,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/152675708/fuente-asus-ap-850g-850w-80plus-gold-eficiencia-energetica-y-potencia-para-tu-pc-gaming",
+      "seller": "Prosmart Retail"
+    },
+    "psu-asus-tuf-gaming-1000g-white": {
+      "pen": 769,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 769,
+      "max": 769,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/151880154/fuente-de-alimentacion-asus-tuf-gaming-1000g-white-gold-1000w-potencia",
+      "seller": "Prosmart Retail"
+    },
+    "psu-asus-tuf-gaming-750g-evo": {
+      "pen": 480.59,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 480.59,
+      "max": 480.59,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/152387594/fuente-de-poder-asus-750w-80-gold-atx-p-n-tuf-gaming-750g",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    },
+    "psu-coolermaster-gx-ii-gold-750": {
+      "pen": 389,
+      "source": "memorykings.pe, infotec.com.pe, cyccomputer.pe",
+      "checked_at": "2026-11-09",
+      "offers": 3,
+      "min": 366,
+      "max": 402.5,
+      "url": "https://infotec.com.pe/fuente-de-poder-cooler-master/29041-fuente-de-poder-cooler-master-gx-ii-750w-mpx-7503-afag-2bus-80-plus-gold-full-modular-atx-30-4719512140062.html",
+      "seller": null
+    },
+    "psu-deepcool-pl650d-v2": {
+      "pen": 216.88,
+      "source": "cyccomputer.pe, infotec.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 204.75,
+      "max": 229,
+      "url": "https://infotec.com.pe/fuente-de-poder/27920-fuente-de-poder-deepcool-650w-pl650d-r-pl650d-fc0b-us-v2-80-plus-bronze.html",
+      "seller": null
+    },
+    "psu-deepcool-pl750d-v2": {
+      "pen": 235,
+      "source": "cyccomputer.pe, infotec.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 231,
+      "max": 239,
+      "url": "https://cyccomputer.pe/producto/fuentes-de-poder/18397931-fuente-deepcool-pl750d-black-750w-80-plus-bronze-pnr-pl750d-fc0b-us-v2.html",
+      "seller": null
+    },
+    "psu-gigabyte-p750bs": {
+      "pen": 299,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 299,
+      "max": 299,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/153233693/fuente-de-poder-gigabyte-gp-p750bs-750w-80-bronze",
+      "seller": "Prosmart Retail"
+    },
+    "psu-gigabyte-ud1000gm-pg5": {
+      "pen": 599,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 599,
+      "max": 619,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/152453658/fuente-gigabyte-ud1000gm-pg5-1000w-80plus-gold",
+      "seller": "Prosmart Retail"
+    },
+    "psu-gigabyte-ud850gm-pg5-v2": {
+      "pen": 509,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 509,
+      "max": 509,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159405066/gigabyte-fuente-de-alimentacion-gp-ud850gm-pg5-v2-850-w-80-gold",
+      "seller": "Prosmart Retail"
+    },
+    "psu-msi-mag-a1000gls-pcie5": {
+      "pen": 498,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 498,
+      "max": 498,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/155350060/fuente-de-poder-msi-mag-a1000gls-pcie5-black-1000w-80-plus-gold-modular",
+      "seller": "Maqtech"
+    },
+    "psu-msi-mag-a750bn-pcie5": {
+      "pen": 319,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 3,
+      "min": 299.99,
+      "max": 329,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/155551428/fuente-de-alimentacion-msi-mag-a750bn-pcie5-iii-80-plus-750w",
+      "seller": "Prosmart Retail"
+    },
+    "psu-msi-mag-a750gls-pcie5": {
+      "pen": 364,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 364,
+      "max": 364,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/153610819/fuente-de-poder-msi-750w-80-plus-gold-mag-a750gls-pcie5",
+      "seller": "Venty"
+    },
+    "ram-adata-xpg-lancer-blade-ddr5-5600-16": {
+      "pen": 1179,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 3,
+      "min": 1085.29,
+      "max": 2164.12,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159421065/xpg-lancer-blade-memoria-ram-ddr5-de-16-gb-5600-mts-cl46-negra",
+      "seller": "Prosmart Retail"
+    },
+    "ram-adata-xpg-lancer-blade-ddr5-6000-16": {
+      "pen": 1049,
+      "source": "infotec.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 1049,
+      "max": 1049,
+      "url": "https://infotec.com.pe/memoria-ram/30725-memoria-ram-xpg-lancer-blade-16gb6000mhz-ddr5-ax5u6000c3616g-slabrwh-cl36-4711658152299.html",
+      "seller": null,
+      "notes": "Cyccomputer lists only the 5600 MHz models and AX5U6000C4816G-SLABRBK (CL48 RGB black), all with stock 0. Those are different variants and were not used."
+    },
+    "ram-adata-xpg-spectrix-d35g-ddr4-3200-16": {
+      "pen": 586.47,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 586.47,
+      "max": 586.47,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/152389802/memoria-ram-xpg-spectrix-d35g-16gb-ddr4-3200mhz-cl16-rgb-dimm-desktop-pn-ax4u320016g16a-sbkd35g",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    },
+    "ram-corsair-vengeance-ddr5-6000-16": {
+      "pen": 1359,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 1359,
+      "max": 1359,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/158552972/memoria-corsair-vengeance-16gb-ddr5-6000-mhz-cl38-043061",
+      "seller": "Cd Store"
+    },
+    "ram-hiksemi-armor-ddr4-3200-16": {
+      "pen": 649,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 3,
+      "min": 509,
+      "max": 752.35,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159409420/hiksemi-armor-hsc416u32i2-memoria-ram-ddr4-de-16-gb-3200-mhz-udimm",
+      "seller": "Prosmart Retail"
+    },
+    "ram-kingston-ddr5-5600-16": {
+      "pen": 1639,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 5,
+      "min": 1599,
+      "max": 5685,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/140542851/Memoria-RAM-Kingston-KCP556US8-16-DDR5-5600MHz-16GB-CL46-Verde",
+      "seller": "Technopshops"
+    },
+    "ram-kingston-ddr5-5600-32": {
+      "pen": 3019,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 5,
+      "min": 2945,
+      "max": 3079.41,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159421003/kingston-memoria-ram-ddr5-de-32-gb-5600-mhz-cl46-dimm",
+      "seller": "Prosmart Retail"
+    },
+    "ram-kingston-fury-beast-ddr4-3200-16": {
+      "pen": 612.75,
+      "source": "infotec.com.pe, cyccomputer.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 556.5,
+      "max": 669,
+      "url": "https://infotec.com.pe/kingston/20907-memoria-kingston-fury-beast-16gb-ddr4-3200-black-kf432c16bb1416.html",
+      "seller": null,
+      "notes": "Infotec's URL was reconstructed from the search listing ('kf432c16bb116'). If it fails, search 'fury beast' on infotec.com.pe."
+    },
+    "ram-kingston-fury-beast-ddr4-3200-8": {
+      "pen": 349.9,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 349.9,
+      "max": 427.65,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/158815067/memoria-ram-8gb-ddr4-kingston-fury-beast-3200-mhz-para-pc",
+      "seller": "Mecsoft"
+    },
+    "ram-kingston-fury-beast-ddr5-5600-16": {
+      "pen": 1269,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 4,
+      "min": 1239,
+      "max": 2297.06,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159421067/kingston-fury-beast-memoria-ram-16-gb-ddr5-5600-cl40-dimm",
+      "seller": "Prosmart Retail"
+    },
+    "ram-kingston-fury-beast-ddr5-5600-32": {
+      "pen": 2969,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 2969,
+      "max": 3079.41,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159404974/kingston-fury-beast-32gb-ddr5-5600-cl40-dimm",
+      "seller": "Prosmart Retail"
+    },
+    "ram-kingston-fury-beast-ddr5-6000-16": {
+      "pen": 1179.5,
+      "source": "cyccomputer.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 1179.5,
+      "max": 1179.5,
+      "url": "https://cyccomputer.pe/producto/memoria-pc-ddr5/18396564-memoria-16gb-ddr5-kingston-fury-beast-black-bus-6000mhz-pnkf560c36bbe2-16.html",
+      "seller": null,
+      "notes": "CAVEAT: the exact PN KF560C36BBE-16 was not found. Only the BBE2 revision is listed, with the same speed, latency, capacity and colour. Drop this if revisions must match exactly. The RGB variant KF560C36BBE2A-16 is S/1274 at cyccomputer (ex"
+    },
+    "ram-kingston-fury-beast-rgb-ddr5-6000-32": {
+      "pen": 2547.5,
+      "source": "memorykings.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 2547.5,
+      "max": 2547.5,
+      "url": "https://www.memorykings.pe/producto/354919/memoria-ddr5-32gb-6000-cl36-fury-beast-rgb-black",
+      "seller": null,
+      "notes": "CAVEAT: listed under the revision PN BBE2A, not BBEA. The module is still 1x32GB DDR5-6000 CL36 RGB black."
+    },
+    "ram-teamgroup-t-create-classic-ddr4-3200-16-kit": {
+      "pen": 607,
+      "source": "memorykings.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 607,
+      "max": 607,
+      "url": "https://www.memorykings.pe/producto/345439/memoria-ddr4-16gb-3200-t-create-2x8gb-silver",
+      "seller": null
+    },
+    "ram-teamgroup-t-force-vulcan-z-ddr4-3200-8": {
+      "pen": 344.12,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 6,
+      "min": 325,
+      "max": 429,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/154659531/memoria-ram-teamgroup-t-force-vulcan-z-tlzgd48g3200hc16f01-8gb-ddr4-3200mhz-udimm-cl16-1-35v-color-rojo-pn-tlzgd48g3200hc16f01",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    },
+    "storage-adata-legend-710-1000": {
+      "pen": 769,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 2,
+      "min": 769,
+      "max": 773,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159404727/ssd-adata-legend-710-nvme-m-2-2280-de-1-tb",
+      "seller": "Prosmart Retail"
+    },
+    "storage-adata-legend-860-1000": {
+      "pen": 769,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 769,
+      "max": 769,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159421285/adata-legend-860-ssd-1-tb-m-2-2280-nvme-pcie-4-0-x4",
+      "seller": "Prosmart Retail"
+    },
+    "storage-adata-legend-860-500": {
+      "pen": 590,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 590,
+      "max": 590,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/152623378/ssd-adata-legend-860-500gb-2280-lectura-6000mb-s-l-pn-sleg-860-500gcs",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    },
+    "storage-adata-su650-512": {
+      "pen": 389,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 7,
+      "min": 349,
+      "max": 529,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/158629817/ssd-adata-ultimate-su650-512gb-sata-iii-2-5",
+      "seller": "Corporacion Famex"
+    },
+    "storage-hiksemi-wave-pro-p-512": {
+      "pen": 469,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 4,
+      "min": 415,
+      "max": 514.71,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159407259/ssd-hiksemi-wave-512-gb-m-2-pcie-3-0-x4-nvme-lectura-de-hasta-3500-mbs",
+      "seller": "Prosmart Retail"
+    },
+    "storage-kingston-a400-240": {
+      "pen": 319,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 17,
+      "min": 259,
+      "max": 999,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/117216475/DISCO-SOLIDO-240GB-KINGSTON-SSD-A400",
+      "seller": "Odemis Sac"
+    },
+    "storage-kingston-a400-480": {
+      "pen": 455,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 18,
+      "min": 389,
+      "max": 990,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/140476118/Disco-Solido-SSD-Kingston-A400-480GB-SATA-6GBS-25-7MM-PN-SA400S37480G",
+      "seller": "Mega Empresarial S.a.c"
+    },
+    "storage-kingston-fury-renegade-g5-1024": {
+      "pen": 1402.94,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 6,
+      "min": 1069,
+      "max": 2039,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/156895569/undad-ssd-kingston-fury-renegade-g5-1tb-m-2-2280-nvme-pn-sfyr2s-1t0",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    },
+    "storage-kingston-kc3000-1024": {
+      "pen": 1399,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 1399,
+      "max": 1399,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/115915789/Disco-solido-SSD-KC3000-PCle-4.0-NVMe-M.2-1024GB",
+      "seller": "Kingston"
+    },
+    "storage-kingston-kc600-1024": {
+      "pen": 1375.88,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 3,
+      "min": 1319,
+      "max": 1399,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/152468060/ssd-kingston-kc600-1024gb-sata-6-0-gbps-2-5-7mm-p-n-skc600-1024g",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    },
+    "storage-kingston-nv3-1000": {
+      "pen": 753,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 17,
+      "min": 659,
+      "max": 1489,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/149929380/Unidad-de-estado-solido-Kingston-NV3-M.2-2280-Interno-1TB-SNV3S1000G",
+      "seller": "Ofimel Importaciones"
+    },
+    "storage-kingston-nv3-2000": {
+      "pen": 1969,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 11,
+      "min": 1409,
+      "max": 2699,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/152881448/ssd-kingston-nv3-2tb-m-2-2230-pcie-4-0-nvme-snv3sm3-2t0",
+      "seller": "Global Tech"
+    },
+    "storage-kingston-nv3-500": {
+      "pen": 499.9,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 16,
+      "min": 423.7,
+      "max": 969,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/155118846/ssd-m-2-500gb-kingston-nv3-pcie-4-0-x4-nvme-5000-mb-s",
+      "seller": "Maqtech"
+    },
+    "storage-teamgroup-cx2-1000": {
+      "pen": 639,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 1,
+      "min": 639,
+      "max": 639,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/159422221/teamgroup-cx2-ssd-1-tb-sata-iii-de-2-5-pulgadas",
+      "seller": "Prosmart Retail"
+    },
+    "storage-teamgroup-mp33-1000": {
+      "pen": 872.35,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 5,
+      "min": 729,
+      "max": 929,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/153930110/unidad-en-estado-solido-mp33-teamgroup-m-2-1tb-p-n-ssd1ttgmp33fp60",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    },
+    "storage-wd-green-sata-1000": {
+      "pen": 620,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 7,
+      "min": 439,
+      "max": 909,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/155118886/ssd-1tb-western-digital-green-sata-2-5",
+      "seller": "Maqtech"
+    },
+    "storage-wd-green-sn350-2000": {
+      "pen": 1469,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 3,
+      "min": 999.9,
+      "max": 1639,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/154799864/western-digital-green-sn350-2tb-nvme-m-2-2280-ssd-velocidad-pcie-gen3-x4-y-alta-capacida",
+      "seller": "Prosmart Retail"
+    },
+    "storage-wd-green-sn350-500": {
+      "pen": 546.47,
+      "source": "falabella.com.pe",
+      "checked_at": "2026-11-09",
+      "offers": 7,
+      "min": 489,
+      "max": 839.41,
+      "url": "https://www.falabella.com.pe/falabella-pe/product/154568210/disco-ssd-wd-green-sn350-nvme-500gb-m-2-2280-p-n-ssdwds500g2g0c",
+      "seller": "Tecnologia Informatica Y Consultoria"
+    }
+  }
+}

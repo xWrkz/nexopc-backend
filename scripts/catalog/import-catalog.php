@@ -3,10 +3,12 @@
  * Importa el catálogo curado de NexoPC dentro del contenedor de WordPress.
  *
  * Uso (como www-data):
- *   php import-catalog.php <carpeta-data> [--apply] [--with-images] [--retire-old] [--restore-old]
+ *   php import-catalog.php <carpeta-data> [--apply] [--with-images] [--prices=<archivo>] [--retire-old] [--restore-old]
  *
  * Sin --apply solo informa lo que haría. Es idempotente: localiza cada producto
- * por SKU. Los productos no verificados quedan en borrador. --retire-old pasa a
+ * por SKU. Los productos no verificados quedan en borrador. Precio y stock solo
+ * cambian con --prices (precio regular desde el archivo) o al crear el producto:
+ * actualizar la ficha técnica no borra lo cargado desde el panel. --retire-old pasa a
  * borrador todo lo que no pertenece al catálogo curado, sin borrar nada, y
  * --restore-old lo devuelve a publicado.
  */
@@ -30,6 +32,13 @@ $arguments = array_slice($argv, 1);
 $data_dir = $arguments[0] ?? '';
 $apply = in_array('--apply', $arguments, true);
 $with_images = in_array('--with-images', $arguments, true);
+$prices = array();
+foreach ($arguments as $argument) {
+    if (strpos($argument, '--prices=') !== 0) continue;
+    $prices_file = substr($argument, 9);
+    if (!is_file($prices_file)) { fwrite(STDOUT, "No existe el archivo de precios $prices_file" . PHP_EOL); exit(1); }
+    $prices = json_decode(file_get_contents($prices_file), true, 32, JSON_THROW_ON_ERROR)['products'] ?? array();
+}
 
 function nexopc_import_log($message) { fwrite(STDOUT, $message . PHP_EOL); }
 function nexopc_import_id($table, $slug) { global $wpdb; return (int) $wpdb->get_var($wpdb->prepare('SELECT id FROM ' . nexopc_hardware_table($table) . ' WHERE slug = %s', $slug)); }
@@ -104,11 +113,12 @@ function nexopc_import_image($product_id, $product) {
     return $attachment;
 }
 
-function nexopc_import_product($item, $apply, $with_images) {
+function nexopc_import_product($item, $apply, $with_images, $price = null) {
     $sku = strtoupper('nx-' . $item['key']);
     $existing = wc_get_product_id_by_sku($sku);
     $status = !empty($item['verified']) ? 'publish' : 'draft';
-    nexopc_import_log(sprintf('%s %s [%s]', $existing ? 'actualizar' : 'crear', $sku, $status));
+    $amount = is_array($price) && is_numeric($price['pen'] ?? null) && $price['pen'] > 0 ? wc_format_decimal($price['pen'], 2) : null;
+    nexopc_import_log(sprintf('%s %s [%s]%s', $existing ? 'actualizar' : 'crear', $sku, $status, $amount ? " S/ $amount" : ''));
     if (!$apply) return true;
 
     $term = get_term_by('slug', NEXOPC_IMPORT_CATEGORIES[$item['category']], 'product_cat');
@@ -122,10 +132,16 @@ function nexopc_import_product($item, $apply, $with_images) {
     $product->set_description(nexopc_import_description($item));
     $product->set_short_description(nexopc_import_short_description($item));
     $product->set_category_ids(array($term->term_id));
-    $product->set_regular_price('');
-    $product->set_sale_price('');
-    $product->set_manage_stock(false);
-    $product->set_stock_status('instock');
+    if ($amount) {
+        $product->set_regular_price($amount);
+        $product->set_sale_price('');
+        $product->update_meta_data('_nexopc_price_source', $price['source'] ?? '');
+        $product->update_meta_data('_nexopc_price_checked_at', $price['checked_at'] ?? '');
+    }
+    if (!$existing) {
+        $product->set_manage_stock(false);
+        $product->set_stock_status('instock');
+    }
     $product->update_meta_data(NEXOPC_IMPORT_KEY_META, $item['key']);
     $product->update_meta_data('_nexopc_mpn', $item['mpn'] ?? '');
     $product->update_meta_data('_nexopc_sources', (array) $item['sources']);
@@ -171,7 +187,7 @@ if ($data_dir !== '' && $data_dir[0] !== '-') {
     if (!is_dir($data_dir)) { nexopc_import_log("No existe la carpeta $data_dir"); exit(1); }
     foreach (glob(rtrim($data_dir, '/') . '/*.json') as $file) {
         foreach (json_decode(file_get_contents($file), true, 32, JSON_THROW_ON_ERROR) as $item) {
-            $result = nexopc_import_product($item, $apply, $with_images);
+            $result = nexopc_import_product($item, $apply, $with_images, $prices[$item['key']] ?? null);
             if (is_wp_error($result)) { $failures++; nexopc_import_log('  error en ' . $item['key'] . ': ' . $result->get_error_message()); }
         }
     }
