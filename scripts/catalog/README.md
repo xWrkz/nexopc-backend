@@ -13,7 +13,28 @@ actividad comercial. Tampoco copies datos ni imágenes de Amazon o de otras tien
 en `null`, con `verified: false` y el motivo en `notes`. Nunca se estima: el armador
 trata un dato ausente como aviso, pero un dato inventado da compatibilidades falsas.
 
-Los productos se cargan sin precio, así que WooCommerce no permite comprarlos.
+## Precios
+
+`prices.json` guarda un precio de referencia en soles con IGV por `key`, separado
+de las fichas porque cambia mucho más seguido. Sale de `falabella.com.pe`: la
+mediana de las ofertas vigentes del mismo modelo, sin precio CMR ni precio
+tachado. Solo se guardan el número, el vendedor y la URL, nunca textos ni
+imágenes de la tienda.
+
+```bash
+node scripts/catalog/update-prices.js            # todo el catálogo
+node scripts/catalog/update-prices.js --only=cpu-ryzen-5-7600 --dry-run
+```
+
+El script descarta otras variantes (color, Ti/XT, ARGB, kits de PC armada) y los
+listados de `EXCLUDE`, revisados a mano. Cuando Falabella no tiene un producto se
+conserva el precio cargado a mano desde otra tienda peruana, con su `source`.
+Revisa el resultado antes de importarlo: es una referencia de mercado, no el
+costo del proveedor.
+
+Sin `--prices`, el importador no toca precio ni stock de productos existentes, así
+que no borra lo cargado desde el panel. Un producto nuevo sin precio queda
+publicado como "Precio por confirmar" y WooCommerce no permite comprarlo.
 
 ## Importar
 
@@ -22,12 +43,16 @@ node scripts/catalog/validate.js
 
 docker cp scripts/catalog/data <contenedor>:/tmp/nexopc-catalog
 docker cp scripts/catalog/import-catalog.php <contenedor>:/tmp/import-catalog.php
+docker cp scripts/catalog/prices.json <contenedor>:/tmp/nexopc-prices.json
 
 # Simulación
 docker exec -u www-data <contenedor> php /tmp/import-catalog.php /tmp/nexopc-catalog
 
 # Aplicar y traer imágenes
 docker exec -u www-data <contenedor> php /tmp/import-catalog.php /tmp/nexopc-catalog --apply --with-images
+
+# Aplicar también los precios de referencia
+docker exec -u www-data <contenedor> php /tmp/import-catalog.php /tmp/nexopc-catalog --apply --prices=/tmp/nexopc-prices.json
 ```
 
 Repetir la importación actualiza por SKU. Los productos con `verified: false` quedan
