@@ -32,6 +32,7 @@ $arguments = array_slice($argv, 1);
 $data_dir = $arguments[0] ?? '';
 $apply = in_array('--apply', $arguments, true);
 $with_images = in_array('--with-images', $arguments, true);
+$images_dir = dirname(rtrim($data_dir, '/')) . '/images';
 $prices = array();
 foreach ($arguments as $argument) {
     if (strpos($argument, '--prices=') !== 0) continue;
@@ -100,9 +101,19 @@ function nexopc_import_brand($name) {
 }
 
 function nexopc_import_image($product_id, $product) {
+    global $images_dir;
+    // Una imagen guardada en images/<key>.<ext> tiene prioridad: hay fabricantes
+    // cuyo CDN no entrega archivos a descargas automáticas.
+    $local = current(array_filter(array_map(function ($extension) use ($images_dir, $product) { return "$images_dir/{$product['key']}.$extension"; }, array('jpg', 'png', 'webp')), 'is_file')) ?: '';
     $url = $product['image_url'] ?? '';
+    if (!$url && $local) $url = 'local:' . $product['key'];
     if (!$url || get_post_meta($product_id, '_nexopc_image_url', true) === $url) return null;
-    $temporary = download_url($url, 30);
+    if ($local) {
+        $temporary = wp_tempnam($local);
+        if (!copy($local, $temporary)) return new WP_Error('nexopc_import_image', 'No se pudo copiar ' . $local);
+    } else {
+        $temporary = download_url($url, 30);
+    }
     if (is_wp_error($temporary)) return $temporary;
     $extension = array('image/jpeg' => 'jpg', 'image/png' => 'png', 'image/webp' => 'webp')[wp_get_image_mime($temporary)] ?? '';
     if (!$extension) { @unlink($temporary); return new WP_Error('nexopc_import_image', 'El archivo no es una imagen admitida.'); }

@@ -205,8 +205,8 @@
     "sources": [
       "https://documents.westerndigital.com/content/dam/doc-library/en_us/assets/public/western-digital/product/internal-drives/wd-green-ssd/product-brief-wd-green-sn350-nvme-ssd.pdf"
     ],
-    "image_url": null,
-    "image_source": null,
+    "image_url": "https://www.sandisk.com/content/dam/store/en-us/assets/products/internal-storage/wd-green-sn350-nvme-ssd/gallery/2022/wd-green-sn350-nvme-ssd-500gb-hero.png",
+    "image_source": "fabricante",
     "verified": true,
     "notes": "Sin imagen: Open Icecat no da acceso a esta marca y el brief no ofrece una URL de imagen por SKU. DL lo cataloga bajo SanDisk."
   },
@@ -228,8 +228,8 @@
     "sources": [
       "https://documents.westerndigital.com/content/dam/doc-library/en_us/assets/public/western-digital/product/internal-drives/wd-green-ssd/product-brief-wd-green-sn350-nvme-ssd.pdf"
     ],
-    "image_url": null,
-    "image_source": null,
+    "image_url": "https://www.sandisk.com/content/dam/store/en-us/assets/products/internal-storage/wd-green-sn350-nvme-ssd/gallery/2022/wd-green-sn350-nvme-ssd-2tb-hero.png",
+    "image_source": "fabricante",
     "verified": true,
     "notes": "Sin imagen: Open Icecat no da acceso a esta marca y el brief no ofrece una URL de imagen por SKU. DL lo cataloga bajo SanDisk."
   },
@@ -439,8 +439,8 @@
     "sources": [
       "https://documents.westerndigital.com/content/dam/doc-library/en_us/assets/public/western-digital/product/internal-drives/wd-blue-hdd/data-sheet-western-digital-wd-blue-pc-hdd.pdf"
     ],
-    "image_url": null,
-    "image_source": null,
+    "image_url": "https://www.westerndigital.com/content/dam/store/en-us/assets/products/internal-storage/wd-blue-desktop-sata-hdd/gallery/wd-blue-pc-desktop-hard-drive-1tb.png",
+    "image_source": "fabricante",
     "verified": true,
     "notes": "Sin imagen: Open Icecat no da acceso a esta marca y la página oficial leída no expuso imagen de producto."
   },

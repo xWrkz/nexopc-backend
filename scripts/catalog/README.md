@@ -42,6 +42,7 @@ publicado como "Precio por confirmar" y WooCommerce no permite comprarlo.
 node scripts/catalog/validate.js
 
 docker cp scripts/catalog/data <contenedor>:/tmp/nexopc-catalog
+docker cp scripts/catalog/images <contenedor>:/tmp/images
 docker cp scripts/catalog/import-catalog.php <contenedor>:/tmp/import-catalog.php
 docker cp scripts/catalog/prices.json <contenedor>:/tmp/nexopc-prices.json
 
@@ -61,6 +62,11 @@ en borrador hasta completar sus datos.
 `--retire-old` pasa a borrador todo lo que no pertenece al catálogo curado, y
 `--restore-old` lo devuelve a publicado. Ninguno borra productos. Haz un respaldo
 antes de usarlos.
+
+Las imágenes salen de Open Icecat o de la página del fabricante. Cuando el CDN del
+fabricante no entrega el archivo a descargas automáticas (AMD), la imagen oficial
+va en `images/<key>.jpg|png|webp` y el importador la usa antes que `image_url`.
+Copia también esa carpeta al contenedor junto a `data`.
 
 Si los datos vienen de Open Icecat, la ficha debe mantener la mención
 `Specs Icecat`, que el importador añade a la descripción corta.

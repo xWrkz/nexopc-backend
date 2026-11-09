@@ -25,10 +25,10 @@
       "https://www.asus.com/motherboards-components/motherboards/prime/prime-a520m-k/techspec/",
       "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
     ],
-    "image_url": null,
-    "image_source": null,
+    "image_url": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-5-5600x.jpg",
+    "image_source": "fabricante",
     "verified": true,
-    "notes": "igpu null: ninguna fuente leída lo declara. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (ASUS A520M-K: AM4 para Ryzen 5000, solo DDR4), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
+    "notes": "igpu null: ninguna fuente leída lo declara. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (ASUS A520M-K: AM4 para Ryzen 5000, solo DDR4), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial. Imagen oficial de la serie, no del modelo exacto."
   },
   {
     "key": "cpu-ryzen-5-5600",
@@ -56,10 +56,10 @@
       "https://www.asus.com/motherboards-components/motherboards/prime/prime-a520m-k/techspec/",
       "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
     ],
-    "image_url": null,
-    "image_source": null,
+    "image_url": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-5-5600x.jpg",
+    "image_source": "fabricante",
     "verified": true,
-    "notes": "igpu null: ninguna fuente leída lo declara. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (ASUS A520M-K: AM4 para Ryzen 5000, solo DDR4), no ficha del producto. mpn null: el 100-100000927BOX del encargo no se pudo confirmar en una fuente leída ni en market.tsv. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
+    "notes": "igpu null: ninguna fuente leída lo declara. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (ASUS A520M-K: AM4 para Ryzen 5000, solo DDR4), no ficha del producto. mpn null: el 100-100000927BOX del encargo no se pudo confirmar en una fuente leída ni en market.tsv. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial. Imagen oficial de la serie, no del modelo exacto."
   },
   {
     "key": "cpu-ryzen-7-5700x",
@@ -87,10 +87,10 @@
       "https://www.asus.com/motherboards-components/motherboards/prime/prime-a520m-k/techspec/",
       "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
     ],
-    "image_url": null,
-    "image_source": null,
+    "image_url": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-7-5800x.jpg",
+    "image_source": "fabricante",
     "verified": true,
-    "notes": "igpu null: ninguna fuente leída lo declara. cooler_included false: columna Cooler N/A en la nota de AMD. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (ASUS A520M-K: AM4 para Ryzen 5000, solo DDR4), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
+    "notes": "igpu null: ninguna fuente leída lo declara. cooler_included false: columna Cooler N/A en la nota de AMD. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (ASUS A520M-K: AM4 para Ryzen 5000, solo DDR4), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial. Imagen oficial de la serie, no del modelo exacto."
   },
   {
     "key": "cpu-ryzen-7-5700g",
@@ -118,10 +118,10 @@
       "https://www.asus.com/motherboards-components/motherboards/prime/prime-a520m-k/techspec/",
       "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
     ],
-    "image_url": null,
-    "image_source": null,
+    "image_url": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-7-5800x.jpg",
+    "image_source": "fabricante",
     "verified": true,
-    "notes": "threads y cooler_included null: sin fuente leída. tdp_w: ASUS lista 45-65W y se registra el máximo. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (ASUS A520M-K: AM4 para Ryzen 5000, solo DDR4), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
+    "notes": "threads y cooler_included null: sin fuente leída. tdp_w: ASUS lista 45-65W y se registra el máximo. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (ASUS A520M-K: AM4 para Ryzen 5000, solo DDR4), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial. Imagen oficial de la serie, no del modelo exacto."
   },
   {
     "key": "cpu-ryzen-5-8400f",
@@ -149,10 +149,10 @@
       "https://ir.amd.com/news-events/press-releases/detail/1089/amdlaunches-ryzen-7000-series-desktop-processors-with-zen-4-architecture-the-fastest-core-in-gaming",
       "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
     ],
-    "image_url": null,
-    "image_source": null,
+    "image_url": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2608523-amd-ryzen-8000-series-processor-product.jpg",
+    "image_source": "fabricante",
     "verified": true,
-    "notes": "threads, igpu y cooler_included null: sin fuente leída (no aparece en las notas de prensa de AMD consultadas). amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (AMD: Socket AM5 con DDR5 dual-channel), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
+    "notes": "threads, igpu y cooler_included null: sin fuente leída (no aparece en las notas de prensa de AMD consultadas). amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (AMD: Socket AM5 con DDR5 dual-channel), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial. Imagen oficial de la serie, no del modelo exacto."
   },
   {
     "key": "cpu-ryzen-5-8500g",
@@ -181,8 +181,8 @@
       "https://ir.amd.com/news-events/press-releases/detail/1089/amdlaunches-ryzen-7000-series-desktop-processors-with-zen-4-architecture-the-fastest-core-in-gaming",
       "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
     ],
-    "image_url": null,
-    "image_source": null,
+    "image_url": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-5-8500g.jpg",
+    "image_source": "fabricante",
     "verified": true,
     "notes": "cooler_included null: sin fuente leída. igpu true: AMD declara gráficos integrados para toda la serie 8000G. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (AMD: Socket AM5 con DDR5 dual-channel), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
   },
@@ -213,10 +213,10 @@
       "https://ir.amd.com/news-events/press-releases/detail/1089/amdlaunches-ryzen-7000-series-desktop-processors-with-zen-4-architecture-the-fastest-core-in-gaming",
       "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
     ],
-    "image_url": null,
-    "image_source": null,
+    "image_url": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/3056700-ryzen-5-7000-series-pib.jpg",
+    "image_source": "fabricante",
     "verified": true,
-    "notes": "verified false solo porque memory_types e igpu son de nivel serie o plataforma: AMD describe gráficos en el I/O die de la serie Ryzen 7000, sin ficha del producto legible. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (AMD: Socket AM5 con DDR5 dual-channel), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
+    "notes": "verified false solo porque memory_types e igpu son de nivel serie o plataforma: AMD describe gráficos en el I/O die de la serie Ryzen 7000, sin ficha del producto legible. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (AMD: Socket AM5 con DDR5 dual-channel), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial. Imagen oficial de la serie, no del modelo exacto."
   },
   {
     "key": "cpu-ryzen-5-9600x",
@@ -245,8 +245,8 @@
       "https://ir.amd.com/news-events/press-releases/detail/1089/amdlaunches-ryzen-7000-series-desktop-processors-with-zen-4-architecture-the-fastest-core-in-gaming",
       "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
     ],
-    "image_url": null,
-    "image_source": null,
+    "image_url": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2613900-ryzen-5-9600x.jpg",
+    "image_source": "fabricante",
     "verified": true,
     "notes": "igpu y cooler_included null: sin fuente leída. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (AMD: Socket AM5 con DDR5 dual-channel), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
   },
@@ -277,8 +277,8 @@
       "https://ir.amd.com/news-events/press-releases/detail/1089/amdlaunches-ryzen-7000-series-desktop-processors-with-zen-4-architecture-the-fastest-core-in-gaming",
       "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
     ],
-    "image_url": null,
-    "image_source": null,
+    "image_url": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-7-7700.jpg",
+    "image_source": "fabricante",
     "verified": true,
     "notes": "verified false solo porque memory_types e igpu son de nivel serie o plataforma: AMD describe gráficos en el I/O die de la serie Ryzen 7000, sin ficha del producto legible. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (AMD: Socket AM5 con DDR5 dual-channel), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. Otra tienda lista la variante 100-100000592SBX, no evaluada. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
   },
@@ -309,8 +309,8 @@
       "https://ir.amd.com/news-events/press-releases/detail/1089/amdlaunches-ryzen-7000-series-desktop-processors-with-zen-4-architecture-the-fastest-core-in-gaming",
       "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
     ],
-    "image_url": null,
-    "image_source": null,
+    "image_url": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2613900-ryzen-7-9700x.jpg",
+    "image_source": "fabricante",
     "verified": true,
     "notes": "igpu y cooler_included null: sin fuente leída. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (AMD: Socket AM5 con DDR5 dual-channel), no ficha del producto. mpn tomado de market.tsv (listado minorista), no confirmado en fuente oficial. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
   },
@@ -341,8 +341,8 @@
       "https://ir.amd.com/news-events/press-releases/detail/1089/amdlaunches-ryzen-7000-series-desktop-processors-with-zen-4-architecture-the-fastest-core-in-gaming",
       "https://en.wikipedia.org/wiki/List_of_AMD_Ryzen_processors"
     ],
-    "image_url": null,
-    "image_source": null,
+    "image_url": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2900400-ryzen-7-9800x3d-product.jpg",
+    "image_source": "fabricante",
     "verified": true,
     "notes": "igpu y cooler_included null: sin fuente leída. mpn null: market.tsv solo lista 100-1000001084WOF, con un dígito más que el patrón de los demás, y no se corrigió de memoria. amd.com no accesible (timeouts y connection reset) e Icecat exige app_key para AMD. memory_types: nivel plataforma (AMD: Socket AM5 con DDR5 dual-channel), no ficha del producto. amd.com no accesible: gráficos integrados e hilos contrastados en Wikipedia. Revisar contra ficha oficial."
   },
