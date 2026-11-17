@@ -164,6 +164,19 @@ function nexopc_checkout_customer($raw) {
     return $customer;
 }
 
+/** Guarda los datos de entrega en la cuenta para precargarlos en la próxima compra. */
+function nexopc_checkout_remember_address(WP_User $user, array $customer) {
+    if (!class_exists('WC_Customer')) return;
+    $profile = new WC_Customer($user->ID);
+    $profile->set_billing_phone($customer['phone']);
+    $profile->set_billing_address_1($customer['address_1']);
+    $profile->set_billing_city($customer['city']);
+    $profile->set_billing_state($customer['state']);
+    $profile->set_billing_postcode($customer['postcode']);
+    $profile->set_billing_country('PE');
+    $profile->save();
+}
+
 function nexopc_checkout(WP_REST_Request $request) {
     $data = $request->get_json_params();
     $data = is_array($data) ? $data : array();
@@ -176,7 +189,11 @@ function nexopc_checkout(WP_REST_Request $request) {
         return nexopc_checkout_error('El pago con Mercado Pago no está disponible en este momento.', 503);
     }
 
-    $customer = nexopc_checkout_customer($data['customer'] ?? null);
+    // Solo compran clientes con sesión (nexopc_customer_permission); el pedido usa siempre el correo de la cuenta.
+    $user = nexopc_session_user($request);
+    $raw_customer = is_array($data['customer'] ?? null) ? $data['customer'] : array();
+    $raw_customer['email'] = $user->user_email;
+    $customer = nexopc_checkout_customer($raw_customer);
     if (is_wp_error($customer)) return $customer;
 
     $lines = nexopc_checkout_lines($data['items'] ?? null);
@@ -205,6 +222,7 @@ function nexopc_checkout(WP_REST_Request $request) {
     unset($shipping['email']);
     $order->set_address($shipping, 'shipping');
     $order->set_customer_note($note);
+    $order->set_customer_id($user->ID);
     $order->set_payment_method($method);
     $order->set_payment_method_title(NEXOPC_PAYMENT_METHODS[$method]);
     $client_ip = sanitize_text_field((string) $request->get_header('x-nexopc-client-ip'));
@@ -213,6 +231,7 @@ function nexopc_checkout(WP_REST_Request $request) {
     }
     $order->calculate_totals();
     $order->save();
+    nexopc_checkout_remember_address($user, $customer);
 
     $checkout_url = null;
     if ($method === 'mercadopago') {
@@ -532,7 +551,7 @@ add_action('rest_api_init', function () {
     register_rest_route('nexopc/v1', '/checkout', array(
         'methods' => WP_REST_Server::CREATABLE,
         'callback' => 'nexopc_checkout',
-        'permission_callback' => 'nexopc_store_permission',
+        'permission_callback' => 'nexopc_customer_permission',
     ));
     register_rest_route('nexopc/v1', '/checkout/status', array(
         'methods' => WP_REST_Server::READABLE,

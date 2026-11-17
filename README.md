@@ -407,7 +407,10 @@ nexopc-backend/
 ├── wp-includes/                      # ❌ NO versionado (core de WP)
 ├── wp-content/
 │   ├── mu-plugins/
-│   │   └── nexopc-cors.php           # ✅ CORS personalizado
+│   │   ├── nexopc-cors.php           # ✅ CORS personalizado
+│   │   ├── nexopc-customers.php      # ✅ Registro de clientes desde la tienda
+│   │   ├── nexopc-accounts.php       # ✅ Sesiones (WP_Session_Tokens), perfil e historial
+│   │   └── nexopc-payments.php       # ✅ Checkout headless y Mercado Pago
 │   ├── plugins/                      # ❌ Se reinstalan desde README
 │   ├── themes/                       # ❌ Se reinstalan desde README
 │   ├── uploads/                      # ❌ Imágenes no versionadas
