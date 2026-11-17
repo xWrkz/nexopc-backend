@@ -551,9 +551,25 @@ function nexopc_inventory_adjust(WP_REST_Request $request) {
     return rest_ensure_response(array('id' => $product->get_id(), 'stockQuantity' => $product->get_stock_quantity(), 'stockStatus' => $product->get_stock_status(), 'history' => array_slice($history, 0, 20)));
 }
 
+/** Datos de entrega para el panel: el departamento se muestra por nombre, no por código. */
+function nexopc_order_shipping($order) {
+    $country = $order->get_shipping_country() ?: 'PE';
+    $states = (array) WC()->countries->get_states($country);
+    $state = $order->get_shipping_state() ?: $order->get_billing_state();
+    return array(
+        'name' => trim($order->get_formatted_shipping_full_name()) ?: trim($order->get_formatted_billing_full_name()),
+        'phone' => $order->get_shipping_phone() ?: $order->get_billing_phone(),
+        'address' => $order->get_shipping_address_1() ?: $order->get_billing_address_1(),
+        'district' => $order->get_shipping_city() ?: $order->get_billing_city(),
+        'region' => $states[$state] ?? $state,
+        'postcode' => $order->get_shipping_postcode() ?: $order->get_billing_postcode(),
+        'note' => $order->get_customer_note(),
+    );
+}
+
 function nexopc_order_item($order, $detail = false) {
     $data = array('id' => $order->get_id(), 'number' => $order->get_order_number(), 'status' => $order->get_status(), 'date' => $order->get_date_created() ? $order->get_date_created()->date(DATE_ATOM) : null, 'total' => $order->get_total(), 'currency' => $order->get_currency(), 'paymentMethod' => $order->get_payment_method_title(), 'payment' => array('method' => $order->get_payment_method(), 'transactionId' => $order->get_transaction_id(), 'paidAt' => $order->get_date_paid() ? $order->get_date_paid()->date(DATE_ATOM) : null, 'mpOrderId' => (string) $order->get_meta('_nexopc_mp_order_id'), 'mpStatus' => (string) $order->get_meta('_nexopc_mp_status'), 'mpStatusDetail' => (string) $order->get_meta('_nexopc_mp_status_detail'), 'mpPaymentMethod' => (string) $order->get_meta('_nexopc_mp_payment_method')), 'customer' => array('id' => $order->get_customer_id(), 'name' => trim($order->get_formatted_billing_full_name()), 'email' => $order->get_billing_email()));
-    if ($detail) { $data['items'] = array_map(function ($item) { $product = $item->get_product(); return array('name' => $item->get_name(), 'quantity' => $item->get_quantity(), 'total' => $item->get_total(), 'sku' => $product ? $product->get_sku() : ''); }, $order->get_items()); $data['notes'] = array_map(function ($note) { return array('date' => $note->comment_date, 'content' => $note->comment_content); }, wc_get_order_notes(array('order_id' => $order->get_id()))); }
+    if ($detail) { $data['shipping'] = nexopc_order_shipping($order); $data['items'] = array_map(function ($item) { $product = $item->get_product(); return array('name' => $item->get_name(), 'quantity' => $item->get_quantity(), 'total' => $item->get_total(), 'sku' => $product ? $product->get_sku() : ''); }, $order->get_items()); $data['notes'] = array_map(function ($note) { return array('date' => $note->comment_date, 'content' => $note->comment_content); }, wc_get_order_notes(array('order_id' => $order->get_id()))); }
     return $data;
 }
 

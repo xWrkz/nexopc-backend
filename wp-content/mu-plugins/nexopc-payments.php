@@ -136,6 +136,22 @@ function nexopc_checkout_product($line) {
     return $product;
 }
 
+/** Código de departamento de WooCommerce (LAL, LMA…). Acepta el nombre por compatibilidad con datos antiguos. */
+function nexopc_region_code($value) {
+    $value = trim(sanitize_text_field((string) $value));
+    $states = function_exists('WC') ? (array) WC()->countries->get_states('PE') : array();
+    if ($value === '' || !$states) return '';
+    if (isset($states[strtoupper($value)])) return strtoupper($value);
+    $plain = function ($text) { return strtolower(remove_accents(trim($text))); };
+    // "Lima" a secas casi siempre es Lima Metropolitana (WooCommerce llama "Lima" a las provincias).
+    $aliases = array('lima' => 'LMA', 'callao' => 'CAL', 'lima metropolitana' => 'LMA', 'lima (provincias)' => 'LIM');
+    if (isset($aliases[$plain($value)])) return $aliases[$plain($value)];
+    foreach ($states as $code => $name) {
+        if ($plain($name) === $plain($value)) return $code;
+    }
+    return '';
+}
+
 function nexopc_checkout_customer($raw) {
     $raw = is_array($raw) ? $raw : array();
     $customer = array(
@@ -145,16 +161,18 @@ function nexopc_checkout_customer($raw) {
         'phone' => sanitize_text_field($raw['phone'] ?? ''),
         'address_1' => sanitize_text_field($raw['address1'] ?? ''),
         'city' => sanitize_text_field($raw['city'] ?? ''),
-        'state' => sanitize_text_field($raw['region'] ?? ''),
-        'postcode' => sanitize_text_field($raw['postcode'] ?? ''),
+        'state' => nexopc_region_code($raw['region'] ?? ''),
+        'postcode' => preg_replace('/\D+/', '', (string) ($raw['postcode'] ?? '')),
         'country' => 'PE',
     );
     // Next.js ya valida con zod; esto es la última barrera frente a llamadas manipuladas.
     $fields = array();
-    foreach (array('first_name' => 'firstName', 'last_name' => 'lastName', 'address_1' => 'address1', 'city' => 'city', 'state' => 'region', 'postcode' => 'postcode') as $key => $field) {
+    foreach (array('first_name' => 'firstName', 'last_name' => 'lastName', 'address_1' => 'address1', 'city' => 'city') as $key => $field) {
         $length = mb_strlen($customer[$key]);
         if ($length < 2 || $length > 120) $fields[$field] = array('Completa este campo.');
     }
+    if (!$customer['state']) $fields['region'] = array('Elige tu región.');
+    if (strlen($customer['postcode']) > 10) $fields['postcode'] = array('El código postal es demasiado largo.');
     if (!$customer['email'] || !is_email($customer['email'])) $fields['email'] = array('Ingresa un correo válido.');
     if (!preg_match('/^[0-9+\-\s()]{7,25}$/', $customer['phone'])) $fields['phone'] = array('Ingresa un teléfono válido.');
     if ($fields) {
