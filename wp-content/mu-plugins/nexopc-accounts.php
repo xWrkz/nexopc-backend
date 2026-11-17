@@ -19,20 +19,21 @@ const NEXOPC_LOGIN_IP_LIMIT = 10;
 const NEXOPC_LOGIN_EMAIL_LIMIT = 8;
 const NEXOPC_LOGIN_WINDOW = 15 * MINUTE_IN_SECONDS;
 const NEXOPC_ACCOUNT_ORDERS_LIMIT = 30;
+// Hash de una clave aleatoria descartada; solo sirve para igualar el tiempo de respuesta.
+const NEXOPC_DUMMY_PASSWORD_HASH = '$wp$2y$10$F18WSnQTBlnzZikt.yVzfu0wu03XsZC3.CVsUb66CBFFcrro6T6sa';
 
 function nexopc_account_error($message, $status = 422, $fields = array(), $code = 'nexopc_account_error') {
     return new WP_Error($code, $message, array('status' => $status, 'fields' => $fields ?: new stdClass()));
 }
 
-/** Cuenta intentos en una ventana fija; devuelve true cuando ya se superó el límite. */
+/** Intentos fallidos en una ventana fija. Los ingresos correctos no cuentan. */
 function nexopc_account_throttled($bucket, $limit) {
+    return (int) get_transient('nexopc_login_' . md5($bucket)) >= $limit;
+}
+
+function nexopc_account_record_failure($bucket) {
     $key = 'nexopc_login_' . md5($bucket);
-    $count = (int) get_transient($key);
-    if ($count >= $limit) {
-        return true;
-    }
-    set_transient($key, $count + 1, NEXOPC_LOGIN_WINDOW);
-    return false;
+    set_transient($key, (int) get_transient($key) + 1, NEXOPC_LOGIN_WINDOW);
 }
 
 /** Solo los clientes de la tienda inician sesión aquí; el personal usa el panel de administración. */
@@ -101,8 +102,16 @@ function nexopc_account_login(WP_REST_Request $request) {
     }
 
     $user = get_user_by('email', $email);
-    $valid = $user && nexopc_is_store_customer($user) && wp_check_password($password, $user->user_pass, $user->ID);
+    if ($user && nexopc_is_store_customer($user)) {
+        $valid = wp_check_password($password, $user->user_pass, $user->ID);
+    } else {
+        // Mismo costo que una clave real, para que el tiempo de respuesta no revele si la cuenta existe.
+        wp_check_password($password, NEXOPC_DUMMY_PASSWORD_HASH);
+        $valid = false;
+    }
     if (!$valid) {
+        if ($client_ip) nexopc_account_record_failure('ip|' . $client_ip);
+        nexopc_account_record_failure('email|' . strtolower($email));
         // Mismo mensaje si el correo no existe o la clave falla: no revelamos qué cuentas existen.
         return nexopc_account_error('Correo o contraseña incorrectos.', 401, array(), 'nexopc_login_failed');
     }
