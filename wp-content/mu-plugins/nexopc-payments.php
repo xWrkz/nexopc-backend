@@ -417,8 +417,17 @@ function nexopc_mp_webhook(WP_REST_Request $request) {
     }
 
     $result = nexopc_mp_sync($data_id);
-    // Si MP no respondió, devolvemos 500 para que reintente el aviso más tarde.
-    return new WP_REST_Response(array('ok' => !is_wp_error($result)), is_wp_error($result) ? 500 : 200);
+    if (is_wp_error($result)) {
+        $error_data = $result->get_error_data();
+        $status = is_array($error_data) ? (int) ($error_data['status'] ?? 0) : 0;
+        // MP no conoce la order (p. ej. "Simular notificación" del panel): no hay nada que reintentar.
+        if (in_array($status, array(400, 404), true)) {
+            return new WP_REST_Response(array('ok' => true, 'ignored' => true), 200);
+        }
+        // Red caída o error de MP: 500 para que reintente el aviso más tarde.
+        return new WP_REST_Response(array('ok' => false), 500);
+    }
+    return new WP_REST_Response(array('ok' => true), 200);
 }
 
 /** Lee la order en MP y aplica su estado al pedido de WooCommerce. Idempotente. */
