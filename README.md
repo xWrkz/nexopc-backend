@@ -292,6 +292,23 @@ Ve a **WooCommerce → Ajustes → Pagos** y activa solo:
 
 ---
 
+## 🧾 Datos de demostración del ERP
+
+`scripts/demo/seed-demo.php` llena el panel (`nexopc-admin`) con datos ficticios para presentarlo: 15 clientes, 48 pedidos de los últimos 60 días en todos los estados (pagados, por cobrar, rechazados, cancelados, reembolsados), stock inicial con su kardex y unidades con número de serie. Requiere que el mu-plugin `nexopc-erp.php` ya esté desplegado.
+
+Todo queda marcado (`_nexopc_demo`, `created_via = nexopc-demo`, correos `@demo.nexopc.test`, unidades con `origen = demo`) y no se envían correos. Solo toca productos publicados con precio que no gestionaban stock: guarda su estado previo y `--purge` lo restaura. Ningún producto queda agotado por la demo.
+
+```bash
+# Dentro del contenedor de WordPress
+php seed-demo.php            # solo informa, no cambia nada
+php seed-demo.php --apply    # crea los datos demo
+php seed-demo.php --purge    # borra todo lo marcado como demo y restaura el stock
+```
+
+> Los ajustes de stock hechos a mano durante la demo sobre esos productos se pierden al ejecutar `--purge`.
+
+---
+
 ## 📦 Importar Productos de Prueba
 
 Para que todos los desarrolladores tengan el mismo set de productos:

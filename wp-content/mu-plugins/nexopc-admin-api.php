@@ -524,7 +524,7 @@ function nexopc_pagination_args(WP_REST_Request $request) {
 
 function nexopc_inventory_list(WP_REST_Request $request) {
     $paging = nexopc_pagination_args($request);
-    $args = array('limit' => $paging['per_page'], 'page' => $paging['page'], 'paginate' => true, 'status' => array('publish', 'draft', 'private'));
+    $args = array('limit' => $paging['per_page'], 'page' => $paging['page'], 'paginate' => true, 'status' => $request->get_param('includeDrafts') ? array('publish', 'draft', 'private') : array('publish', 'private'));
     if ($request->get_param('search')) $args['s'] = sanitize_text_field($request->get_param('search'));
     if ($request->get_param('stockStatus')) $args['stock_status'] = sanitize_text_field($request->get_param('stockStatus'));
     $query = wc_get_products($args);
@@ -542,13 +542,28 @@ function nexopc_inventory_adjust(WP_REST_Request $request) {
     if (!$product) return nexopc_error('nexopc_stock_product_not_found', 'Producto no encontrado.', 404);
     $mode = ($data['mode'] ?? 'increase') === 'set' ? 'set' : (($data['mode'] ?? 'increase') === 'decrease' ? 'decrease' : 'increase');
     $quantity = absint($data['quantity'] ?? 0); if (!$quantity && $mode !== 'set') return nexopc_error('nexopc_stock_quantity_required', 'Indica una cantidad mayor a cero.', 422);
+    $previous = $product->get_manage_stock() ? (int) $product->get_stock_quantity() : 0;
     $product->set_manage_stock(true); $product->save();
     $new_stock = $mode === 'set' ? wc_update_product_stock($product, $quantity, 'set') : wc_update_product_stock($product, $quantity, $mode);
     $product = wc_get_product($product->get_id());
-    $history = (array) $product->get_meta('_nexopc_stock_history');
-    array_unshift($history, array('date' => current_time(DATE_ATOM), 'user' => get_current_user_id(), 'mode' => $mode, 'quantity' => $quantity, 'reason' => sanitize_text_field($data['reason'] ?? ''), 'result' => (int) $new_stock));
-    $product->update_meta_data('_nexopc_stock_history', array_slice($history, 0, 100)); $product->set_stock_status($new_stock > 0 ? 'instock' : 'outofstock'); $product->save();
+    $product->set_stock_status($new_stock > 0 ? 'instock' : 'outofstock'); $product->save();
+    $history = nexopc_stock_history_push($product->get_id(), array('type' => 'adjust', 'mode' => $mode, 'quantity' => $quantity, 'reason' => sanitize_text_field($data['reason'] ?? ''), 'previous' => $previous, 'result' => (int) $new_stock));
     return rest_ensure_response(array('id' => $product->get_id(), 'stockQuantity' => $product->get_stock_quantity(), 'stockStatus' => $product->get_stock_status(), 'history' => array_slice($history, 0, 20)));
+}
+
+/** Historial de movimientos (kardex) de un producto o variante: lista de arrays, el más reciente primero. */
+function nexopc_stock_history($product_id) {
+    $history = get_post_meta($product_id, '_nexopc_stock_history', true);
+    return is_array($history) ? array_values(array_filter($history, 'is_array')) : array();
+}
+
+/** Añade un movimiento al kardex sin re-guardar el producto completo (no dispara hooks de producto). */
+function nexopc_stock_history_push($product_id, array $entry) {
+    $history = nexopc_stock_history($product_id);
+    array_unshift($history, array_merge(array('date' => current_time(DATE_ATOM), 'user' => get_current_user_id()), $entry));
+    $history = array_slice($history, 0, 200);
+    update_post_meta($product_id, '_nexopc_stock_history', $history);
+    return $history;
 }
 
 /** Datos de entrega para el panel: el departamento se muestra por nombre, no por código. */
@@ -567,27 +582,168 @@ function nexopc_order_shipping($order) {
     );
 }
 
+/**
+ * Estado de cobro derivado del pedido. WooCommerce no lo guarda aparte:
+ * refunded > paid (tiene fecha de pago o está en un estado pagado) > failed > cancelled > pending.
+ */
+function nexopc_order_payment_state($order) {
+    $status = $order->get_status();
+    if ($status === 'refunded' || (float) $order->get_total_refunded() > 0) return 'refunded';
+    if ($order->get_date_paid() || in_array($status, array('processing', 'completed'), true)) return 'paid';
+    if ($status === 'failed') return 'failed';
+    if ($status === 'cancelled') return 'cancelled';
+    return 'pending';
+}
+
+/** Estados de pedido que corresponden a cada estado de cobro (para filtrar en la consulta). */
+function nexopc_payment_state_statuses($state) {
+    $map = array('paid' => array('processing', 'completed'), 'pending' => array('pending', 'on-hold'), 'failed' => array('failed'), 'cancelled' => array('cancelled'), 'refunded' => array('refunded'));
+    return $map[$state] ?? null;
+}
+
+function nexopc_order_date($date) {
+    return $date ? $date->date(DATE_ATOM) : null;
+}
+
+/** Unidades físicas (números de serie) asignadas a cada línea del pedido, indexadas por order_item_id. */
+function nexopc_order_assigned_units($order) {
+    global $wpdb;
+    $ids = array_map('absint', array_keys($order->get_items()));
+    if (!$ids) return array();
+    $p = $wpdb->prefix . 'nexopc_';
+    $placeholders = implode(',', array_fill(0, count($ids), '%d'));
+    $rows = $wpdb->get_results($wpdb->prepare("SELECT a.order_item_id, u.id, u.serial_numero, u.estado FROM {$p}pedido_item_unidad a JOIN {$p}unidades_inventario u ON u.id = a.unidad_id WHERE a.order_item_id IN ($placeholders) ORDER BY a.id", $ids), ARRAY_A);
+    $units = array();
+    foreach ((array) $rows as $row) $units[(int) $row['order_item_id']][] = array('id' => (int) $row['id'], 'serial' => (string) $row['serial_numero'], 'status' => $row['estado']);
+    return $units;
+}
+
 function nexopc_order_item($order, $detail = false) {
-    $data = array('id' => $order->get_id(), 'number' => $order->get_order_number(), 'status' => $order->get_status(), 'date' => $order->get_date_created() ? $order->get_date_created()->date(DATE_ATOM) : null, 'total' => $order->get_total(), 'currency' => $order->get_currency(), 'paymentMethod' => $order->get_payment_method_title(), 'payment' => array('method' => $order->get_payment_method(), 'transactionId' => $order->get_transaction_id(), 'paidAt' => $order->get_date_paid() ? $order->get_date_paid()->date(DATE_ATOM) : null, 'mpOrderId' => (string) $order->get_meta('_nexopc_mp_order_id'), 'mpStatus' => (string) $order->get_meta('_nexopc_mp_status'), 'mpStatusDetail' => (string) $order->get_meta('_nexopc_mp_status_detail'), 'mpPaymentMethod' => (string) $order->get_meta('_nexopc_mp_payment_method')), 'customer' => array('id' => $order->get_customer_id(), 'name' => trim($order->get_formatted_billing_full_name()), 'email' => $order->get_billing_email()));
-    if ($detail) { $data['shipping'] = nexopc_order_shipping($order); $data['items'] = array_map(function ($item) { $product = $item->get_product(); return array('name' => $item->get_name(), 'quantity' => $item->get_quantity(), 'total' => $item->get_total(), 'sku' => $product ? $product->get_sku() : ''); }, $order->get_items()); $data['notes'] = array_map(function ($note) { return array('date' => $note->comment_date, 'content' => $note->comment_content); }, wc_get_order_notes(array('order_id' => $order->get_id()))); }
+    $data = array(
+        'id' => $order->get_id(),
+        'number' => $order->get_order_number(),
+        'status' => $order->get_status(),
+        'paymentState' => nexopc_order_payment_state($order),
+        'date' => nexopc_order_date($order->get_date_created()),
+        'total' => $order->get_total(),
+        'currency' => $order->get_currency(),
+        'itemCount' => $order->get_item_count(),
+        'paymentMethod' => $order->get_payment_method_title(),
+        'demo' => (bool) $order->get_meta('_nexopc_demo'),
+        'payment' => array(
+            'method' => $order->get_payment_method(),
+            'transactionId' => $order->get_transaction_id(),
+            'paidAt' => nexopc_order_date($order->get_date_paid()),
+            'mpOrderId' => (string) $order->get_meta('_nexopc_mp_order_id'),
+            'mpStatus' => (string) $order->get_meta('_nexopc_mp_status'),
+            'mpStatusDetail' => (string) $order->get_meta('_nexopc_mp_status_detail'),
+            'mpPaymentMethod' => (string) $order->get_meta('_nexopc_mp_payment_method'),
+        ),
+        'customer' => array('id' => $order->get_customer_id(), 'name' => trim($order->get_formatted_billing_full_name()), 'email' => $order->get_billing_email()),
+    );
+    if (!$detail) return $data;
+
+    $units = nexopc_order_assigned_units($order);
+    $data['shipping'] = nexopc_order_shipping($order);
+    $data['customer']['phone'] = $order->get_billing_phone();
+    $data['customer']['dni'] = $order->get_customer_id() ? (string) get_user_meta($order->get_customer_id(), 'nexopc_dni', true) : '';
+    $data['items'] = array_values(array_map(function ($item) use ($units) {
+        $product = $item->get_product();
+        $sellable = absint($item->get_variation_id() ?: $item->get_product_id());
+        $policy = function_exists('nexopc_serial_policy_for_product') ? nexopc_serial_policy_for_product($sellable) : 'none';
+        if ($policy === 'none' && $item->get_variation_id() && function_exists('nexopc_serial_policy_for_product')) $policy = nexopc_serial_policy_for_product($item->get_product_id());
+        $quantity = (int) $item->get_quantity();
+        return array(
+            'itemId' => $item->get_id(),
+            'productId' => $item->get_product_id(),
+            'sellableId' => $sellable,
+            'name' => $item->get_name(),
+            'sku' => $product ? $product->get_sku() : '',
+            'image' => $product ? wp_get_attachment_image_url($product->get_image_id(), 'thumbnail') : null,
+            'quantity' => $quantity,
+            'unitPrice' => wc_format_decimal($quantity ? (float) $item->get_subtotal() / $quantity : 0, 2),
+            'subtotal' => $item->get_subtotal(),
+            'total' => $item->get_total(),
+            'serialPolicy' => $policy,
+            'units' => $units[$item->get_id()] ?? array(),
+        );
+    }, $order->get_items()));
+    $data['totals'] = array('subtotal' => wc_format_decimal($order->get_subtotal(), 2), 'discount' => wc_format_decimal($order->get_total_discount(), 2), 'shipping' => wc_format_decimal($order->get_shipping_total(), 2), 'tax' => wc_format_decimal($order->get_total_tax(), 2), 'refunded' => wc_format_decimal($order->get_total_refunded(), 2), 'total' => $order->get_total());
+    $data['dates'] = array('created' => nexopc_order_date($order->get_date_created()), 'paid' => nexopc_order_date($order->get_date_paid()), 'completed' => nexopc_order_date($order->get_date_completed()), 'modified' => nexopc_order_date($order->get_date_modified()));
+    $data['createdVia'] = $order->get_created_via();
+    $data['notes'] = array_map(function ($note) {
+        return array('id' => (int) $note->id, 'date' => $note->date_created ? $note->date_created->date(DATE_ATOM) : null, 'content' => $note->content, 'customerNote' => (bool) $note->customer_note, 'author' => $note->added_by === 'system' ? 'Sistema' : $note->added_by);
+    }, wc_get_order_notes(array('order_id' => $order->get_id())));
     return $data;
 }
 
+function nexopc_valid_date_param($value) {
+    $value = sanitize_text_field((string) $value);
+    return preg_match('/^\d{4}-\d{2}-\d{2}$/', $value) ? $value : '';
+}
+
 function nexopc_orders_list(WP_REST_Request $request) {
-    $paging = nexopc_pagination_args($request); $args = array('limit' => $paging['per_page'], 'page' => $paging['page'], 'paginate' => true, 'orderby' => 'date', 'order' => 'DESC');
-    if ($request->get_param('status')) $args['status'] = sanitize_key($request->get_param('status'));
+    $paging = nexopc_pagination_args($request);
+    $args = array('limit' => $paging['per_page'], 'page' => $paging['page'], 'paginate' => true, 'orderby' => 'date', 'order' => 'DESC', 'type' => 'shop_order');
+    $statuses = $request->get_param('status') ? array(sanitize_key($request->get_param('status'))) : null;
+    if ($request->get_param('payment')) {
+        $by_payment = nexopc_payment_state_statuses(sanitize_key($request->get_param('payment')));
+        if ($by_payment === null) return nexopc_error('nexopc_invalid_payment_state', 'Estado de cobro no válido.', 422);
+        $statuses = $statuses === null ? $by_payment : array_values(array_intersect($statuses, $by_payment));
+        if (!$statuses) return rest_ensure_response(array('items' => array(), 'page' => $paging['page'], 'perPage' => $paging['per_page'], 'total' => 0, 'totalPages' => 1));
+    }
+    if ($statuses !== null) $args['status'] = $statuses;
     if ($request->get_param('search')) $args['s'] = sanitize_text_field($request->get_param('search'));
-    $query = wc_get_orders($args); return rest_ensure_response(array('items' => array_map(function ($order) { return nexopc_order_item($order); }, $query->orders), 'page' => $paging['page'], 'perPage' => $paging['per_page'], 'total' => (int) $query->total, 'totalPages' => (int) $query->max_num_pages));
+    if ($request->get_param('customerId')) $args['customer_id'] = absint($request->get_param('customerId'));
+    $from = nexopc_valid_date_param($request->get_param('dateFrom'));
+    $to = nexopc_valid_date_param($request->get_param('dateTo'));
+    if ($from || $to) {
+        $tz = wp_timezone();
+        $start = $from ? (new DateTime($from . ' 00:00:00', $tz))->getTimestamp() : 0;
+        $end = $to ? (new DateTime($to . ' 23:59:59', $tz))->getTimestamp() : time() + DAY_IN_SECONDS;
+        $args['date_created'] = $start . '...' . $end;
+    }
+    $query = wc_get_orders($args);
+    return rest_ensure_response(array('items' => array_map(function ($order) { return nexopc_order_item($order); }, $query->orders), 'page' => $paging['page'], 'perPage' => $paging['per_page'], 'total' => (int) $query->total, 'totalPages' => max(1, (int) $query->max_num_pages)));
 }
 
 function nexopc_order_get(WP_REST_Request $request) { $order = wc_get_order(absint($request['id'])); return $order ? rest_ensure_response(nexopc_order_item($order, true)) : nexopc_error('nexopc_order_not_found', 'Pedido no encontrado.', 404); }
-function nexopc_order_update(WP_REST_Request $request) { $order = wc_get_order(absint($request['id'])); if (!$order) return nexopc_error('nexopc_order_not_found', 'Pedido no encontrado.', 404); $data = nexopc_request_data($request); $status = sanitize_key($data['status'] ?? ''); if (!$status || !array_key_exists('wc-' . $status, wc_get_order_statuses())) return nexopc_error('nexopc_invalid_order_status', 'Estado de pedido no válido.', 422); if ($status === 'completed') { $serials=nexopc_validate_order_serials_before_dispatch($order); if (is_wp_error($serials)) return $serials; } $order->update_status($status, sanitize_textarea_field($data['note'] ?? ''), !empty($data['notifyCustomer'])); return rest_ensure_response(nexopc_order_item($order, true)); }
+
+function nexopc_order_update(WP_REST_Request $request) {
+    $order = wc_get_order(absint($request['id']));
+    if (!$order) return nexopc_error('nexopc_order_not_found', 'Pedido no encontrado.', 404);
+    $data = nexopc_request_data($request);
+    $note = sanitize_textarea_field($data['note'] ?? '');
+
+    // Cobro registrado a mano (transferencia, contraentrega): fija la fecha de pago y pasa a "Procesando".
+    if (($data['action'] ?? '') === 'markPaid') {
+        if (!$order->needs_payment() && $order->get_date_paid()) return nexopc_error('nexopc_order_already_paid', 'El pedido ya figura como pagado.', 422);
+        $reference = sanitize_text_field($data['reference'] ?? '');
+        $order->add_order_note(trim('Cobro registrado manualmente desde el ERP.' . ($reference ? ' Referencia: ' . $reference . '.' : '') . ($note ? ' ' . $note : '')), 0, true);
+        if ($order->needs_payment()) $order->payment_complete($reference);
+        else { $order->set_date_paid(time()); if ($reference) $order->set_transaction_id($reference); $order->save(); if (!$order->has_status(array('processing', 'completed'))) $order->update_status('processing'); }
+        return rest_ensure_response(nexopc_order_item(wc_get_order($order->get_id()), true));
+    }
+
+    $status = sanitize_key($data['status'] ?? '');
+    if (!$status || !array_key_exists('wc-' . $status, wc_get_order_statuses())) return nexopc_error('nexopc_invalid_order_status', 'Estado de pedido no válido.', 422);
+    if ($status === 'completed') { $serials = nexopc_validate_order_serials_before_dispatch($order); if (is_wp_error($serials)) return $serials; }
+    $order->update_status($status, $note, !empty($data['notifyCustomer']));
+    return rest_ensure_response(nexopc_order_item(wc_get_order($order->get_id()), true));
+}
+
+function nexopc_customer_summary($user) {
+    $customer = new WC_Customer($user->ID);
+    return array('id' => $user->ID, 'name' => trim($customer->get_first_name() . ' ' . $customer->get_last_name()) ?: $user->display_name, 'email' => $user->user_email, 'orders' => wc_get_customer_order_count($user->ID), 'spent' => wc_get_customer_total_spent($user->ID), 'registeredAt' => $user->user_registered, 'phone' => $customer->get_billing_phone(), 'dni' => (string) get_user_meta($user->ID, 'nexopc_dni', true), 'demo' => (bool) get_user_meta($user->ID, '_nexopc_demo', true));
+}
 
 function nexopc_customers_list(WP_REST_Request $request) {
-    $paging = nexopc_pagination_args($request); $args = array('number' => $paging['per_page'], 'offset' => ($paging['page'] - 1) * $paging['per_page'], 'role__in' => array('customer', 'subscriber'), 'orderby' => 'registered', 'order' => 'DESC');
-    if ($request->get_param('search')) $args['search'] = '*' . sanitize_text_field($request->get_param('search')) . '*';
-    $users = get_users($args); $total = count_users(); $items = array_map(function ($user) { $customer = new WC_Customer($user->ID); return array('id' => $user->ID, 'name' => trim($customer->get_first_name() . ' ' . $customer->get_last_name()) ?: $user->display_name, 'email' => $user->user_email, 'orders' => wc_get_customer_order_count($user->ID), 'spent' => wc_get_customer_total_spent($user->ID), 'registeredAt' => $user->user_registered, 'phone' => $customer->get_billing_phone(), 'dni' => (string) get_user_meta($user->ID, 'nexopc_dni', true)); }, $users);
-    $count = (int) (($total['avail_roles']['customer'] ?? 0) + ($total['avail_roles']['subscriber'] ?? 0)); return rest_ensure_response(array('items' => $items, 'page' => $paging['page'], 'perPage' => $paging['per_page'], 'total' => $count, 'totalPages' => max(1, (int) ceil($count / $paging['per_page']))));
+    $paging = nexopc_pagination_args($request);
+    $args = array('number' => $paging['per_page'], 'offset' => ($paging['page'] - 1) * $paging['per_page'], 'role__in' => array('customer', 'subscriber'), 'orderby' => 'registered', 'order' => 'DESC', 'count_total' => true);
+    if ($request->get_param('search')) { $args['search'] = '*' . sanitize_text_field($request->get_param('search')) . '*'; $args['search_columns'] = array('user_login', 'user_email', 'display_name'); }
+    $query = new WP_User_Query($args);
+    $count = (int) $query->get_total();
+    return rest_ensure_response(array('items' => array_map('nexopc_customer_summary', $query->get_results()), 'page' => $paging['page'], 'perPage' => $paging['per_page'], 'total' => $count, 'totalPages' => max(1, (int) ceil($count / $paging['per_page']))));
 }
 
 function nexopc_kit_stock_change($order, $direction) {
