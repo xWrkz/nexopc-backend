@@ -27,8 +27,10 @@ const NEXOPC_DEMO_DOMAIN = '@demo.nexopc.test';
 const NEXOPC_DEMO_ORDERS = 48;
 const NEXOPC_DEMO_DAYS = 60;
 
-// Nada de correos: ni de pedidos ni de cuentas nuevas.
+// Nada de correos: ni de pedidos ni de cuentas nuevas. Los de WooCommerce se desactivan
+// (si solo se bloquearan, WooCommerce anotaría "Email ... failed to send" en cada pedido).
 add_filter('pre_wp_mail', '__return_false');
+foreach (WC()->mailer()->get_emails() as $wc_email) add_filter('woocommerce_email_enabled_' . $wc_email->id, '__return_false');
 
 $arguments = array_slice($argv, 1);
 $apply = in_array('--apply', $arguments, true);
